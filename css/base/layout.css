@@ -207,13 +207,14 @@ button, select, input {
 }
 
 .layout-spacer-top {
-  flex: 0.05;
+  flex: 1;
   min-height: 4px;
   pointer-events: none;
 }
 
 .layout-spacer-bottom {
-  flex: 1.6;
+  flex: 1;
+  min-height: 4px;
   pointer-events: none;
 }
 
@@ -223,6 +224,8 @@ button, select, input {
   justify-content: center;
   position: relative;
   width: 100%;
+  flex-shrink: 0;
+  z-index: 10;
 }
 
 @media (orientation: portrait) {
