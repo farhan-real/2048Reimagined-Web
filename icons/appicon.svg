@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="cleanCanvasBg" cx="50%" cy="36%" r="65%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="55%" stop-color="#070a14" />
+      <stop offset="100%" stop-color="#020306" />
+    </radialGradient>
+
+    <!-- Master Tile Gradient -->
+    <linearGradient id="cleanTileGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5ff" />
+      <stop offset="30%" stop-color="#00a8ff" />
+      <stop offset="68%" stop-color="#0051ff" />
+      <stop offset="100%" stop-color="#6d28d9" />
+    </linearGradient>
+
+    <!-- Specular Rim -->
+    <linearGradient id="cleanRimGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+      <stop offset="35%" stop-color="#a5f3fc" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#0051ff" stop-opacity="0.12" />
+    </linearGradient>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="512" height="512" fill="url(#cleanCanvasBg)" />
+
+  <!-- Corner Ambient Accents -->
+  <g opacity="0.14">
+    <rect x="42" y="42" width="96" height="96" rx="20" fill="#00f0ff" />
+    <rect x="374" y="42" width="96" height="96" rx="20" fill="#6d28d9" />
+    <rect x="42" y="374" width="96" height="96" rx="20" fill="#3b82f6" />
+    <rect x="374" y="374" width="96" height="96" rx="20" fill="#00f5ff" />
+  </g>
+
+  <!-- Vector Drop Shadows (Replacing unsupported <filter>) -->
+  <rect x="76" y="94" width="360" height="360" rx="72" fill="#000000" opacity="0.55" />
+  <rect x="76" y="84" width="360" height="360" rx="72" fill="#0051ff" opacity="0.25" />
+
+  <!-- Master 2048 Tile -->
+  <rect x="76" y="76" width="360" height="360" rx="72" fill="url(#cleanTileGrad)" />
+
+  <!-- Specular Chamfered Rim -->
+  <rect x="78" y="78" width="356" height="356" rx="70" fill="none" stroke="url(#cleanRimGrad)" stroke-width="4" />
+
+  <!-- Glossy Glass Curvature Highlight -->
+  <path d="M 80 152 C 80 110, 110 80, 152 80 L 360 80 C 402 80, 432 110, 432 152 C 340 180, 172 180, 80 152 Z" fill="#ffffff" opacity="0.18" />
+
+  <!-- Cyan Glint Star -->
+  <g transform="translate(132, 132)">
+    <circle cx="0" cy="0" r="16" fill="#00f5ff" opacity="0.3" />
+    <path d="M -18 0 Q 0 0 0 -18 Q 0 0 18 0 Q 0 0 0 18 Q 0 0 -18 0" fill="#ffffff" opacity="0.95" />
+  </g>
+
+  <!-- Text Drop Shadow Path (Replacing text filter) -->
+  <g fill="#031536" opacity="0.6" transform="translate(0, 4)">
+    <!-- 2 -->
+    <path d="M 127 240 C 127 224, 139 214, 155 214 C 171 214, 183 224, 183 239 C 183 253, 173 265, 153 284 L 183 284 L 183 308 L 127 308 L 127 290 L 157 258 C 163 252, 167 246, 167 239 C 167 233, 162 229, 155 229 C 148 229, 143 233, 143 240 Z" />
+    <!-- 0 -->
+    <path fill-rule="evenodd" d="M 221 214 C 237 214, 249 227, 249 245 L 249 277 C 249 295, 237 308, 221 308 C 205 308, 193 295, 193 277 L 193 245 C 193 227, 205 214, 221 214 Z M 221 230 C 215 230, 209 236, 209 246 L 209 276 C 209 286, 215 292, 221 292 C 227 292, 233 286, 233 276 L 233 246 C 233 236, 227 230, 221 230 Z" />
+    <!-- 4 -->
+    <path fill-rule="evenodd" d="M 295 214 L 311 214 L 311 272 L 319 272 L 319 288 L 311 288 L 311 308 L 295 308 L 295 288 L 261 288 L 261 272 L 295 214 Z M 295 240 L 277 272 L 295 272 Z" />
+    <!-- 8 -->
+    <path fill-rule="evenodd" d="M 357 214 C 371 214, 382 224, 382 238 C 382 248, 376 256, 367 260 C 378 264, 385 274, 385 286 C 385 300, 372 308, 357 308 C 342 308, 329 300, 329 286 C 329 274, 336 264, 347 260 C 338 256, 332 248, 332 238 C 332 224, 343 214, 357 214 Z M 357 228 C 351 228, 346 232, 346 238 C 346 244, 351 248, 357 248 C 363 248, 368 244, 368 238 C 368 232, 363 228, 357 228 Z M 357 268 C 350 268, 344 273, 344 285 C 344 292, 349 295, 357 295 C 365 295, 370 292, 370 285 C 370 273, 364 268, 357 268 Z" />
+  </g>
+
+  <!-- Foreground Numerals (Pure Vector Paths) -->
+  <g fill="#ffffff">
+    <!-- 2 -->
+    <path d="M 127 240 C 127 224, 139 214, 155 214 C 171 214, 183 224, 183 239 C 183 253, 173 265, 153 284 L 183 284 L 183 308 L 127 308 L 127 290 L 157 258 C 163 252, 167 246, 167 239 C 167 233, 162 229, 155 229 C 148 229, 143 233, 143 240 Z" />
+    <!-- 0 -->
+    <path fill-rule="evenodd" d="M 221 214 C 237 214, 249 227, 249 245 L 249 277 C 249 295, 237 308, 221 308 C 205 308, 193 295, 193 277 L 193 245 C 193 227, 205 214, 221 214 Z M 221 230 C 215 230, 209 236, 209 246 L 209 276 C 209 286, 215 292, 221 292 C 227 292, 233 286, 233 276 L 233 246 C 233 236, 227 230, 221 230 Z" />
+    <!-- 4 -->
+    <path fill-rule="evenodd" d="M 295 214 L 311 214 L 311 272 L 319 272 L 319 288 L 311 288 L 311 308 L 295 308 L 295 288 L 261 288 L 261 272 L 295 214 Z M 295 240 L 277 272 L 295 272 Z" />
+    <!-- 8 -->
+    <path fill-rule="evenodd" d="M 357 214 C 371 214, 382 224, 382 238 C 382 248, 376 256, 367 260 C 378 264, 385 274, 385 286 C 385 300, 372 308, 357 308 C 342 308, 329 300, 329 286 C 329 274, 336 264, 347 260 C 338 256, 332 248, 332 238 C 332 224, 343 214, 357 214 Z M 357 228 C 351 228, 346 232, 346 238 C 346 244, 351 248, 357 248 C 363 248, 368 244, 368 238 C 368 232, 363 228, 357 228 Z M 357 268 C 350 268, 344 273, 344 285 C 344 292, 349 295, 357 295 C 365 295, 370 292, 370 285 C 370 273, 364 268, 357 268 Z" />
+  </g>
+</svg>
