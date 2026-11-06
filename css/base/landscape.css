@@ -64,21 +64,21 @@
     grid-column: auto;
     grid-row: auto;
     flex: 1;
-    max-width: 580px;
+    max-width: 680px;
     min-width: 320px;
     background: color-mix(in srgb, var(--accent-color) 4%, var(--card-bg));
     border: 1px solid color-mix(in srgb, var(--accent-color) 22%, var(--card-border));
     border-radius: 14px;
-    padding: 8px 14px;
+    padding: 9px 18px;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
-    gap: 6px;
+    gap: 8px;
     margin: 0 auto;
   }
 
   body[data-orientation-mode="auto"] .nav-bar,
   body[data-orientation-mode="landscape"] .nav-bar {
     width: 100%;
-    margin-bottom: 1px;
+    margin-bottom: 2px;
   }
 
   body[data-orientation-mode="auto"] .header-main-row,
@@ -87,50 +87,50 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1px;
+    margin-top: 2px;
   }
 
   body[data-orientation-mode="auto"] .action-buttons-group,
   body[data-orientation-mode="landscape"] .action-buttons-group {
-    max-width: 340px;
-    gap: 8px;
+    max-width: 370px;
+    gap: 10px;
   }
 
   body[data-orientation-mode="auto"] .btn-capsule,
   body[data-orientation-mode="landscape"] .btn-capsule {
-    padding: 7px 12px;
-    font-size: 0.78rem;
+    padding: 8px 14px;
+    font-size: 0.8rem;
   }
 
   body[data-orientation-mode="auto"] .scores-wrapper,
   body[data-orientation-mode="landscape"] .scores-wrapper {
     display: flex;
-    gap: 8px;
+    gap: 10px;
   }
 
   body[data-orientation-mode="auto"] .score-card,
   body[data-orientation-mode="landscape"] .score-card {
-    min-width: 95px;
-    padding: 5px 12px;
+    min-width: 105px;
+    padding: 6px 14px;
   }
 
-  body[data-orientation-mode="auto"] .top-right-section,
-  body[data-orientation-mode="landscape"] .top-right-section {
+  body[data-orientation-mode="auto"] .top-right-group,
+  body[data-orientation-mode="landscape"] .top-right-group {
     grid-column: auto;
     grid-row: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 5px;
+    gap: 10px;
     flex-shrink: 0;
-    min-width: 230px;
-    max-width: 285px;
+    min-width: 240px;
+    max-width: 290px;
   }
 
   body[data-orientation-mode="auto"] .timer-pill,
   body[data-orientation-mode="landscape"] .timer-pill {
-    padding: 4px 11px;
-    font-size: 0.88rem;
+    padding: 5px 13px;
+    font-size: 0.9rem;
     align-self: flex-end;
   }
 
@@ -184,7 +184,7 @@ body[data-orientation-mode="portrait"] .music-companion-card {
   background: color-mix(in srgb, var(--accent-color) 7%, var(--card-bg));
   border: 1px solid color-mix(in srgb, var(--accent-color) 25%, var(--card-border));
   border-radius: 12px;
-  padding: 5px 8px;
+  padding: 6px 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -234,7 +234,7 @@ body[data-orientation-mode="portrait"] .music-companion-card {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 5px;
+  gap: 6px;
   flex-shrink: 0;
 }
 
