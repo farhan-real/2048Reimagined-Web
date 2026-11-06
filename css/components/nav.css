@@ -39,15 +39,16 @@
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   color: var(--text-color);
-  padding: 8px 12px;
+  padding: 8px 14px;
   border-radius: 8px;
   font-weight: 700;
   font-size: 0.8rem;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 6px;
-  max-width: 140px;
+  gap: 8px;
+  min-width: 165px;
+  max-width: 250px;
   transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -56,6 +57,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   flex: 1;
+  text-align: left;
 }
 
 .theme-dropdown-btn:active {
@@ -78,17 +80,33 @@
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 10px;
-  width: 236px;
+  width: 250px;
   display: none;
   flex-direction: column;
   z-index: 50;
   box-shadow: 0 10px 30px rgba(0,0,0,0.9);
   overflow-y: auto;
   max-height: 340px;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--accent-color) 45%, var(--card-border)) transparent;
 }
 
-.theme-dropdown-wrapper.active .theme-dropdown-list {
-  display: flex;
+.theme-dropdown-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.theme-dropdown-list::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 4px 0;
+}
+
+.theme-dropdown-list::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--accent-color) 40%, var(--card-border));
+  border-radius: 6px;
+}
+
+.theme-dropdown-list::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
 }
 
 .dropdown-section-header {

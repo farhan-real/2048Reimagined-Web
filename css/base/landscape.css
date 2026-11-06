@@ -11,29 +11,74 @@
     justify-content: flex-start;
     align-items: center;
     width: 100vw;
-    max-width: 1080px;
+    max-width: 100vw;
     height: 100vh;
-    padding: calc(6px + env(safe-area-inset-top, 0px)) 24px calc(14px + env(safe-area-inset-bottom, 0px)) 24px;
+    padding: calc(8px + env(safe-area-inset-top, 0px)) 24px calc(10px + env(safe-area-inset-bottom, 0px)) 24px;
     gap: 0;
     transform: none;
+    box-sizing: border-box;
+  }
+
+  body[data-orientation-mode="auto"] .top-outer-bar,
+  body[data-orientation-mode="landscape"] .top-outer-bar {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 6px;
+    flex-shrink: 0;
+  }
+
+  body[data-orientation-mode="auto"] .brand-area,
+  body[data-orientation-mode="landscape"] .brand-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    min-width: 180px;
+  }
+
+  body[data-orientation-mode="auto"] .brand-area .logo-text,
+  body[data-orientation-mode="landscape"] .brand-area .logo-text {
+    font-size: 2.8rem;
+    line-height: 0.9;
+  }
+
+  body[data-orientation-mode="auto"] .brand-area .desktop-hint,
+  body[data-orientation-mode="landscape"] .brand-area .desktop-hint {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    opacity: 0.7;
+    color: var(--text-color);
+    margin-top: 4px;
   }
 
   body[data-orientation-mode="auto"] .app-header,
   body[data-orientation-mode="landscape"] .app-header {
-    width: 100%;
-    max-width: 860px;
+    grid-column: auto;
+    grid-row: auto;
+    flex: 1;
+    max-width: 580px;
+    min-width: 320px;
     background: color-mix(in srgb, var(--accent-color) 4%, var(--card-bg));
-    border: 1px solid color-mix(in srgb, var(--accent-color) 18%, var(--card-border));
+    border: 1px solid color-mix(in srgb, var(--accent-color) 22%, var(--card-border));
     border-radius: 14px;
-    padding: 10px 16px;
+    padding: 8px 14px;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
     gap: 6px;
+    margin: 0 auto;
   }
 
   body[data-orientation-mode="auto"] .nav-bar,
   body[data-orientation-mode="landscape"] .nav-bar {
     width: 100%;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
   }
 
   body[data-orientation-mode="auto"] .header-main-row,
@@ -42,66 +87,51 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 1px;
   }
 
-  body[data-orientation-mode="auto"] .logo-text,
-  body[data-orientation-mode="landscape"] .logo-text {
-    font-size: 2.6rem;
+  body[data-orientation-mode="auto"] .action-buttons-group,
+  body[data-orientation-mode="landscape"] .action-buttons-group {
+    max-width: 340px;
+    gap: 8px;
+  }
+
+  body[data-orientation-mode="auto"] .btn-capsule,
+  body[data-orientation-mode="landscape"] .btn-capsule {
+    padding: 7px 12px;
+    font-size: 0.78rem;
   }
 
   body[data-orientation-mode="auto"] .scores-wrapper,
   body[data-orientation-mode="landscape"] .scores-wrapper {
     display: flex;
-    gap: 10px;
+    gap: 8px;
   }
 
   body[data-orientation-mode="auto"] .score-card,
   body[data-orientation-mode="landscape"] .score-card {
-    min-width: 110px;
-    padding: 6px 14px;
+    min-width: 95px;
+    padding: 5px 12px;
   }
 
-  body[data-orientation-mode="auto"] .actions-row,
-  body[data-orientation-mode="landscape"] .actions-row {
-    width: 100%;
+  body[data-orientation-mode="auto"] .top-right-section,
+  body[data-orientation-mode="landscape"] .top-right-section {
+    grid-column: auto;
+    grid-row: auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2px;
-  }
-
-  body[data-orientation-mode="auto"] .action-buttons-group,
-  body[data-orientation-mode="landscape"] .action-buttons-group {
-    max-width: 380px;
-    gap: 10px;
-  }
-
-  body[data-orientation-mode="auto"] .btn-capsule,
-  body[data-orientation-mode="landscape"] .btn-capsule {
-    padding: 9px 14px;
-    font-size: 0.8rem;
-  }
-
-  body[data-orientation-mode="auto"] .desktop-hint,
-  body[data-orientation-mode="landscape"] .desktop-hint {
-    display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
     gap: 5px;
-    font-size: 0.72rem;
-    font-weight: 700;
-    opacity: 0.65;
-    color: var(--text-color);
+    flex-shrink: 0;
+    min-width: 230px;
+    max-width: 285px;
   }
 
-  body[data-orientation-mode="auto"] .hint-key,
-  body[data-orientation-mode="landscape"] .hint-key {
-    background: var(--empty-cell-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 5px;
-    padding: 2px 6px;
-    font-size: 0.65rem;
-    font-weight: 800;
-    color: var(--accent-color);
+  body[data-orientation-mode="auto"] .timer-pill,
+  body[data-orientation-mode="landscape"] .timer-pill {
+    padding: 4px 11px;
+    font-size: 0.88rem;
+    align-self: flex-end;
   }
 
   body[data-orientation-mode="auto"] .game-stage,
@@ -110,16 +140,16 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 28px;
     width: 100%;
-    margin-top: 10px;
+    flex: 1;
+    margin: 4px 0 0 0;
     position: relative;
     z-index: 10;
   }
 
   body[data-orientation-mode="auto"] .board-container,
   body[data-orientation-mode="landscape"] .board-container {
-    margin: 0;
+    margin: 0 auto;
     flex-shrink: 0;
   }
 
@@ -127,8 +157,8 @@
   body[data-orientation-mode="landscape"] .music-companion-card {
     display: flex;
     flex-direction: column;
-    width: 290px;
-    gap: 12px;
+    width: 100%;
+    gap: 0;
     flex-shrink: 0;
   }
 
@@ -141,7 +171,7 @@
 
   body[data-orientation-mode="auto"] #visualizer-full,
   body[data-orientation-mode="landscape"] #visualizer-full {
-    height: clamp(65px, 12vh, 95px);
+    height: clamp(55px, 10vh, 80px);
   }
 }
 
@@ -153,58 +183,94 @@ body[data-orientation-mode="portrait"] .music-companion-card {
   width: 100%;
   background: color-mix(in srgb, var(--accent-color) 7%, var(--card-bg));
   border: 1px solid color-mix(in srgb, var(--accent-color) 25%, var(--card-border));
-  border-radius: 16px;
-  padding: 16px;
+  border-radius: 12px;
+  padding: 5px 8px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 10px;
-  text-align: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
 }
 
 .landscape-track-card .vinyl-disc {
-  width: 58px;
-  height: 58px;
+  width: 36px;
+  height: 36px;
   flex-shrink: 0;
 }
 
+.landscape-track-card .disc-center {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #000;
+}
+
+.landscape-track-card .track-meta {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+
 .landscape-track-card .track-title {
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+}
+
+.landscape-track-card .track-artists {
+  font-size: 0.67rem;
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 1px;
+  line-height: 1.2;
 }
 
 .landscape-controls-row {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  width: 100%;
-  margin-top: 2px;
+  justify-content: flex-end;
+  gap: 5px;
+  flex-shrink: 0;
 }
 
 .landscape-btn {
-  width: 38px;
-  height: 38px;
+  width: 26px;
+  height: 26px;
+}
+
+.landscape-btn svg {
+  width: 12px;
+  height: 12px;
 }
 
 .landscape-btn.play-btn {
-  width: 44px;
-  height: 44px;
+  width: 30px;
+  height: 30px;
+}
+
+.landscape-btn.play-btn svg {
+  width: 14px;
+  height: 14px;
 }
 
 .landscape-visualizer-box {
   width: 100%;
-  height: 120px;
+  height: 32px;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 16px;
-  padding: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 3px 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  box-sizing: border-box;
+  margin-top: 4px;
 }
 
 #visualizer-landscape {

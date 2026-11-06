@@ -8,6 +8,6 @@
 
 @media (orientation: landscape) {
   :root {
-    --board-size: min(440px, calc(100vh - 40px));
+    --board-size: min(440px, calc(100vh - 160px), calc(100dvh - 160px));
   }
 }
