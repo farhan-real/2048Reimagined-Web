@@ -204,7 +204,7 @@
   top: calc(105px + env(safe-area-inset-top, 0px));
   height: calc(100vh - 105px - env(safe-area-inset-top, 0px));
   height: calc(100dvh - 105px - env(safe-area-inset-top, 0px));
-  width: clamp(115px, 11vw, 200px);
+  width: clamp(130px, 12.5vw, 230px);
   pointer-events: none;
   z-index: 20;
   display: none;

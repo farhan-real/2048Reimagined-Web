@@ -98,9 +98,10 @@
       rnd(); rnd();
       for (let i = 0; i < count; i++) {
         const frac = i / Math.max(1, count - 1);
-        const wave = Math.sin(frac * Math.PI * 4.6) * 0.05 + Math.cos(frac * Math.PI * 9.2) * 0.04;
-        const alt = (i % 2 === 0 ? 0.035 : -0.035);
-        arr[i] = Math.max(0.88, Math.min(1.15, 1.0 + wave + alt + (rnd() - 0.5) * 0.12));
+        const wave = Math.sin(frac * Math.PI * 6.2) * 0.08 + Math.cos(frac * Math.PI * 12.4) * 0.06;
+        const alt = (i % 2 === 0 ? 0.06 : -0.06);
+        const jitter = (rnd() - 0.5) * 0.15;
+        arr[i] = Math.max(0.80, Math.min(1.20, 1.0 + wave + alt + jitter));
       }
       return arr;
     }
@@ -129,7 +130,7 @@
       else if (this.boxSize === "large") { baseW = 184; baseH = 86; }
       resizeFixed(this.canvasBox, this.ctxBox, baseW, baseH);
 
-      const edgeW = Math.max(115, Math.min(200, Math.round(window.innerWidth * 0.11)));
+      const edgeW = Math.max(130, Math.min(230, Math.round(window.innerWidth * 0.125)));
       const edgeH = Math.max(200, (window.innerHeight || 800) - 105);
       resizeFixed(this.canvasEdgeLeft, this.ctxEdgeLeft, edgeW, edgeH);
       resizeFixed(this.canvasEdgeRight, this.ctxEdgeRight, edgeW, edgeH);
@@ -183,7 +184,7 @@
       ctx.clearRect(0, 0, w, h);
       const slot = h / count, barHeight = Math.max(3, slot * 0.62), gap = slot - barHeight;
       const bars = this.getBars(count, variationBuffer);
-      const maxBarWidth = (w - 12) * 0.78;
+      const maxBarWidth = (w - 10) * 0.86;
 
       const grad = isLeftEdge
         ? ctx.createLinearGradient(0, 0, maxBarWidth, 0)
@@ -196,13 +197,12 @@
 
       for (let i = 0; i < count; i++) {
         const rawVal = bars[count - 1 - i];
-        const shapedVal = Math.pow(Math.max(0, Math.min(1.0, rawVal)), 1.12);
-        const targetWidth = Math.max(6, shapedVal * maxBarWidth);
+        const targetWidth = Math.max(6, rawVal * maxBarWidth);
 
         if (!peakBuffer[i] || targetWidth > peakBuffer[i]) {
           peakBuffer[i] = targetWidth;
         } else {
-          peakBuffer[i] = Math.max(targetWidth, peakBuffer[i] - (w * 2.5 * dt));
+          peakBuffer[i] = Math.max(targetWidth, peakBuffer[i] - (w * 2.6 * dt));
         }
 
         const barWidth = peakBuffer[i];
@@ -243,7 +243,7 @@
         if (!peakBuffer[i] || targetHeight > peakBuffer[i]) {
           peakBuffer[i] = targetHeight;
         } else {
-          peakBuffer[i] = Math.max(targetHeight, peakBuffer[i] - (h * 2.2 * dt));
+          peakBuffer[i] = Math.max(targetHeight, peakBuffer[i] - (h * 2.4 * dt));
         }
         const barHeight = peakBuffer[i];
         const x = i * slot + (gap / 2);
