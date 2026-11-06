@@ -73,6 +73,10 @@
   transform: rotate(180deg);
 }
 
+.theme-dropdown-wrapper.active .theme-dropdown-list {
+  display: flex;
+}
+
 .theme-dropdown-list {
   position: absolute;
   top: calc(100% + 6px);

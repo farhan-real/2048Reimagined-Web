@@ -72,19 +72,27 @@
       this.themeCurrentLbl = document.getElementById('theme-current-lbl');
 
       this.setupEvents();
+      this.buildDropdown();
     }
 
     setupEvents() {
-      this.themeTriggerBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        this.themeDropdownWrapper.classList.toggle('active');
-      });
-      document.addEventListener('click', () => {
-        this.themeDropdownWrapper.classList.remove('active');
+      if (this.themeTriggerBtn) {
+        this.themeTriggerBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (this.themeDropdownWrapper) {
+            this.themeDropdownWrapper.classList.toggle('active');
+          }
+        });
+      }
+      document.addEventListener('click', (e) => {
+        if (this.themeDropdownWrapper && !this.themeDropdownWrapper.contains(e.target)) {
+          this.themeDropdownWrapper.classList.remove('active');
+        }
       });
     }
 
     buildDropdown(onSelect) {
+      if (!this.themeDropdownList) return;
       this.themeDropdownList.innerHTML = "";
 
       THEME_SECTIONS.forEach(section => {
@@ -158,7 +166,7 @@
     setTheme(themeKey, onSelect) {
       if (!THEMES[themeKey]) themeKey = "neondark";
       this.currentTheme = themeKey;
-      this.themeCurrentLbl.textContent = THEMES[themeKey].name;
+      if (this.themeCurrentLbl) this.themeCurrentLbl.textContent = THEMES[themeKey].name;
       document.body.setAttribute('data-theme', themeKey);
       this.buildDropdown(onSelect);
       if (onSelect) onSelect(themeKey);
