@@ -4,6 +4,8 @@ A modular, high-performance Progressive Web App (PWA) implementation of the clas
 
 Designed for responsive execution across desktop and mobile browsers, supporting both portrait and landscape viewports with offline service worker caching and standalone native installation.
 
+Play at [2048reimagined.pages.dev](https://2048reimagined.pages.dev/) or [farhan-real.github.io/2048Reimagined-Web](https://farhan-real.github.io/2048Reimagined-Web/)
+
 ---
 
 ## Core Features
