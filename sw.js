@@ -1,4 +1,4 @@
-const CACHE_NAME = '2048-reimagined-v4';
+const CACHE_NAME = '2048-reimagined-v5';
 const PRECACHE_ASSETS = [
   './',
   'index.html',
@@ -17,6 +17,46 @@ const PRECACHE_ASSETS = [
   'css/modals/modal-music.css',
   'css/modals/modal-info.css',
   'css/themes/themes.css',
+  'css/themes/cyber/blueprintdark.css',
+  'css/themes/cyber/blueprintlight.css',
+  'css/themes/cyber/cyberpunkdark.css',
+  'css/themes/cyber/cyberpunklight.css',
+  'css/themes/cyber/frutigerdark.css',
+  'css/themes/cyber/frutigerlight.css',
+  'css/themes/cyber/neondark.css',
+  'css/themes/cyber/neonlight.css',
+  'css/themes/cyber/vectorheartdark.css',
+  'css/themes/cyber/vectorheartlight.css',
+  'css/themes/minimal/classicdark.css',
+  'css/themes/minimal/classiclight.css',
+  'css/themes/minimal/nordicdark.css',
+  'css/themes/minimal/nordiclight.css',
+  'css/themes/minimal/pasteldark.css',
+  'css/themes/minimal/pastellight.css',
+  'css/themes/minimal/pastelpinkdark.css',
+  'css/themes/minimal/pastelpinklight.css',
+  'css/themes/minimal/void.css',
+  'css/themes/nature/autumndark.css',
+  'css/themes/nature/autumnlight.css',
+  'css/themes/nature/forestdark.css',
+  'css/themes/nature/forestlight.css',
+  'css/themes/nature/oceandark.css',
+  'css/themes/nature/oceanlight.css',
+  'css/themes/nature/sakuradark.css',
+  'css/themes/nature/sakuralight.css',
+  'css/themes/nature/ukiyoe.css',
+  'css/themes/retro/dmgdark.css',
+  'css/themes/retro/dmglight.css',
+  'css/themes/retro/retrodark.css',
+  'css/themes/retro/retrolight.css',
+  'css/themes/retro/synthwavedark.css',
+  'css/themes/retro/synthwavelight.css',
+  'css/themes/retro/terminaldark.css',
+  'css/themes/retro/terminallight.css',
+  'css/themes/space/nebuladark.css',
+  'css/themes/space/nebulalight.css',
+  'css/themes/space/supernovadark.css',
+  'css/themes/space/supernovalight.css',
   'js/core/storage.js',
   'js/core/prng.js',
   'js/core/tile.js',
@@ -72,13 +112,11 @@ self.addEventListener('message', (event) => {
   }
 });
 
-// Network-First strategy: Ensures GitHub Pages delivers latest code immediately, falling back to cache when offline
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
 
   const requestUrl = new URL(event.request.url);
 
-  // Bypass service worker cache for audio range requests to maintain native streaming
   if (requestUrl.pathname.includes('/music/') || event.request.headers.has('range')) {
     return;
   }

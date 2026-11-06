@@ -180,7 +180,6 @@
       window.addEventListener('click', unlockAudio);
       window.addEventListener('keydown', unlockAudio);
 
-      // Only mount manifest and service worker on HTTP/HTTPS origins (prevents CORS on file:// direct load)
       if (window.location.protocol.startsWith('http')) {
         const manifestLink = document.createElement('link');
         manifestLink.rel = 'manifest';
@@ -190,7 +189,6 @@
         if ('serviceWorker' in navigator) {
           navigator.serviceWorker.register('sw.js').then(async (reg) => {
             try {
-              // Dynamically check latest version declared in sw.js against stored version
               const res = await fetch('sw.js', { cache: 'no-store' });
               if (res.ok) {
                 const text = await res.text();
@@ -219,7 +217,6 @@
         }
       }
 
-      // Allow browser native PWA install banner to display on mobile and provide custom header trigger
       let deferredInstallPrompt = null;
       const btnInstall = document.getElementById('btn-install-app');
 

@@ -65,6 +65,7 @@
     constructor(parentUI) {
       this.parent = parentUI;
       this.currentTheme = "neondark";
+      this.onThemeChange = null;
 
       this.themeTriggerBtn = document.getElementById('theme-dropdown-btn');
       this.themeDropdownWrapper = document.getElementById('theme-dropdown-wrapper');
@@ -87,7 +88,8 @@
           }
         });
       }
-      document.addEventListener('click', (e) => {
+
+      document.addEventListener('pointerdown', (e) => {
         if (this.themeDropdownWrapper && !this.themeDropdownWrapper.contains(e.target)) {
           this.themeDropdownWrapper.classList.remove('active');
         }
@@ -95,6 +97,7 @@
     }
 
     buildDropdown(onSelect) {
+      if (onSelect) this.onThemeChange = onSelect;
       if (!this.themeDropdownList) return;
       this.themeDropdownList.innerHTML = "";
 
@@ -131,12 +134,18 @@
 
             toggle.querySelector('.mode-btn-dark').addEventListener('click', (e) => {
               e.stopPropagation();
-              this.setTheme(variant.darkKey, onSelect);
+              this.setTheme(variant.darkKey);
             });
 
             toggle.querySelector('.mode-btn-light').addEventListener('click', (e) => {
               e.stopPropagation();
-              this.setTheme(variant.lightKey, onSelect);
+              this.setTheme(variant.lightKey);
+            });
+
+            toggle.addEventListener('click', (e) => {
+              e.stopPropagation();
+              const nextTheme = (this.currentTheme === variant.lightKey) ? variant.darkKey : variant.lightKey;
+              this.setTheme(nextTheme);
             });
 
             meta.appendChild(toggle);
@@ -156,9 +165,9 @@
           item.addEventListener('click', (e) => {
             e.stopPropagation();
             const targetKey = variant.fixedKey || ((isSelected && this.currentTheme === variant.lightKey)
-              ? (variant.lightKey || variant.darkKey)
+              ? variant.darkKey
               : (variant.darkKey || variant.lightKey));
-            this.setTheme(targetKey, onSelect);
+            this.setTheme(targetKey);
           });
 
           this.themeDropdownList.appendChild(item);
@@ -167,12 +176,13 @@
     }
 
     setTheme(themeKey, onSelect) {
+      if (onSelect) this.onThemeChange = onSelect;
       if (!THEMES[themeKey]) themeKey = "neondark";
       this.currentTheme = themeKey;
       if (this.themeCurrentLbl) this.themeCurrentLbl.textContent = THEMES[themeKey].name;
       document.body.setAttribute('data-theme', themeKey);
-      this.buildDropdown(onSelect);
-      if (onSelect) onSelect(themeKey);
+      this.buildDropdown();
+      if (this.onThemeChange) this.onThemeChange(themeKey);
     }
   }
 
