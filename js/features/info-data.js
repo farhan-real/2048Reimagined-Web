@@ -2,14 +2,16 @@
   const CHANGELOG = [
     {
       version: "v4.0.0",
-      title: "PWA Overhaul & Desktop Integration",
+      title: "PWA Overhaul, Landscape Dashboard & Restart Safety",
       changes: [
-        "Re-architected core engine from Android-wrapped assets into a standalone Progressive Web App (PWA) with offline Service Worker support.",
-        "Added live website deployment—now fully playable in any modern browser without installation.",
-        "Completely redesigned responsive layouts for both mobile and desktop viewports (320px up to 4K displays).",
-        "Full desktop integration: keyboard controls (WASD/Arrows), mouse gesture support, and standalone window launch.",
-        "Added dedicated desktop side-panel frequency visualizers utilizing widescreen real estate.",
-        "Heavy codebase refactor: modularized CSS/JS into native ES6 standards with zero build dependencies."
+        "Widescreen Landscape Dashboard: 3-column top architecture featuring brand & keyboard hints on the left, a centralized dashboard (navigation, theme switcher, undo/restart capsules, and score cards) in the center, and a dedicated timer badge with live music companion card on the right.",
+        "Music Companion Card: Integrated desktop widget featuring an animated spinning vinyl disc, live track title & artist display, and direct playback controls.",
+        "Dual-Edge Landscape Visualizers: Dynamic frequency spectrum analyzers flanking the left and right screen borders to take full advantage of widescreen canvas real estate.",
+        "Ergonomic Portrait Layout: Streamlined top header card, high-contrast score cards, quick-access undo/restart capsules, centered board, and bottom-anchored reactive visualizer.",
+        "Restart Confirmation Dialog: Added safety prompt on restart to prevent accidental loss of board state and score progress during an active run.",
+        "Progressive Web App (PWA): Deployed as a standalone installable PWA with offline Service Worker caching, running seamlessly on desktop and mobile browsers.",
+        "Universal Cross-Platform Controls: Unified touch swipe gestures, desktop mouse dragging, and discrete keyboard bindings (WASD / Arrows, Z/U to undo, R to restart, Space for music toggle).",
+        "Zero Build Overhead: Modularized native ES6 architecture and modular theme stylesheets running without bundlers or transpilation."
       ]
     },
     {
