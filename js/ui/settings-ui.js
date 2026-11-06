@@ -9,6 +9,7 @@
 
       this.initElements();
       this.setupEvents();
+      this.setupVisualizerSettings();
     }
 
     initElements() {
@@ -29,6 +30,10 @@
       this.deterministicCheckbox = document.getElementById('toggle-deterministic');
       this.confirmExitCheckbox = document.getElementById('toggle-confirm-exit');
       this.showTimerCheckbox = document.getElementById('toggle-show-timer');
+
+      this.settingsBarsSlider = document.getElementById('slider-settings-visualizer-bars');
+      this.lblSettingsBars = document.getElementById('lbl-settings-visualizer-bars');
+      this.settingsBoxCard = document.getElementById('card-settings-box-size');
     }
 
     setupEvents() {
@@ -43,6 +48,64 @@
       this.setupOrientationTabs();
       this.setupHapticTabs();
       this.setupColorTabs();
+    }
+
+    setupVisualizerSettings() {
+      const modeGroup = document.getElementById('group-settings-visualizer-mode');
+      if (modeGroup) {
+        modeGroup.querySelectorAll('.tab-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const mode = btn.getAttribute('data-mode');
+            modeGroup.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.getAttribute('data-mode') === mode));
+            if (this.settingsBoxCard) this.settingsBoxCard.style.display = (mode === 'box') ? 'flex' : 'none';
+            if (window.musicEngine) {
+              window.musicEngine.visualizer.setMode(mode);
+              window.musicEngine.saveSettings();
+            }
+            if (this.parent && this.parent.music) this.parent.music.syncVisualizerTabs(mode);
+          });
+        });
+      }
+
+      const boxGroup = document.getElementById('group-settings-visualizer-box-size');
+      if (boxGroup) {
+        boxGroup.querySelectorAll('.tab-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const size = btn.getAttribute('data-size');
+            boxGroup.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.getAttribute('data-size') === size));
+            if (window.musicEngine) {
+              window.musicEngine.visualizer.setBoxSize(size);
+              window.musicEngine.saveSettings();
+            }
+            if (this.parent && this.parent.music) this.parent.music.syncBoxSizeTabs(size);
+          });
+        });
+      }
+
+      if (this.settingsBarsSlider) {
+        this.settingsBarsSlider.addEventListener('input', () => {
+          const val = parseInt(this.settingsBarsSlider.value);
+          this.updateBarsLabel(val);
+          if (window.musicEngine && window.musicEngine.visualizer) {
+            window.musicEngine.visualizer.setBarCount(val);
+            window.musicEngine.saveSettings();
+          }
+          const musicSlider = document.getElementById('slider-visualizer-bars');
+          const musicBadge = document.getElementById('lbl-visualizer-bars');
+          if (musicSlider) musicSlider.value = val;
+          if (musicBadge) musicBadge.textContent = this.lblSettingsBars.textContent;
+        });
+      }
+    }
+
+    updateBarsLabel(barCount) {
+      if (!this.lblSettingsBars) return;
+      let text = '';
+      if (barCount <= 35) text = `Minimal (${barCount} bars)`;
+      else if (barCount <= 55) text = `Normal (${barCount} bars)`;
+      else if (barCount <= 85) text = `Dense (${barCount} bars)`;
+      else text = `Extreme (${barCount} bars)`;
+      this.lblSettingsBars.textContent = text;
     }
 
     setupOrientationTabs() {
@@ -156,6 +219,8 @@
 
     load() {
       const s = window.storage.getSettings();
+      const m = window.storage.getMusicSettings();
+
       this.popupColor = s.popupColor;
       this.slideHapticVal = s.slideHaptic;
       this.mergeHapticVal = s.mergeHaptic;
@@ -175,6 +240,25 @@
 
       if (this.sfxVolumeSlider) { this.sfxVolumeSlider.value = sfxVol; if (this.lblSfxVolume) this.lblSfxVolume.textContent = sfxVol + '%'; }
       if (this.musicVolumeSlider) { this.musicVolumeSlider.value = musicVol; if (this.lblMusicVolume) this.lblMusicVolume.textContent = musicVol + '%'; }
+
+      if (this.settingsBarsSlider) {
+        const bars = m.visualizerBarCount || 65;
+        this.settingsBarsSlider.value = bars;
+        this.updateBarsLabel(bars);
+      }
+
+      const mode = m.visualizerMode || "full";
+      const modeGroup = document.getElementById('group-settings-visualizer-mode');
+      if (modeGroup) {
+        modeGroup.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.getAttribute('data-mode') === mode));
+      }
+      if (this.settingsBoxCard) this.settingsBoxCard.style.display = (mode === 'box') ? 'flex' : 'none';
+
+      const boxSize = m.visualizerBoxSize || "medium";
+      const boxGroup = document.getElementById('group-settings-visualizer-box-size');
+      if (boxGroup) {
+        boxGroup.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.getAttribute('data-size') === boxSize));
+      }
 
       if (window.sound) { window.sound.enabled = s.soundEnabled; window.sound.setVolume(sfxVol / 100); }
       if (window.musicEngine) window.musicEngine.setVolume(musicVol / 100);

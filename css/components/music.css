@@ -199,11 +199,44 @@
   padding: 8px;
 }
 
+@media (min-width: 768px) {
+  .visualizer-box-container {
+    bottom: 24px;
+    left: 24px;
+    width: 230px;
+    height: 108px;
+    padding: 8px;
+  }
+
+  [data-box-size="small"] .visualizer-box-container {
+    width: 170px;
+    height: 80px;
+    border-radius: 12px;
+    padding: 6px;
+  }
+
+  [data-box-size="medium"] .visualizer-box-container {
+    width: 230px;
+    height: 108px;
+    border-radius: 14px;
+    padding: 8px;
+  }
+
+  [data-box-size="large"] .visualizer-box-container {
+    width: 300px;
+    height: 140px;
+    border-radius: 16px;
+    padding: 10px;
+  }
+}
+
 [data-visualizer-mode="box"] .visualizer-box-container {
   display: flex !important;
 }
 
-[data-visualizer-mode="box"] #visualizer-full {
+[data-visualizer-mode="box"] #visualizer-full,
+[data-visualizer-mode="box"] #visualizer-edge-left,
+[data-visualizer-mode="box"] #visualizer-edge-right {
   display: none !important;
 }
 

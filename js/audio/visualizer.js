@@ -125,9 +125,16 @@
         this.ctxFull.setTransform(dpr, 0, 0, dpr, 0, 0);
       }
 
-      let baseW = 148, baseH = 70;
-      if (this.boxSize === "small") { baseW = 112; baseH = 52; }
-      else if (this.boxSize === "large") { baseW = 184; baseH = 86; }
+      const isDesktop = window.innerWidth >= 768;
+      let baseW = isDesktop ? 230 : 148;
+      let baseH = isDesktop ? 108 : 70;
+      if (this.boxSize === "small") {
+        baseW = isDesktop ? 170 : 112;
+        baseH = isDesktop ? 80 : 52;
+      } else if (this.boxSize === "large") {
+        baseW = isDesktop ? 300 : 184;
+        baseH = isDesktop ? 140 : 86;
+      }
       resizeFixed(this.canvasBox, this.ctxBox, baseW, baseH);
 
       const edgeW = Math.max(130, Math.min(230, Math.round(window.innerWidth * 0.125)));
@@ -239,7 +246,8 @@
       ctx.fillStyle = grad;
 
       for (let i = 0; i < count; i++) {
-        const targetHeight = Math.max(6, Math.min(maxHeight, bars[i] * maxHeight));
+        const shapedVal = Math.tanh(bars[i] * 1.1) * 0.94;
+        const targetHeight = Math.max(6, Math.min(maxHeight, shapedVal * maxHeight));
         if (!peakBuffer[i] || targetHeight > peakBuffer[i]) {
           peakBuffer[i] = targetHeight;
         } else {
@@ -279,8 +287,8 @@
       this.hueOffset = (this.hueOffset + dt * 26) % 360;
       const dpr = Math.min(window.devicePixelRatio || 1, 2.0);
 
-      if (this.mode !== "off") {
-        const edgeCount = Math.max(28, Math.min(46, Math.round((this.barCount || 65) * 0.60)));
+      if (this.mode === "full") {
+        const edgeCount = Math.max(16, Math.min(90, Math.round((this.barCount || 65) * 0.75)));
 
         if (this.ctxEdgeLeft && this.canvasEdgeLeft && this.canvasEdgeLeft.offsetWidth > 0) {
           const expectedW = Math.round(this.canvasEdgeLeft.offsetWidth * dpr);
@@ -315,6 +323,13 @@
         if (this.fullVariations.length !== count) this.fullVariations = this.generateVariations(count, this.trackSeed);
         this.renderSpectrum(this.ctxFull, this.canvasFull, count, dpr, dt, (this.canvasFull.height / dpr) - 6, 0, this.fullPeaks, this.fullVariations);
       } else if (this.mode === "box" && this.ctxBox && this.canvasBox && this.canvasBox.offsetHeight > 0) {
+        const expectedW = Math.round(this.canvasBox.offsetWidth * dpr);
+        const expectedH = Math.round(this.canvasBox.offsetHeight * dpr);
+        if (this.canvasBox.width !== expectedW || this.canvasBox.height !== expectedH) {
+          this.canvasBox.width = expectedW;
+          this.canvasBox.height = expectedH;
+          this.ctxBox.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
         const ratio = this.boxSize === "small" ? 0.32 : this.boxSize === "large" ? 0.44 : 0.38;
         const count = Math.max(14, Math.min(48, Math.round((this.barCount || 65) * ratio)));
         if (this.boxPeaks.length !== count) this.boxPeaks = new Float32Array(count);

@@ -81,15 +81,23 @@
           window.musicEngine.visualizer.setBarCount(val);
           window.musicEngine.saveSettings();
         }
+        const settingsSlider = document.getElementById('slider-settings-visualizer-bars');
+        const settingsBadge = document.getElementById('lbl-settings-visualizer-bars');
+        if (settingsSlider) settingsSlider.value = val;
+        if (settingsBadge) settingsBadge.textContent = this.lblVisualizerBars.textContent;
       });
     }
 
     updateBarsLabel(barCount) {
       if (!this.lblVisualizerBars) return;
-      if (barCount <= 35) this.lblVisualizerBars.textContent = `Minimal (${barCount} bars)`;
-      else if (barCount <= 55) this.lblVisualizerBars.textContent = `Normal (${barCount} bars)`;
-      else if (barCount <= 85) this.lblVisualizerBars.textContent = `Dense (${barCount} bars)`;
-      else this.lblVisualizerBars.textContent = `Extreme (${barCount} bars)`;
+      let text = '';
+      if (barCount <= 35) text = `Minimal (${barCount} bars)`;
+      else if (barCount <= 55) text = `Normal (${barCount} bars)`;
+      else if (barCount <= 85) text = `Dense (${barCount} bars)`;
+      else text = `Extreme (${barCount} bars)`;
+      this.lblVisualizerBars.textContent = text;
+      const settingsBadge = document.getElementById('lbl-settings-visualizer-bars');
+      if (settingsBadge) settingsBadge.textContent = text;
     }
 
     setupAutoplayToggle() {
@@ -118,8 +126,8 @@
 
       const playSvg = `<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>`;
       const pauseSvg = `<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"></rect><rect x="14" y="4" width="4" height="16" rx="1"></rect></svg>`;
-      const landPlaySvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>`;
-      const landPauseSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"></rect><rect x="14" y="4" width="4" height="16" rx="1"></rect></svg>`;
+      const landPlaySvg = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>`;
+      const landPauseSvg = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"></rect><rect x="14" y="4" width="4" height="16" rx="1"></rect></svg>`;
 
       if (this.btnPlay) this.btnPlay.innerHTML = isPlaying ? pauseSvg : playSvg;
       const landPlay = document.getElementById('btn-landscape-play');
@@ -178,6 +186,10 @@
             window.musicEngine.visualizer.setMode(mode);
             window.musicEngine.saveSettings();
           }
+          const settingsGroup = document.getElementById('group-settings-visualizer-mode');
+          if (settingsGroup) {
+            settingsGroup.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.getAttribute('data-mode') === mode));
+          }
         });
       });
     }
@@ -203,6 +215,10 @@
           if (window.musicEngine) {
             window.musicEngine.visualizer.setBoxSize(size);
             window.musicEngine.saveSettings();
+          }
+          const settingsBox = document.getElementById('group-settings-visualizer-box-size');
+          if (settingsBox) {
+            settingsBox.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.getAttribute('data-size') === size));
           }
         });
       });
