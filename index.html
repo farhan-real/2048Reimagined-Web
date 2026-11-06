@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="css/themes/themes.css">
   <link rel="stylesheet" href="css/base/layout.css">
   <link rel="stylesheet" href="css/base/landscape.css">
-  <link rel="stylesheet" href="css/components/nav.css?v=4">
+  <link rel="stylesheet" href="css/components/nav.css">
   <link rel="stylesheet" href="css/components/board.css">
   <link rel="stylesheet" href="css/components/music.css">
   <link rel="stylesheet" href="css/modals/modal-base.css">
@@ -188,7 +188,32 @@
         document.head.appendChild(manifestLink);
 
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('sw.js').then((reg) => {
+          navigator.serviceWorker.register('sw.js').then(async (reg) => {
+            try {
+              // Dynamically check latest version declared in sw.js against stored version
+              const res = await fetch('sw.js', { cache: 'no-store' });
+              if (res.ok) {
+                const text = await res.text();
+                const match = text.match(/CACHE_NAME\s*=\s*['"]([^'"]+)['"]/);
+                if (match) {
+                  const latest = match[1];
+                  const current = window.storage ? window.storage.getSwVersion() : localStorage.getItem('2048_sw_version');
+                  if (current && current !== latest) {
+                    if (window.storage) window.storage.setSwVersion(latest);
+                    else localStorage.setItem('2048_sw_version', latest);
+                    await reg.update();
+                    if ('caches' in window) {
+                      const keys = await caches.keys();
+                      await Promise.all(keys.filter((k) => k !== latest).map((k) => caches.delete(k)));
+                    }
+                    window.location.reload();
+                    return;
+                  }
+                  if (window.storage) window.storage.setSwVersion(latest);
+                  else localStorage.setItem('2048_sw_version', latest);
+                }
+              }
+            } catch (e) {}
             reg.update();
           }).catch(() => {});
         }
