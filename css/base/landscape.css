@@ -1,0 +1,313 @@
+.center-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-panel {
+  display: none;
+}
+
+/* Widescreen Desktop & Horizontal Layout */
+@media (orientation: landscape) {
+  body[data-orientation-mode="auto"],
+  body[data-orientation-mode="landscape"] {
+    background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--accent-color) 4%, var(--bg-color)) 0%, var(--bg-color) 70%);
+  }
+
+  body[data-orientation-mode="auto"] .app-wrapper,
+  body[data-orientation-mode="landscape"] .app-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    max-width: 1380px;
+    height: 100vh;
+    padding: calc(8px + env(safe-area-inset-top, 0px)) 36px calc(24px + env(safe-area-inset-bottom, 0px)) 36px;
+    gap: 36px;
+    transform: translateY(-28px);
+  }
+
+  body[data-orientation-mode="auto"] .left-panel,
+  body[data-orientation-mode="landscape"] .left-panel {
+    flex: 0 0 340px;
+    max-width: 340px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  body[data-orientation-mode="auto"] .left-game-card,
+  body[data-orientation-mode="landscape"] .left-game-card {
+    order: 1;
+    background: color-mix(in srgb, var(--accent-color) 6%, var(--card-bg));
+    border: 1px solid color-mix(in srgb, var(--accent-color) 22%, var(--card-border));
+    border-radius: 16px;
+    padding: 18px 18px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  body[data-orientation-mode="auto"] .left-nav-card,
+  body[data-orientation-mode="landscape"] .left-nav-card {
+    order: 2;
+    background: color-mix(in srgb, var(--accent-color) 5%, var(--card-bg));
+    border: 1px solid color-mix(in srgb, var(--accent-color) 20%, var(--card-border));
+    border-radius: 14px;
+    padding: 12px 14px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  }
+
+  body[data-orientation-mode="auto"] .left-game-card .brand-row,
+  body[data-orientation-mode="landscape"] .left-game-card .brand-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  body[data-orientation-mode="auto"] .left-game-card .logo-text,
+  body[data-orientation-mode="landscape"] .left-game-card .logo-text {
+    font-size: 3.2rem;
+    line-height: 0.9;
+    letter-spacing: -2px;
+  }
+
+  body[data-orientation-mode="auto"] .left-game-card .scores-wrapper,
+  body[data-orientation-mode="landscape"] .left-game-card .scores-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+
+  body[data-orientation-mode="auto"] .left-game-card .score-card,
+  body[data-orientation-mode="landscape"] .left-game-card .score-card {
+    flex: 1;
+    min-width: 0;
+    max-width: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+  }
+
+  body[data-orientation-mode="auto"] .left-game-card .score-card .label,
+  body[data-orientation-mode="landscape"] .left-game-card .score-card .label {
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 3px;
+  }
+
+  body[data-orientation-mode="auto"] .left-game-card .score-card .value,
+  body[data-orientation-mode="landscape"] .left-game-card .score-card .value {
+    font-size: 1.65rem;
+    font-weight: 900;
+  }
+
+  body[data-orientation-mode="auto"] .left-game-card .actions-row,
+  body[data-orientation-mode="landscape"] .left-game-card .actions-row {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-top: 0;
+  }
+
+  body[data-orientation-mode="auto"] .left-game-card .btn-capsule,
+  body[data-orientation-mode="landscape"] .left-game-card .btn-capsule {
+    padding: 12px 14px;
+    font-size: 0.84rem;
+    border-radius: 10px;
+  }
+
+  body[data-orientation-mode="auto"] .left-game-card .actions-sub-row,
+  body[data-orientation-mode="landscape"] .left-game-card .actions-sub-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  body[data-orientation-mode="auto"] .desktop-hint,
+  body[data-orientation-mode="landscape"] .desktop-hint {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    opacity: 0.65;
+    color: var(--text-color);
+  }
+
+  body[data-orientation-mode="auto"] .hint-key,
+  body[data-orientation-mode="landscape"] .hint-key {
+    background: var(--empty-cell-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: var(--accent-color);
+  }
+
+  body[data-orientation-mode="auto"] .left-nav-card .nav-bar,
+  body[data-orientation-mode="landscape"] .left-nav-card .nav-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  body[data-orientation-mode="auto"] .left-nav-card .nav-actions-left,
+  body[data-orientation-mode="landscape"] .left-nav-card .nav-actions-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+  }
+
+  body[data-orientation-mode="auto"] .left-nav-card .nav-actions-left .icon-btn,
+  body[data-orientation-mode="landscape"] .left-nav-card .nav-actions-left .icon-btn {
+    flex: 1;
+    height: 38px;
+    border-radius: 8px;
+  }
+
+  body[data-orientation-mode="auto"] .left-nav-card .nav-actions-right,
+  body[data-orientation-mode="landscape"] .left-nav-card .nav-actions-right,
+  body[data-orientation-mode="auto"] .left-nav-card .theme-dropdown-wrapper,
+  body[data-orientation-mode="landscape"] .left-nav-card .theme-dropdown-wrapper {
+    width: 100%;
+  }
+
+  body[data-orientation-mode="auto"] .left-nav-card .theme-dropdown-btn,
+  body[data-orientation-mode="landscape"] .left-nav-card .theme-dropdown-btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 9px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+    border-radius: 8px;
+  }
+
+  body[data-orientation-mode="auto"] .left-nav-card .theme-dropdown-list,
+  body[data-orientation-mode="landscape"] .left-nav-card .theme-dropdown-list {
+    width: 100%;
+  }
+
+  body[data-orientation-mode="auto"] .center-panel,
+  body[data-orientation-mode="landscape"] .center-panel {
+    flex: 0 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  body[data-orientation-mode="auto"] .right-panel,
+  body[data-orientation-mode="landscape"] .right-panel {
+    flex: 0 0 340px;
+    max-width: 340px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  body[data-orientation-mode="auto"] .layout-spacer-top,
+  body[data-orientation-mode="auto"] .layout-spacer-bottom,
+  body[data-orientation-mode="landscape"] .layout-spacer-top,
+  body[data-orientation-mode="landscape"] .layout-spacer-bottom {
+    display: none !important;
+  }
+
+  body[data-orientation-mode="auto"] #visualizer-full,
+  body[data-orientation-mode="landscape"] #visualizer-full {
+    height: clamp(75px, 15vh, 115px);
+  }
+}
+
+body[data-orientation-mode="portrait"] .right-panel {
+  display: none !important;
+}
+
+.landscape-track-card {
+  width: 100%;
+  background: color-mix(in srgb, var(--accent-color) 7%, var(--card-bg));
+  border: 1px solid color-mix(in srgb, var(--accent-color) 25%, var(--card-border));
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.landscape-track-card .vinyl-disc {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+}
+
+.landscape-track-card .track-title {
+  font-size: 0.98rem;
+  font-weight: 800;
+}
+
+.landscape-controls-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 2px;
+}
+
+.landscape-btn {
+  width: 38px;
+  height: 38px;
+}
+
+.landscape-btn.play-btn {
+  width: 44px;
+  height: 44px;
+}
+
+.landscape-visualizer-box {
+  width: 100%;
+  height: 185px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#visualizer-landscape {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

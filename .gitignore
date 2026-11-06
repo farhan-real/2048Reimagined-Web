@@ -1,0 +1,6 @@
+.vscode
+*.ps1
+*.md
+!README.md
+!readme.md
+*_secret*
