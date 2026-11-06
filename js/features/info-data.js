@@ -1,6 +1,18 @@
 (function() {
   const CHANGELOG = [
     {
+      version: "v4.0.0",
+      title: "PWA Overhaul & Desktop Integration",
+      changes: [
+        "Re-architected core engine from Android-wrapped assets into a standalone Progressive Web App (PWA) with offline Service Worker support.",
+        "Added live website deployment—now fully playable in any modern browser without installation.",
+        "Completely redesigned responsive layouts for both mobile and desktop viewports (320px up to 4K displays).",
+        "Full desktop integration: keyboard controls (WASD/Arrows), mouse gesture support, and standalone window launch.",
+        "Added dedicated desktop side-panel frequency visualizers utilizing widescreen real estate.",
+        "Heavy codebase refactor: modularized CSS/JS into native ES6 standards with zero build dependencies."
+      ]
+    },
+    {
       version: "V3.2.0",
       title: "Cross-Platform Web & Desktop Architecture",
       changes: [
