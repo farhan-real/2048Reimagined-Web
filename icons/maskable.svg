@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Edge-to-Edge Canvas Background Gradient -->
+    <radialGradient id="maskCanvasBg" cx="50%" cy="36%" r="65%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="55%" stop-color="#070a14" />
+      <stop offset="100%" stop-color="#020306" />
+    </radialGradient>
+
+    <!-- Electric Cyan to Royal Sapphire & Violet Tile Gradient -->
+    <linearGradient id="maskTileGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5ff" />
+      <stop offset="30%" stop-color="#00a8ff" />
+      <stop offset="68%" stop-color="#0051ff" />
+      <stop offset="100%" stop-color="#6d28d9" />
+    </linearGradient>
+
+    <!-- Crystalline Ice-White Specular Rim -->
+    <linearGradient id="maskRimGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+      <stop offset="35%" stop-color="#a5f3fc" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#0051ff" stop-opacity="0.12" />
+    </linearGradient>
+
+    <filter id="maskTileShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000000" flood-opacity="0.7" />
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#00f0ff" flood-opacity="0.38" />
+    </filter>
+
+    <filter id="maskTextDepth" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#031536" flood-opacity="0.65" />
+    </filter>
+  </defs>
+
+  <!-- Full Bleed Background for Adaptive Masking -->
+  <rect width="512" height="512" fill="url(#maskCanvasBg)" />
+
+  <!-- Safe-Zone Centered Hero Tile Group (Fits safely inside Android 80% circle) -->
+  <g transform="translate(256, 256) scale(0.86) translate(-256, -256)">
+    <!-- Ambient Corner Accents -->
+    <g opacity="0.14">
+      <rect x="42" y="42" width="96" height="96" rx="20" fill="#00f0ff" />
+      <rect x="374" y="42" width="96" height="96" rx="20" fill="#6d28d9" />
+      <rect x="42" y="374" width="96" height="96" rx="20" fill="#3b82f6" />
+      <rect x="374" y="374" width="96" height="96" rx="20" fill="#00f5ff" />
+    </g>
+
+    <!-- Main 2048 Tile -->
+    <g filter="url(#maskTileShadow)">
+      <rect x="76" y="76" width="360" height="360" rx="72" fill="url(#maskTileGrad)" />
+    </g>
+
+    <!-- Specular Chamfered Rim -->
+    <rect x="78" y="78" width="356" height="356" rx="70" fill="none" stroke="url(#maskRimGrad)" stroke-width="4" />
+
+    <!-- Glossy Glass Arc Highlight -->
+    <path d="M 80 152 C 80 110, 110 80, 152 80 L 360 80 C 402 80, 432 110, 432 152 C 340 180, 172 180, 80 152 Z" fill="#ffffff" opacity="0.18" />
+
+    <!-- Cyan Glint Star -->
+    <g transform="translate(132, 132)">
+      <circle cx="0" cy="0" r="16" fill="#00f5ff" opacity="0.3" />
+      <path d="M -18 0 Q 0 0 0 -18 Q 0 0 18 0 Q 0 0 0 18 Q 0 0 -18 0" fill="#ffffff" opacity="0.95" />
+    </g>
+
+    <!-- Sculpted Pure White Numerals -->
+    <text x="256" y="264" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="124" font-weight="900" letter-spacing="-3" filter="url(#maskTextDepth)">2048</text>
+  </g>
+</svg>
