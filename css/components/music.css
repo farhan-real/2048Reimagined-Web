@@ -151,9 +151,13 @@
   display: block !important;
 }
 
-/* Remove isolated visualizer boxes whenever full bottom visualizer is active */
-[data-visualizer-mode="full"] .visualizer-box-container,
-[data-visualizer-mode="full"] .landscape-visualizer-box {
+@media (orientation: landscape) {
+  #visualizer-full {
+    display: none !important;
+  }
+}
+
+[data-visualizer-mode="full"] .visualizer-box-container {
   display: none !important;
 }
 
@@ -199,17 +203,14 @@
   display: flex !important;
 }
 
-[data-visualizer-mode="box"] .landscape-visualizer-box {
-  display: flex !important;
-}
-
 [data-visualizer-mode="box"] #visualizer-full {
   display: none !important;
 }
 
 [data-visualizer-mode="off"] #visualizer-full,
 [data-visualizer-mode="off"] .visualizer-box-container,
-[data-visualizer-mode="off"] .landscape-visualizer-box {
+[data-visualizer-mode="off"] #visualizer-edge-left,
+[data-visualizer-mode="off"] #visualizer-edge-right {
   display: none !important;
 }
 

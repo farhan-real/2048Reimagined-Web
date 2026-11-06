@@ -223,6 +223,18 @@ button, select, input {
   width: 100%;
 }
 
+@media (orientation: portrait) {
+  #visualizer-edge-left,
+  #visualizer-edge-right {
+    display: none !important;
+  }
+}
+
+body[data-orientation-mode="portrait"] #visualizer-edge-left,
+body[data-orientation-mode="portrait"] #visualizer-edge-right {
+  display: none !important;
+}
+
 .music-companion-card {
   display: none;
 }

@@ -17,6 +17,8 @@
     gap: 0;
     transform: none;
     box-sizing: border-box;
+    position: relative;
+    z-index: 30;
   }
 
   body[data-orientation-mode="auto"] .top-outer-bar,
@@ -185,8 +187,42 @@
 
   body[data-orientation-mode="auto"] #visualizer-full,
   body[data-orientation-mode="landscape"] #visualizer-full {
-    height: clamp(50px, 9vh, 72px);
+    display: none !important;
   }
+
+  body[data-orientation-mode="auto"] #visualizer-edge-left,
+  body[data-orientation-mode="landscape"] #visualizer-edge-left,
+  body[data-orientation-mode="auto"] #visualizer-edge-right,
+  body[data-orientation-mode="landscape"] #visualizer-edge-right {
+    display: block !important;
+  }
+}
+
+#visualizer-edge-left,
+#visualizer-edge-right {
+  position: fixed;
+  top: calc(105px + env(safe-area-inset-top, 0px));
+  height: calc(100vh - 105px - env(safe-area-inset-top, 0px));
+  height: calc(100dvh - 105px - env(safe-area-inset-top, 0px));
+  width: clamp(115px, 11vw, 200px);
+  pointer-events: none;
+  z-index: 20;
+  display: none;
+}
+
+#visualizer-edge-left {
+  left: 0;
+}
+
+#visualizer-edge-right {
+  right: 0;
+}
+
+body[data-visualizer-mode="off"] #visualizer-edge-left,
+body[data-visualizer-mode="off"] #visualizer-edge-right,
+body[data-visualizer-mode="box"] #visualizer-edge-left,
+body[data-visualizer-mode="box"] #visualizer-edge-right {
+  display: none !important;
 }
 
 body[data-orientation-mode="portrait"] .music-companion-card {
@@ -270,25 +306,4 @@ body[data-orientation-mode="portrait"] .music-companion-card {
 .landscape-btn.play-btn svg {
   width: 14px;
   height: 14px;
-}
-
-.landscape-visualizer-box {
-  width: 90%;
-  height: 30px;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 8px;
-  padding: 3px 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  margin-top: 4px;
-}
-
-#visualizer-landscape {
-  width: 100%;
-  height: 100%;
-  display: block;
 }
