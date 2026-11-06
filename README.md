@@ -143,6 +143,30 @@ The project relies entirely on native browser standards (ES6 modules, Canvas API
 
 ---
 
+## Q/A
+<details>
+<summary><b>Q: Is the game free to play?</b></summary>
+<br>
+
+Yes! It is 100% free, open-source, and has no ads.
+</details>
+
+<details>
+<summary><b>Q: Can I play offline?</b></summary>
+<br>
+
+Yes, once the page is loaded, all assets are cached so you can play without an internet connection.
+</details>
+
+<details>
+<summary><b>Q: Why isn't light mode working?</b></summary>
+<br>
+
+Disable third-party extensions like **Dark Reader** in Chrome, or turn off **night mode** or **force dark** settings in Brave and Firefox.
+</details>
+
+---
+
 ## Credits
 
 - Game Design: Original 2048 puzzle mechanics by Gabriele Cirulli.
