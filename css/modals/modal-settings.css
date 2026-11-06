@@ -1,3 +1,74 @@
+.modal-header-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+#btn-install-app,
+.btn-header-install {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: var(--card-bg, #111111);
+  border: 1.5px solid var(--accent-color, #00f0ff);
+  color: var(--accent-color, #00f0ff);
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  touch-action: manipulation;
+  box-shadow: 0 0 10px var(--accent-glow, rgba(0, 240, 255, 0.35));
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+  white-space: nowrap;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+
+#btn-install-app svg,
+.btn-header-install svg {
+  width: 13px;
+  height: 13px;
+  stroke: var(--accent-color, currentColor);
+  stroke-width: 2.5;
+  flex-shrink: 0;
+  transition: stroke 0.15s ease;
+}
+
+#btn-install-app:hover,
+.btn-header-install:hover {
+  background: var(--accent-color, #00f0ff);
+  color: #000000;
+  box-shadow: 0 0 16px var(--accent-glow, rgba(0, 240, 255, 0.7));
+  transform: translateY(-1px);
+}
+
+#btn-install-app:hover svg,
+.btn-header-install:hover svg {
+  stroke: #000000;
+}
+
+#btn-install-app:active,
+.btn-header-install:active {
+  transform: scale(0.95);
+}
+
+@media (display-mode: standalone) {
+  #btn-install-app,
+  .btn-header-install {
+    display: none !important;
+  }
+}
+
 .settings-card {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.06);
