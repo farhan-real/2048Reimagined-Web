@@ -45,7 +45,7 @@ button, select, input {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto auto auto auto;
   gap: 8px 0;
   margin-bottom: 6px;
   flex-shrink: 0;
@@ -53,12 +53,43 @@ button, select, input {
   z-index: 40;
 }
 
+.app-header {
+  display: contents;
+}
+
+.header-main-row {
+  display: contents;
+}
+
+/* 1st Row: 4 buttons + theme inside desktop-styled background window card */
+.nav-bar {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 80;
+  gap: 6px;
+  background: color-mix(in srgb, var(--accent-color) 4%, var(--card-bg));
+  border: 1px solid color-mix(in srgb, var(--accent-color) 22%, var(--card-border));
+  border-radius: 14px;
+  padding: 6px 10px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+}
+
+/* 2nd Row: 2048 logo on left, scores on right */
 .brand-area {
   grid-column: 1;
-  grid-row: 1;
+  grid-row: 2;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   gap: 2px;
+  align-self: center;
 }
 
 .logo-text {
@@ -83,60 +114,52 @@ button, select, input {
   color: var(--accent-color);
 }
 
-.top-right-group {
+.scores-wrapper {
   grid-column: 2;
-  grid-row: 1;
+  grid-row: 2;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  align-self: center;
 }
 
-.timer-pill {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+.score-card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 20px;
-  padding: 5px 13px;
-  font-size: 0.95rem;
-  font-weight: 900;
-  font-variant-numeric: tabular-nums;
-  color: var(--accent-color);
-  letter-spacing: 0.5px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
-  transition: opacity 0.2s ease;
-  align-self: flex-end;
-}
-
-.timer-pill svg {
-  stroke: var(--accent-color);
-  opacity: 0.9;
-  flex-shrink: 0;
-}
-
-.app-header {
-  grid-column: 1 / -1;
-  grid-row: 2;
-  width: 100%;
+  border-radius: 8px;
+  padding: 6px 12px;
+  min-width: 80px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  flex-shrink: 0;
-}
-
-.header-main-row {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  position: relative;
 }
 
+.score-card .label {
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.5;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.score-card .value {
+  font-size: 1.45rem;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+/* 3rd Row: 2 buttons (Undo and Restart) */
 .action-buttons-group {
+  grid-column: 1 / -1;
+  grid-row: 3;
   display: flex;
   gap: 8px;
-  flex: 1;
+  width: 100%;
 }
 
 .btn-capsule {
@@ -172,42 +195,42 @@ button, select, input {
   border: 1px solid var(--text-color);
 }
 
-.scores-wrapper {
+/* Below that (4th Row): Timer on the right */
+.top-right-group {
+  grid-column: 1 / -1;
+  grid-row: 4;
   display: flex;
-  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
 }
 
-.score-card {
+.timer-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 8px;
-  padding: 6px 12px;
-  min-width: 88px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.score-card .label {
-  font-size: 0.58rem;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  opacity: 0.5;
-  font-weight: 700;
-  margin-bottom: 2px;
-}
-
-.score-card .value {
-  font-size: 1.45rem;
+  border-radius: 20px;
+  padding: 5px 13px;
+  font-size: 0.95rem;
   font-weight: 900;
-  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent-color);
+  letter-spacing: 0.5px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+  transition: opacity 0.2s ease;
+  align-self: flex-end;
+}
+
+.timer-pill svg {
+  stroke: var(--accent-color);
+  opacity: 0.9;
+  flex-shrink: 0;
 }
 
 .layout-spacer-top {
-  flex: 1;
+  flex: 0.5;
   min-height: 4px;
   pointer-events: none;
 }
