@@ -25,7 +25,7 @@
     }
 
     setupGameEvents() {
-      this.ui.btnRestart.addEventListener('click', () => this.restart());
+      this.ui.btnRestart.addEventListener('click', () => this.confirmRestart());
       this.ui.retryOverlayBtn.addEventListener('click', () => this.restart());
       this.ui.btnUndo.addEventListener('click', () => this.undo());
       this.ui.resetBestBtn.addEventListener('click', () => {
@@ -41,6 +41,22 @@
             this.ui.triggerHaptic(this.ui.getMergeHaptic());
           }
         });
+      });
+    }
+
+    confirmRestart() {
+      if (this.ui.gameoverOverlay.classList.contains('active') || (this.score === 0 && this.moveCount === 0)) {
+        this.restart();
+        return;
+      }
+      this.ui.showConfirmDialog({
+        title: "Restart Game?",
+        message: "Are you sure you want to restart? Your current score and board progress will be lost.",
+        confirmText: "Restart",
+        onConfirm: () => {
+          this.restart();
+          this.ui.triggerHaptic(this.ui.getSlideHaptic());
+        }
       });
     }
 
@@ -87,6 +103,26 @@
       this.tilesContainer.querySelectorAll('.tile').forEach(t => t.remove());
     }
 
+    renderBoardTiles(boardMatrix) {
+      this.clearDOMGrid();
+      this.grid.clear();
+      let count = 0;
+      for (let r = 0; r < 4; r++) {
+        for (let c = 0; c < 4; c++) {
+          const val = boardMatrix[r] ? boardMatrix[r][c] : null;
+          if (val) {
+            const t = new window.Tile(r, c, val);
+            t.element.classList.add('no-transition');
+            this.grid.set(r, c, t);
+            this.tilesContainer.appendChild(t.element);
+            count++;
+            setTimeout(() => t.element.classList.remove('no-transition', 'tile-new'), 50);
+          }
+        }
+      }
+      return count;
+    }
+
     undo() {
       if (!this.undoState || this.isMoving) return;
       this.ui.triggerHaptic(this.ui.getSlideHaptic());
@@ -97,8 +133,6 @@
         if (this.ui && this.ui.leaderboard) this.ui.leaderboard.render();
       }
 
-      this.clearDOMGrid();
-      this.grid.clear();
       this.score = this.undoState.score;
       this.moveCount = this.undoState.moveCount;
       this.gameSeed = this.undoState.gameSeed || this.gameSeed;
@@ -111,19 +145,7 @@
 
       this.ui.gameoverOverlay.classList.remove('active');
       this.particles.clear();
-
-      for (let r = 0; r < 4; r++) {
-        for (let c = 0; c < 4; c++) {
-          const val = this.undoState.board[r][c];
-          if (val) {
-            const t = new window.Tile(r, c, val);
-            t.element.classList.add('no-transition');
-            this.grid.set(r, c, t);
-            this.tilesContainer.appendChild(t.element);
-            setTimeout(() => t.element.classList.remove('no-transition', 'tile-new'), 50);
-          }
-        }
-      }
+      this.renderBoardTiles(this.undoState.board);
 
       this.undoState = null;
       this.updateUndoButtonState();
@@ -271,24 +293,7 @@
           if (data.timeSeconds !== undefined) this.timer.setTimeSeconds(data.timeSeconds);
           this.timer.resume();
 
-          this.clearDOMGrid();
-          this.grid.clear();
-
-          let tileCount = 0;
-          for (let r = 0; r < 4; r++) {
-            for (let c = 0; c < 4; c++) {
-              const val = data.board[r] ? data.board[r][c] : null;
-              if (val) {
-                const t = new window.Tile(r, c, val);
-                t.element.classList.add('no-transition');
-                this.grid.set(r, c, t);
-                this.tilesContainer.appendChild(t.element);
-                tileCount++;
-                setTimeout(() => t.element.classList.remove('no-transition', 'tile-new'), 50);
-              }
-            }
-          }
-
+          const tileCount = this.renderBoardTiles(data.board);
           this.undoState = data.undoState || null;
           this.ui.setTheme(data.currentTheme || "neondark", () => this.saveState());
           this.updateScoreUI();

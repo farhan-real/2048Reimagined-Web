@@ -89,7 +89,7 @@
         case 'ArrowUp':    case 'KeyW': this.engine.move('up');    break;
         case 'ArrowDown':  case 'KeyS': this.engine.move('down');  break;
         case 'KeyZ': case 'KeyU':       this.engine.undo();        break;
-        case 'KeyR':                    this.engine.restart();     break;
+        case 'KeyR':                    this.engine.confirmRestart(); break;
         case 'Space':
           e.preventDefault();
           if (window.musicEngine) window.musicEngine.togglePlay();
