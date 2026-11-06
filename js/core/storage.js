@@ -20,7 +20,8 @@
     ORIENTATION_MODE: '2048_orientation_mode',
     SLIDE_HAPTIC: '2048_slide_haptic_val',
     MERGE_HAPTIC: '2048_merge_haptic_val',
-    POPUP_COLOR: '2048_popup_color'
+    POPUP_COLOR: '2048_popup_color',
+    SW_VERSION: '2048_sw_version'
   };
 
   const memStore = {};
@@ -51,6 +52,9 @@
   const storage = {
     getBestScore: () => parseInt(safeStorage.getItem(KEYS.BEST_SCORE)) || 0,
     setBestScore: (val) => safeStorage.setItem(KEYS.BEST_SCORE, val.toString()),
+
+    getSwVersion: () => safeStorage.getItem(KEYS.SW_VERSION),
+    setSwVersion: (ver) => safeStorage.setItem(KEYS.SW_VERSION, String(ver)),
 
     getGameState: () => {
       try {
