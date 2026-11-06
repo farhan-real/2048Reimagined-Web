@@ -23,33 +23,66 @@
     POPUP_COLOR: '2048_popup_color'
   };
 
+  const memStore = {};
+  const safeStorage = {
+    getItem(key) {
+      try {
+        return window.localStorage ? window.localStorage.getItem(key) : (memStore[key] || null);
+      } catch (e) {
+        return memStore[key] || null;
+      }
+    },
+    setItem(key, val) {
+      try {
+        if (window.localStorage) window.localStorage.setItem(key, String(val));
+      } catch (e) {
+        memStore[key] = String(val);
+      }
+    },
+    removeItem(key) {
+      try {
+        if (window.localStorage) window.localStorage.removeItem(key);
+      } catch (e) {
+        delete memStore[key];
+      }
+    }
+  };
+
   const storage = {
-    getBestScore: () => parseInt(localStorage.getItem(KEYS.BEST_SCORE)) || 0,
-    setBestScore: (val) => localStorage.setItem(KEYS.BEST_SCORE, val.toString()),
+    getBestScore: () => parseInt(safeStorage.getItem(KEYS.BEST_SCORE)) || 0,
+    setBestScore: (val) => safeStorage.setItem(KEYS.BEST_SCORE, val.toString()),
 
     getGameState: () => {
       try {
-        const stored = localStorage.getItem(KEYS.ACTIVE_STATE);
+        const stored = safeStorage.getItem(KEYS.ACTIVE_STATE);
         return stored ? JSON.parse(stored) : null;
       } catch {
         return null;
       }
     },
-    setGameState: (state) => localStorage.setItem(KEYS.ACTIVE_STATE, JSON.stringify(state)),
+    setGameState: (state) => {
+      try {
+        safeStorage.setItem(KEYS.ACTIVE_STATE, JSON.stringify(state));
+      } catch (e) {}
+    },
 
     getLeaderboard: () => {
       try {
-        const stored = localStorage.getItem(KEYS.LEADERBOARD);
+        const stored = safeStorage.getItem(KEYS.LEADERBOARD);
         return stored ? JSON.parse(stored) : [];
       } catch {
         return [];
       }
     },
-    setLeaderboard: (data) => localStorage.setItem(KEYS.LEADERBOARD, JSON.stringify(data)),
+    setLeaderboard: (data) => {
+      try {
+        safeStorage.setItem(KEYS.LEADERBOARD, JSON.stringify(data));
+      } catch (e) {}
+    },
 
     getMusicSettings: () => {
       try {
-        const stored = localStorage.getItem(KEYS.MUSIC_SETTINGS);
+        const stored = safeStorage.getItem(KEYS.MUSIC_SETTINGS);
         return stored ? JSON.parse(stored) : {
           enabledTrackIds: [],
           lastTrackIndex: 0,
@@ -71,46 +104,50 @@
         };
       }
     },
-    saveMusicSettings: (settings) => localStorage.setItem(KEYS.MUSIC_SETTINGS, JSON.stringify(settings)),
+    saveMusicSettings: (settings) => {
+      try {
+        safeStorage.setItem(KEYS.MUSIC_SETTINGS, JSON.stringify(settings));
+      } catch (e) {}
+    },
 
     getSettings: () => {
       const music = storage.getMusicSettings();
       return {
-        slideSpeed: localStorage.getItem(KEYS.SLIDE_SPEED) || "130",
-        partLife: localStorage.getItem(KEYS.PART_LIFE) || "450",
-        partDensity: localStorage.getItem(KEYS.PART_DENSITY) || "20",
+        slideSpeed: safeStorage.getItem(KEYS.SLIDE_SPEED) || "130",
+        partLife: safeStorage.getItem(KEYS.PART_LIFE) || "450",
+        partDensity: safeStorage.getItem(KEYS.PART_DENSITY) || "20",
         visualizerBarCount: music.visualizerBarCount !== undefined ? music.visualizerBarCount : 65,
         visualizerBoxSize: music.visualizerBoxSize || "medium",
-        particlesEnabled: localStorage.getItem(KEYS.PARTICLES_ENABLED) !== "false",
-        soundEnabled: localStorage.getItem(KEYS.SOUND_ENABLED) !== "false",
-        sfxVolume: localStorage.getItem(KEYS.SFX_VOLUME) !== null ? parseInt(localStorage.getItem(KEYS.SFX_VOLUME)) : 80,
-        musicVolume: localStorage.getItem(KEYS.MUSIC_VOLUME) !== null ? parseInt(localStorage.getItem(KEYS.MUSIC_VOLUME)) : 75,
+        particlesEnabled: safeStorage.getItem(KEYS.PARTICLES_ENABLED) !== "false",
+        soundEnabled: safeStorage.getItem(KEYS.SOUND_ENABLED) !== "false",
+        sfxVolume: safeStorage.getItem(KEYS.SFX_VOLUME) !== null ? parseInt(safeStorage.getItem(KEYS.SFX_VOLUME)) : 80,
+        musicVolume: safeStorage.getItem(KEYS.MUSIC_VOLUME) !== null ? parseInt(safeStorage.getItem(KEYS.MUSIC_VOLUME)) : 75,
         autoplayMusicEnabled: music.autoplayMusicEnabled !== false,
-        deterministicEnabled: localStorage.getItem(KEYS.DETERMINISTIC_ENABLED) === "true",
-        confirmExitEnabled: localStorage.getItem(KEYS.CONFIRM_EXIT_ENABLED) !== "false",
-        showTimerEnabled: localStorage.getItem(KEYS.SHOW_TIMER_ENABLED) !== "false",
-        orientationMode: localStorage.getItem(KEYS.ORIENTATION_MODE) || "auto",
-        slideHaptic: localStorage.getItem(KEYS.SLIDE_HAPTIC) !== null ? parseInt(localStorage.getItem(KEYS.SLIDE_HAPTIC)) : 8,
-        mergeHaptic: localStorage.getItem(KEYS.MERGE_HAPTIC) !== null ? parseInt(localStorage.getItem(KEYS.MERGE_HAPTIC)) : 18,
-        popupColor: localStorage.getItem(KEYS.POPUP_COLOR) || "#00f0ff"
+        deterministicEnabled: safeStorage.getItem(KEYS.DETERMINISTIC_ENABLED) === "true",
+        confirmExitEnabled: safeStorage.getItem(KEYS.CONFIRM_EXIT_ENABLED) !== "false",
+        showTimerEnabled: safeStorage.getItem(KEYS.SHOW_TIMER_ENABLED) !== "false",
+        orientationMode: safeStorage.getItem(KEYS.ORIENTATION_MODE) || "auto",
+        slideHaptic: safeStorage.getItem(KEYS.SLIDE_HAPTIC) !== null ? parseInt(safeStorage.getItem(KEYS.SLIDE_HAPTIC)) : 8,
+        mergeHaptic: safeStorage.getItem(KEYS.MERGE_HAPTIC) !== null ? parseInt(safeStorage.getItem(KEYS.MERGE_HAPTIC)) : 18,
+        popupColor: safeStorage.getItem(KEYS.POPUP_COLOR) || "#00f0ff"
       };
     },
 
     saveSettings: (settings) => {
-      localStorage.setItem(KEYS.SLIDE_SPEED, settings.slideSpeed);
-      localStorage.setItem(KEYS.PART_LIFE, settings.partLife);
-      localStorage.setItem(KEYS.PART_DENSITY, settings.partDensity);
-      localStorage.setItem(KEYS.PARTICLES_ENABLED, settings.particlesEnabled);
-      localStorage.setItem(KEYS.SOUND_ENABLED, settings.soundEnabled);
-      localStorage.setItem(KEYS.SFX_VOLUME, settings.sfxVolume);
-      localStorage.setItem(KEYS.MUSIC_VOLUME, settings.musicVolume);
-      localStorage.setItem(KEYS.DETERMINISTIC_ENABLED, settings.deterministicEnabled);
-      localStorage.setItem(KEYS.CONFIRM_EXIT_ENABLED, settings.confirmExitEnabled);
-      localStorage.setItem(KEYS.SHOW_TIMER_ENABLED, settings.showTimerEnabled);
-      localStorage.setItem(KEYS.ORIENTATION_MODE, settings.orientationMode || "auto");
-      localStorage.setItem(KEYS.SLIDE_HAPTIC, settings.slideHaptic);
-      localStorage.setItem(KEYS.MERGE_HAPTIC, settings.mergeHaptic);
-      localStorage.setItem(KEYS.POPUP_COLOR, settings.popupColor);
+      safeStorage.setItem(KEYS.SLIDE_SPEED, settings.slideSpeed);
+      safeStorage.setItem(KEYS.PART_LIFE, settings.partLife);
+      safeStorage.setItem(KEYS.PART_DENSITY, settings.partDensity);
+      safeStorage.setItem(KEYS.PARTICLES_ENABLED, settings.particlesEnabled);
+      safeStorage.setItem(KEYS.SOUND_ENABLED, settings.soundEnabled);
+      safeStorage.setItem(KEYS.SFX_VOLUME, settings.sfxVolume);
+      safeStorage.setItem(KEYS.MUSIC_VOLUME, settings.musicVolume);
+      safeStorage.setItem(KEYS.DETERMINISTIC_ENABLED, settings.deterministicEnabled);
+      safeStorage.setItem(KEYS.CONFIRM_EXIT_ENABLED, settings.confirmExitEnabled);
+      safeStorage.setItem(KEYS.SHOW_TIMER_ENABLED, settings.showTimerEnabled);
+      safeStorage.setItem(KEYS.ORIENTATION_MODE, settings.orientationMode || "auto");
+      safeStorage.setItem(KEYS.SLIDE_HAPTIC, settings.slideHaptic);
+      safeStorage.setItem(KEYS.MERGE_HAPTIC, settings.mergeHaptic);
+      safeStorage.setItem(KEYS.POPUP_COLOR, settings.popupColor);
     }
   };
 
