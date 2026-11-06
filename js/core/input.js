@@ -67,7 +67,7 @@
     }
 
     isInteractiveElement(target) {
-      return !!target.closest('button, select, input, .overlay, .modal-card, .theme-dropdown-list, .slider, .tab-btn, .switch');
+      return !!target.closest('button, select, input, .overlay, .modal-card, .theme-dropdown-wrapper, .theme-dropdown-list, .slider, .tab-btn, .switch');
     }
 
     handleKeyDown(e) {

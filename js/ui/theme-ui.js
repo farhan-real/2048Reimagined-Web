@@ -79,6 +79,9 @@
       if (this.themeTriggerBtn) {
         this.themeTriggerBtn.addEventListener('click', (e) => {
           e.stopPropagation();
+          if (this.themeDropdownList && this.themeDropdownList.children.length === 0) {
+            this.buildDropdown();
+          }
           if (this.themeDropdownWrapper) {
             this.themeDropdownWrapper.classList.toggle('active');
           }

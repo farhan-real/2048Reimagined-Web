@@ -1,4 +1,4 @@
-const CACHE_NAME = '2048-reimagined-v1';
+const CACHE_NAME = '2048-reimagined-v4';
 const PRECACHE_ASSETS = [
   './',
   'index.html',
@@ -43,7 +43,9 @@ const PRECACHE_ASSETS = [
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(PRECACHE_ASSETS);
+      return Promise.allSettled(
+        PRECACHE_ASSETS.map((url) => cache.add(url).catch(() => {}))
+      );
     }).then(() => self.skipWaiting())
   );
 });
@@ -62,6 +64,7 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+// Network-First strategy: Ensures GitHub Pages delivers latest code immediately, falling back to cache when offline
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
 
@@ -73,22 +76,23 @@ self.addEventListener('fetch', (event) => {
   }
 
   event.respondWith(
-    caches.match(event.request).then((cached) => {
-      const networkFetch = fetch(event.request).then((response) => {
-        if (response && response.status === 200 && response.type === 'basic') {
-          const cloned = response.clone();
+    fetch(event.request)
+      .then((networkResponse) => {
+        if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
+          const cloned = networkResponse.clone();
           caches.open(CACHE_NAME).then((cache) => {
             cache.put(event.request, cloned);
           });
         }
-        return response;
-      }).catch(() => {
-        if (event.request.mode === 'navigate') {
-          return caches.match('index.html');
-        }
-      });
-
-      return cached || networkFetch;
-    })
+        return networkResponse;
+      })
+      .catch(() => {
+        return caches.match(event.request).then((cached) => {
+          if (cached) return cached;
+          if (event.request.mode === 'navigate') {
+            return caches.match('index.html');
+          }
+        });
+      })
   );
 });

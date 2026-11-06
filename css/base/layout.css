@@ -49,6 +49,8 @@ button, select, input {
   gap: 8px 0;
   margin-bottom: 6px;
   flex-shrink: 0;
+  position: relative;
+  z-index: 40;
 }
 
 .brand-area {
