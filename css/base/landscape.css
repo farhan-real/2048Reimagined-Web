@@ -13,7 +13,7 @@
     width: 100vw;
     max-width: 100vw;
     height: 100vh;
-    padding: calc(8px + env(safe-area-inset-top, 0px)) 24px calc(10px + env(safe-area-inset-bottom, 0px)) 24px;
+    padding: calc(8px + env(safe-area-inset-top, 0px)) 2% calc(10px + env(safe-area-inset-bottom, 0px)) 2%;
     gap: 0;
     transform: none;
     box-sizing: border-box;
@@ -23,22 +23,25 @@
   body[data-orientation-mode="landscape"] .top-outer-bar {
     width: 100%;
     max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 21.5% 55% 21.5%;
+    grid-template-rows: 1fr;
     align-items: center;
-    gap: 16px;
+    gap: 1%;
     margin-bottom: 6px;
     flex-shrink: 0;
   }
 
   body[data-orientation-mode="auto"] .brand-area,
   body[data-orientation-mode="landscape"] .brand-area {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     flex-shrink: 0;
-    min-width: 180px;
   }
 
   body[data-orientation-mode="auto"] .brand-area .logo-text,
@@ -61,23 +64,26 @@
 
   body[data-orientation-mode="auto"] .app-header,
   body[data-orientation-mode="landscape"] .app-header {
-    grid-column: auto;
-    grid-row: auto;
-    flex: 1;
-    max-width: 680px;
-    min-width: 320px;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    width: 100%;
     background: color-mix(in srgb, var(--accent-color) 4%, var(--card-bg));
     border: 1px solid color-mix(in srgb, var(--accent-color) 22%, var(--card-border));
     border-radius: 14px;
-    padding: 9px 18px;
+    padding: 8px 16px;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
-    gap: 8px;
-    margin: 0 auto;
+    gap: 6px;
+    margin: 0;
+    box-sizing: border-box;
   }
 
   body[data-orientation-mode="auto"] .nav-bar,
   body[data-orientation-mode="landscape"] .nav-bar {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 2px;
   }
 
@@ -88,49 +94,56 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 2px;
+    gap: 2%;
   }
 
   body[data-orientation-mode="auto"] .action-buttons-group,
   body[data-orientation-mode="landscape"] .action-buttons-group {
-    max-width: 370px;
-    gap: 10px;
+    width: 54%;
+    display: flex;
+    gap: 8px;
   }
 
   body[data-orientation-mode="auto"] .btn-capsule,
   body[data-orientation-mode="landscape"] .btn-capsule {
-    padding: 8px 14px;
+    flex: 1;
+    padding: 8px 12px;
     font-size: 0.8rem;
+    white-space: nowrap;
   }
 
   body[data-orientation-mode="auto"] .scores-wrapper,
   body[data-orientation-mode="landscape"] .scores-wrapper {
+    width: 44%;
     display: flex;
-    gap: 10px;
+    justify-content: flex-end;
+    gap: 8px;
   }
 
   body[data-orientation-mode="auto"] .score-card,
   body[data-orientation-mode="landscape"] .score-card {
-    min-width: 105px;
-    padding: 6px 14px;
+    flex: 1;
+    min-width: 0;
+    padding: 5px 10px;
   }
 
   body[data-orientation-mode="auto"] .top-right-group,
   body[data-orientation-mode="landscape"] .top-right-group {
-    grid-column: auto;
-    grid-row: auto;
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 10px;
+    gap: 8px;
     flex-shrink: 0;
-    min-width: 240px;
-    max-width: 290px;
   }
 
   body[data-orientation-mode="auto"] .timer-pill,
   body[data-orientation-mode="landscape"] .timer-pill {
-    padding: 5px 13px;
-    font-size: 0.9rem;
+    padding: 4px 12px;
+    font-size: 0.88rem;
     align-self: flex-end;
   }
 
@@ -157,6 +170,7 @@
   body[data-orientation-mode="landscape"] .music-companion-card {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     width: 100%;
     gap: 0;
     flex-shrink: 0;
@@ -171,7 +185,7 @@
 
   body[data-orientation-mode="auto"] #visualizer-full,
   body[data-orientation-mode="landscape"] #visualizer-full {
-    height: clamp(55px, 10vh, 80px);
+    height: clamp(50px, 9vh, 72px);
   }
 }
 
@@ -180,7 +194,7 @@ body[data-orientation-mode="portrait"] .music-companion-card {
 }
 
 .landscape-track-card {
-  width: 100%;
+  width: 90%;
   background: color-mix(in srgb, var(--accent-color) 7%, var(--card-bg));
   border: 1px solid color-mix(in srgb, var(--accent-color) 25%, var(--card-border));
   border-radius: 12px;
@@ -194,8 +208,8 @@ body[data-orientation-mode="portrait"] .music-companion-card {
 }
 
 .landscape-track-card .vinyl-disc {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   flex-shrink: 0;
 }
 
@@ -234,7 +248,7 @@ body[data-orientation-mode="portrait"] .music-companion-card {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 6px;
+  gap: 5px;
   flex-shrink: 0;
 }
 
@@ -259,8 +273,8 @@ body[data-orientation-mode="portrait"] .music-companion-card {
 }
 
 .landscape-visualizer-box {
-  width: 100%;
-  height: 32px;
+  width: 90%;
+  height: 30px;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 8px;
