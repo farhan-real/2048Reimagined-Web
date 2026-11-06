@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="css/themes/themes.css">
   <link rel="stylesheet" href="css/base/layout.css">
   <link rel="stylesheet" href="css/base/landscape.css">
-  <link rel="stylesheet" href="css/components/nav.css">
+  <link rel="stylesheet" href="css/components/nav.css?v=4">
   <link rel="stylesheet" href="css/components/board.css">
   <link rel="stylesheet" href="css/components/music.css">
   <link rel="stylesheet" href="css/modals/modal-base.css">
@@ -188,7 +188,9 @@
         document.head.appendChild(manifestLink);
 
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('sw.js').catch(() => {});
+          navigator.serviceWorker.register('sw.js').then((reg) => {
+            reg.update();
+          }).catch(() => {});
         }
       }
 

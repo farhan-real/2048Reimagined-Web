@@ -5,12 +5,18 @@
   align-items: center;
   position: relative;
   margin-bottom: 4px;
+  z-index: 80;
 }
 
 .nav-actions-left, .nav-actions-right {
   display: flex;
   align-items: center;
   gap: 6px;
+  position: relative;
+}
+
+.nav-actions-right {
+  z-index: 85;
 }
 
 .icon-btn {
@@ -33,6 +39,7 @@
 
 .theme-dropdown-wrapper {
   position: relative;
+  z-index: 90;
 }
 
 .theme-dropdown-btn {
@@ -74,20 +81,23 @@
 }
 
 .theme-dropdown-wrapper.active .theme-dropdown-list {
-  display: flex;
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
 .theme-dropdown-list {
   position: absolute;
   top: calc(100% + 6px);
   right: 0;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
+  background: var(--card-bg, #111111);
+  border: 1px solid var(--card-border, #333333);
   border-radius: 10px;
   width: 250px;
   display: none;
   flex-direction: column;
-  z-index: 50;
+  z-index: 1000;
   box-shadow: 0 10px 30px rgba(0,0,0,0.9);
   overflow-y: auto;
   max-height: 340px;
