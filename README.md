@@ -1,13 +1,15 @@
 # 2048 Reimagined
 
-A modular, high-performance web implementation of the classic 2048 puzzle game, featuring a dynamic multi-theme visual engine, embedded chiptune audio pipeline, reactive frequency visualizer, and hardware-accelerated canvas physics.
+A modular, high-performance Progressive Web App (PWA) implementation of the classic 2048 puzzle game, featuring a dynamic multi-theme visual engine, embedded chiptune soundtrack, reactive frequency visualizer, and hardware-accelerated canvas physics.
 
-Designed for responsive execution across desktop and mobile browsers, supporting both portrait and landscape viewports with zero external runtime dependencies.
+Designed for responsive execution across desktop and mobile browsers, supporting both portrait and landscape viewports with offline service worker caching and standalone native installation.
 
 ---
 
 ## Core Features
 
+- Progressive Web App (PWA): Fully installable on Desktop (Chrome, Edge, Safari, Brave) and Mobile (Android, iOS) with offline execution and standalone window mode.
+- Offline Service Worker: Robust precaching of core scripts, styles, layouts, and procedural sound pipelines for instant loading without a network connection.
 - Modular Visual Engine: Over 20 distinct visual palettes organized into thematic categories, supporting live toggling between Dark, Light, and specialized canvas surface treatments.
 - Integrated Audio Architecture: Built-in audio controller with playlist curation, progress tracking, WebAudio procedural sound synthesis, and a 25-track chiptune library.
 - Continuous Spectral Visualizer: Real-time frequency response system with harmonic smoothing to eliminate abrupt frequency-band stepping, supporting Full Bottom, Isolated Box, and Landscape panel rendering modes.
@@ -15,6 +17,19 @@ Designed for responsive execution across desktop and mobile browsers, supporting
 - Input Adaptability: Unified pointer gesture handling supporting mobile touch swipes, desktop mouse drags, and discrete keyboard inputs.
 - Deterministic Gameplay Mode: Optional seeded pseudo-random number generator (Mulberry32) ensuring move reproducibility and preventing undo-based RNG exploitation.
 - State Persistence and Analytics: LocalStorage caching for session board states, undo history, personal records, and a top-five leaderboard with duration metrics.
+
+---
+
+## Installation (PWA)
+
+### Desktop (Chrome, Edge, Brave, Opera)
+1. Open the game in any Chromium-based browser.
+2. Click the **Install App** icon button in the top navigation bar or the browser's address bar install icon.
+3. Confirm installation to launch 2048 Reimagined in its own dedicated, chromeless application window.
+
+### Mobile (Android & iOS)
+- Android (Chrome): Tap the top navigation install icon or select **Install app** / **Add to Home screen** from the browser menu.
+- iOS (Safari): Tap the **Share** button and select **Add to Home Screen**.
 
 ---
 
@@ -78,6 +93,7 @@ Themes: Pastel Rainbow, Pastel Pink, Nordic Frost, Classic Sand, The Void (True 
 |   |-- components/     # Board container, navigation, and music widget styles
 |   |-- modals/         # Dialog sheets, settings panel, and leaderboard views
 |   `-- themes/         # Categorized stylesheets (cyber, minimal, nature, retro, space)
+|-- icons/              # Vector PWA launcher and adaptive maskable icons
 |-- js/
 |   |-- audio/          # Playback engine, procedural SFX, and visualizer pipelines
 |   |-- core/           # Board grid, tile instances, PRNG, and storage controllers
@@ -86,14 +102,16 @@ Themes: Pastel Rainbow, Pastel Pink, Nordic Frost, Classic Sand, The Void (True 
 |-- music/              # Curated 192kbps chiptune soundtrack files
 |-- previews/           # Scalable theme reference SVGs
 |-- ai.md               # Repository standards and development instructions
-`-- index.html          # Application entry point and layout structure
+|-- index.html          # Application entry point and layout structure
+|-- manifest.json       # Web app install manifest and metadata
+`-- sw.js               # Service Worker for offline caching
 ```
 
 ---
 
 ## Local Setup
 
-The project relies entirely on native browser standards (ES6 modules, Canvas API, Web Audio API, and CSS Custom Properties) and requires no build steps, bundlers, or package installations.
+The project relies entirely on native browser standards (ES6 modules, Canvas API, Web Audio API, Service Worker Cache API, and CSS Custom Properties) and requires no build steps, bundlers, or package installations.
 
 1. Clone the repository:
    ```bash
@@ -116,7 +134,7 @@ The project relies entirely on native browser standards (ES6 modules, Canvas API
 
 ## Technical Specifications
 
-- Target Standards: ECMAScript 2020+, HTML5 Canvas, Web Audio API.
+- Target Standards: ECMAScript 2020+, HTML5 Canvas, Web Audio API, Service Worker Cache API.
 - Rendering Target: 60Hz - 144Hz high refresh rate viewports.
 - Responsive Range: Optimized for mobile viewports (down to 320px width) up to 4K desktop landscape displays.
 - Storage Footprint: Pure client-side execution; all state stored locally via the Web Storage API.
@@ -128,3 +146,12 @@ The project relies entirely on native browser standards (ES6 modules, Canvas API
 - Game Design: Original 2048 puzzle mechanics by Gabriele Cirulli.
 - Architecture and Implementation: Farhan.
 - Soundtrack Composers: Dubmood, Zabutom, Zalza, Floppi, Jakim, ko0x, Moodmode, Oxbow, rez, kenet, 0BiT, GEAR, SnD.
+---
+
+---
+
+## License
+
+This project is licensed under the [GNU Affero General Public License v3.0 (AGPL-3.0)](LICENSE).
+
+**Music & Soundtrack Disclaimer:** All chiptune music tracks included in this repository belong to their respective original artists and composers. The audio files are not licensed under the AGPL-3.0 license, and all intellectual property and copyright rights remain reserved to their respective creators.
