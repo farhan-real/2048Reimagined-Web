@@ -130,7 +130,10 @@
 .tile[data-value="512"] { background: var(--t512-bg); color: var(--t512-color); border: var(--t512-border); box-shadow: var(--t512-glow); text-shadow: var(--t512-text-shadow, none); }
 .tile[data-value="1024"] { background: var(--t1024-bg); color: var(--t1024-color); border: var(--t1024-border); box-shadow: var(--t1024-glow); text-shadow: var(--t1024-text-shadow, none); }
 .tile[data-value="2048"] { background: var(--t2048-bg); color: var(--t2048-color); border: var(--t2048-border); box-shadow: var(--t2048-glow); text-shadow: var(--t2048-text-shadow, none); }
+.tile[data-value="4096"] { background: var(--t4096-bg); color: var(--t4096-color); border: var(--t4096-border); box-shadow: var(--t4096-glow); text-shadow: var(--t4096-text-shadow, none); }
+.tile[data-value="8192"] { background: var(--t8192-bg); color: var(--t8192-color); border: var(--t8192-border); box-shadow: var(--t8192-glow); text-shadow: var(--t8192-text-shadow, none); }
+.tile[data-value="16384"] { background: var(--t16384-bg); color: var(--t16384-color); border: var(--t16384-border); box-shadow: var(--t16384-glow); text-shadow: var(--t16384-text-shadow, none); }
 
-.tile[data-value="4096"], .tile[data-value="8192"], .tile[data-value="16384"], .tile[data-value="32768"], .tile[data-value="65536"] {
+.tile[data-value="32768"], .tile[data-value="65536"], .tile[data-value="131072"] {
   background: var(--tsuper-bg); color: var(--tsuper-color); border: var(--tsuper-border); box-shadow: var(--tsuper-glow); text-shadow: var(--tsuper-text-shadow, none);
 }
