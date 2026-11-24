@@ -2,7 +2,6 @@
   class SettingsUI {
     constructor(parentUI) {
       this.parent = parentUI;
-      this.popupColor = "#00f0ff";
       this.slideHapticVal = 8;
       this.mergeHapticVal = 18;
       this.orientationMode = "auto";
@@ -47,7 +46,6 @@
 
       this.setupOrientationTabs();
       this.setupHapticTabs();
-      this.setupColorTabs();
     }
 
     setupVisualizerSettings() {
@@ -168,38 +166,6 @@
       bindGroup('group-haptic-merge', (v) => { this.mergeHapticVal = v; });
     }
 
-    setupColorTabs() {
-      const container = document.getElementById('group-popup-color');
-      if (!container) return;
-      container.querySelectorAll('.tab-btn').forEach(btn => {
-        const col = btn.getAttribute('data-color');
-        btn.style.color = col;
-        btn.addEventListener('click', () => {
-          this.popupColor = col;
-          this.syncPopupColors();
-        });
-      });
-    }
-
-    syncPopupColors() {
-      const container = document.getElementById('group-popup-color');
-      if (!container) return;
-      container.querySelectorAll('.tab-btn').forEach(btn => {
-        const col = btn.getAttribute('data-color');
-        if (col === this.popupColor) {
-          btn.classList.add('active');
-          btn.style.backgroundColor = col;
-          btn.style.color = '#000000';
-          btn.style.boxShadow = `0 0 8px ${col}`;
-        } else {
-          btn.classList.remove('active');
-          btn.style.backgroundColor = 'transparent';
-          btn.style.color = col;
-          btn.style.boxShadow = 'none';
-        }
-      });
-    }
-
     updateSliderLabels() {
       const speed = parseInt(this.slideSlider.value);
       this.lblSlideSpeed.textContent = speed === 0 ? "Instant (0ms)" : speed <= 90 ? `Snappy (${speed}ms)` : speed <= 180 ? `Smooth (${speed}ms)` : `Chill (${speed}ms)`;
@@ -221,7 +187,6 @@
       const s = window.storage.getSettings();
       const m = window.storage.getMusicSettings();
 
-      this.popupColor = s.popupColor;
       this.slideHapticVal = s.slideHaptic;
       this.mergeHapticVal = s.mergeHaptic;
       this.orientationMode = s.orientationMode || "auto";
@@ -278,7 +243,6 @@
       syncTab('group-haptic-slide', this.slideHapticVal, 'data-val');
       syncTab('group-haptic-merge', this.mergeHapticVal, 'data-val');
       syncTab('group-orientation-mode', this.orientationMode, 'data-orientation');
-      this.syncPopupColors();
     }
 
     save() {
@@ -295,8 +259,7 @@
         showTimerEnabled: this.showTimerCheckbox.checked,
         orientationMode: this.orientationMode,
         slideHaptic: this.slideHapticVal,
-        mergeHaptic: this.mergeHapticVal,
-        popupColor: this.popupColor
+        mergeHaptic: this.mergeHapticVal
       });
       if (window.sound) window.sound.enabled = this.soundCheckbox.checked;
       this.applyTimerVisibility();

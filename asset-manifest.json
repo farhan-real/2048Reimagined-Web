@@ -6,7 +6,7 @@
   "./css/components/music.css": "e6fbdb3a15de",
   "./css/components/nav.css": "8ff4e951ae7c",
   "./css/modals/modal-base.css": "3549ab22d6b8",
-  "./css/modals/modal-info.css": "343ae9c88c1f",
+  "./css/modals/modal-info.css": "b3d0125ab886",
   "./css/modals/modal-leaderboard.css": "004545aecf63",
   "./css/modals/modal-music.css": "c6c26661d656",
   "./css/modals/modal-settings.css": "7656e59fcee7",
@@ -54,7 +54,7 @@
   "./icons/appicon.svg": "94b61f887267",
   "./icons/icon.svg": "5e4bb7e59768",
   "./icons/maskable.svg": "4ef0a07b9f35",
-  "./index.html": "22848d1b4d0b",
+  "./index.html": "b39dd03cca00",
   "./js/audio/music-data.js": "3f61abb5cb38",
   "./js/audio/music.js": "310757555172",
   "./js/audio/sfx.js": "9ce7ac7198b4",
@@ -64,7 +64,7 @@
   "./js/core/grid.js": "a7833b50d1c3",
   "./js/core/input.js": "099bc1431b25",
   "./js/core/prng.js": "5b2b07f0a273",
-  "./js/core/storage.js": "21d1ee14df11",
+  "./js/core/storage.js": "ac452c06090d",
   "./js/core/tile.js": "12d64942ed88",
   "./js/features/info-data.js": "657279bc6a91",
   "./js/features/leaderboard.js": "7716a7f9d060",
@@ -73,7 +73,7 @@
   "./js/ui/infoui.js": "8c5c7e1d7d0d",
   "./js/ui/leaderboard-ui.js": "c5cd926ac99e",
   "./js/ui/music-ui.js": "7ddf34a7a6be",
-  "./js/ui/settings-ui.js": "4aab1243447f",
+  "./js/ui/settings-ui.js": "2648f9f86889",
   "./js/ui/theme-ui.js": "ec482cf23118",
-  "./js/ui/ui.js": "7cb2890d65d6"
+  "./js/ui/ui.js": "293c8ef7769c"
 }

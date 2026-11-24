@@ -114,6 +114,8 @@
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
+  color: var(--accent-color);
+  text-shadow: var(--accent-glow);
   font-weight: 900;
   font-size: 13px;
   pointer-events: none;

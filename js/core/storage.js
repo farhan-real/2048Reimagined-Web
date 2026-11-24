@@ -20,7 +20,6 @@
     ORIENTATION_MODE: '2048_orientation_mode',
     SLIDE_HAPTIC: '2048_slide_haptic_val',
     MERGE_HAPTIC: '2048_merge_haptic_val',
-    POPUP_COLOR: '2048_popup_color',
     SW_VERSION: '2048_sw_version'
   };
 
@@ -132,8 +131,7 @@
         showTimerEnabled: safeStorage.getItem(KEYS.SHOW_TIMER_ENABLED) !== "false",
         orientationMode: safeStorage.getItem(KEYS.ORIENTATION_MODE) || "auto",
         slideHaptic: safeStorage.getItem(KEYS.SLIDE_HAPTIC) !== null ? parseInt(safeStorage.getItem(KEYS.SLIDE_HAPTIC)) : 8,
-        mergeHaptic: safeStorage.getItem(KEYS.MERGE_HAPTIC) !== null ? parseInt(safeStorage.getItem(KEYS.MERGE_HAPTIC)) : 18,
-        popupColor: safeStorage.getItem(KEYS.POPUP_COLOR) || "#00f0ff"
+        mergeHaptic: safeStorage.getItem(KEYS.MERGE_HAPTIC) !== null ? parseInt(safeStorage.getItem(KEYS.MERGE_HAPTIC)) : 18
       };
     },
 
@@ -151,7 +149,6 @@
       safeStorage.setItem(KEYS.ORIENTATION_MODE, settings.orientationMode || "auto");
       safeStorage.setItem(KEYS.SLIDE_HAPTIC, settings.slideHaptic);
       safeStorage.setItem(KEYS.MERGE_HAPTIC, settings.mergeHaptic);
-      safeStorage.setItem(KEYS.POPUP_COLOR, settings.popupColor);
     }
   };
 

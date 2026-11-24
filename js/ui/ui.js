@@ -65,7 +65,6 @@
 
     setupGlobalModalEvents() {
       this.settingsBtn.addEventListener('click', () => {
-        this.settings.syncPopupColors();
         this.openModal(this.settingsModal);
       });
       this.settingsCloseBtn.addEventListener('click', () => {
@@ -199,10 +198,6 @@
       const popup = document.createElement('div');
       popup.className = 'score-popup';
       popup.textContent = `+${increment}`;
-      popup.style.color = this.settings.popupColor;
-      if (this.theme.currentTheme !== 'classic' && this.theme.currentTheme !== 'pastel_pink') {
-        popup.style.textShadow = `0 0 10px ${this.settings.popupColor}`;
-      }
       this.scoreContainer.appendChild(popup);
       setTimeout(() => popup.remove(), 500);
     }
