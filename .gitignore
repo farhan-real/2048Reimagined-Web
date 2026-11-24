@@ -1,5 +1,6 @@
 .vscode
 *.ps1
+*.sh
 *.md
 !README.md
 !readme.md
