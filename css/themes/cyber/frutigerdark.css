@@ -1,14 +1,14 @@
 [data-theme="frutigerdark"] {
-  --bg-color: #041820;
-  --board-bg: #082836;
-  --board-border: #00d8f0;
-  --empty-cell-bg: rgba(0, 216, 240, 0.06);
-  --empty-cell-border: 1px solid rgba(103, 232, 249, 0.16);
-  --text-color: #e0fbff;
+  --bg-color: #071a2e;
+  --board-bg: #0d2a47;
+  --board-border: #38bdf8;
+  --empty-cell-bg: rgba(125, 211, 252, 0.08);
+  --empty-cell-border: 1px solid rgba(186, 230, 253, 0.22);
+  --text-color: #e0f7ff;
   --accent-color: #00e5ff;
   --accent-glow: 0 0 12px rgba(0, 229, 255, 0.6);
-  --card-bg: #0a3345;
-  --card-border: #145570;
+  --card-bg: #103254;
+  --card-border: #245f94;
 
   --t2-bg: linear-gradient(180deg, #2c748c 0%, #14495c 45%, #0c3240 100%);
   --t2-color: #e0fbff;
