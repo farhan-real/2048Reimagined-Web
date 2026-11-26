@@ -40,24 +40,39 @@
       this.parent.openModal(this.modalConfirm);
     }
 
+    formatChangelogEntry(change) {
+      const idx = change.indexOf(': ');
+      if (idx > 0 && idx < 48 && !change.slice(0, idx).includes('<')) {
+        const lead = change.slice(0, idx);
+        const body = change.slice(idx + 2);
+        return `<li class="changelog-item"><span class="changelog-lead">${lead}:</span> <span class="changelog-desc">${body}</span></li>`;
+      }
+      return `<li class="changelog-item"><span class="changelog-desc">${change}</span></li>`;
+    }
+
     renderChangelog() {
       if (!this.changelogContainer || !window.InfoData) return;
       const logs = window.InfoData.getChangelog();
       this.changelogContainer.innerHTML = "";
 
-      logs.forEach(log => {
+      logs.forEach((log, index) => {
         const box = document.createElement('div');
-        box.className = "themed-info-box";
-        box.style.marginBottom = "10px";
+        box.className = "themed-info-box changelog-card" + (index === 0 ? " is-latest" : "");
 
+        const latestTag = index === 0 ? `<span class="changelog-latest-pill">Latest</span>` : "";
         let html = `
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <div class="info-version-badge">${log.version}</div>
-            <div style="font-size: 0.72rem; font-weight: 700; opacity: 0.7;">${log.title}</div>
+          <div class="changelog-card-header">
+            <div class="changelog-meta-row">
+              <div class="info-version-badge">${log.version}</div>
+              ${latestTag}
+            </div>
+            <div class="changelog-card-title">${log.title}</div>
           </div>
-          <ul class="dialog-list">
+          <ul class="changelog-list">
         `;
-        log.changes.forEach(change => { html += `<li>${change}</li>`; });
+        log.changes.forEach(change => {
+          html += this.formatChangelogEntry(change);
+        });
         html += `</ul>`;
         box.innerHTML = html;
         this.changelogContainer.appendChild(box);
@@ -72,17 +87,16 @@
       credits.forEach(section => {
         const box = document.createElement('div');
         box.className = "themed-info-box";
-        box.style.marginBottom = "10px";
 
         let html = `
           <div class="info-version-badge">${section.category}</div>
-          <ul class="dialog-list">
+          <ul class="changelog-list">
         `;
         section.items.forEach(item => {
           if (item.role) {
-            html += `<li><strong>${item.role}:</strong> ${item.name}</li>`;
+            html += `<li class="changelog-item"><span class="changelog-lead">${item.role}:</span> <span class="changelog-desc">${item.name}</span></li>`;
           } else {
-            html += `<li>${item.name}</li>`;
+            html += `<li class="changelog-item"><span class="changelog-desc">${item.name}</span></li>`;
           }
         });
         html += `</ul>`;

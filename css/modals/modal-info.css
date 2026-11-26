@@ -1,43 +1,109 @@
+#modal-changelog .modal-card {
+  max-width: 470px;
+}
+
 .themed-info-box {
   background: color-mix(in srgb, var(--accent-color) 6%, var(--card-bg));
   border: 1px solid color-mix(in srgb, var(--accent-color) 25%, var(--card-border));
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  box-shadow: 0 0 20px color-mix(in srgb, var(--accent-color) 4%, transparent);
+  box-shadow: 0 4px 18px color-mix(in srgb, var(--accent-color) 6%, transparent);
+}
+
+.changelog-card.is-latest {
+  background: color-mix(in srgb, var(--accent-color) 10%, var(--card-bg));
+  border-color: color-mix(in srgb, var(--accent-color) 45%, var(--card-border));
+}
+
+.changelog-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent-color) 18%, var(--card-border));
+}
+
+.changelog-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.changelog-card-title {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--text-color);
+  line-height: 1.3;
+  letter-spacing: -0.2px;
 }
 
 .info-version-badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   align-self: flex-start;
   font-size: 0.7rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.8px;
   color: var(--accent-color);
-  background: color-mix(in srgb, var(--accent-color) 12%, transparent);
-  border: 1px solid color-mix(in srgb, var(--accent-color) 30%, transparent);
-  padding: 3px 8px;
+  background: color-mix(in srgb, var(--accent-color) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-color) 35%, transparent);
+  padding: 3px 9px;
   border-radius: 6px;
 }
 
+.changelog-latest-pill {
+  font-size: 0.64rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: var(--bg-color);
+  background: var(--accent-color);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.changelog-list,
 .dialog-list {
+  list-style: none;
   margin: 0;
-  padding-left: 18px;
-  font-size: 0.78rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 0.8rem;
   color: var(--text-color);
-  opacity: 0.85;
   line-height: 1.5;
 }
 
-.dialog-list li {
-  margin-bottom: 8px;
+.changelog-item {
+  position: relative;
+  padding-left: 14px;
 }
 
-.dialog-list li:last-child {
-  margin-bottom: 0;
+.changelog-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.56em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  opacity: 0.9;
+}
+
+.changelog-lead {
+  font-weight: 800;
+  color: var(--text-color);
+}
+
+.changelog-desc {
+  opacity: 0.82;
 }
 
 /* In-game Overlay */
