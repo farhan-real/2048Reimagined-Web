@@ -80,38 +80,38 @@
   --t1024-text-shadow: 0 0 8px #ffe600;
   --t1024-particle: #ffe600;
 
-  --t2048-bg: linear-gradient(135deg, #2b0038, #120424);
+  --t2048-bg: linear-gradient(135deg, #002236, #120424);
   --t2048-color: #00ffff;
-  --t2048-border: 2px solid #00ffff;
-  --t2048-glow: 0 0 24px rgba(0, 255, 255, 0.7);
-  --t2048-text-shadow: 0 0 9px #00ffff;
+  --t2048-border: 1px solid #00ffff;
+  --t2048-glow: 0 0 22px rgba(0, 255, 255, 0.65);
+  --t2048-text-shadow: 0 0 8px #00ffff;
   --t2048-particle: #00ffff;
 
-  --t4096-bg: linear-gradient(135deg, #3d0028, #120424);
+  --t4096-bg: linear-gradient(135deg, #360024, #120424);
   --t4096-color: #ff007f;
-  --t4096-border: 2px solid #ff007f;
-  --t4096-glow: 0 0 24px rgba(255, 0, 127, 0.7);
-  --t4096-text-shadow: 0 0 9px #ff007f;
+  --t4096-border: 1px solid #ff007f;
+  --t4096-glow: 0 0 22px rgba(255, 0, 127, 0.65);
+  --t4096-text-shadow: 0 0 8px #ff007f;
   --t4096-particle: #ff007f;
 
   --t8192-bg: linear-gradient(135deg, #331f00, #120424);
   --t8192-color: #ffe600;
-  --t8192-border: 2px solid #ff9e00;
-  --t8192-glow: 0 0 26px rgba(255, 230, 0, 0.7);
-  --t8192-text-shadow: 0 0 9px #ffe600;
+  --t8192-border: 1px solid #ffe600;
+  --t8192-glow: 0 0 24px rgba(255, 230, 0, 0.65);
+  --t8192-text-shadow: 0 0 8px #ffe600;
   --t8192-particle: #ffe600;
 
-  --t16384-bg: linear-gradient(135deg, #360030, #002236);
-  --t16384-color: #ffffff;
-  --t16384-border: 2px solid #00ffff;
-  --t16384-glow: 0 0 28px rgba(0, 255, 255, 0.75), 0 0 14px rgba(255, 0, 127, 0.65);
-  --t16384-text-shadow: 0 0 10px #ffffff;
-  --t16384-particle: #ffffff;
+  --t16384-bg: linear-gradient(135deg, #003322, #120424);
+  --t16384-color: #00ff9f;
+  --t16384-border: 1px solid #00ff9f;
+  --t16384-glow: 0 0 24px rgba(0, 255, 159, 0.65);
+  --t16384-text-shadow: 0 0 8px #00ff9f;
+  --t16384-particle: #00ff9f;
 
   --tsuper-bg: linear-gradient(135deg, #2b0038, #120424);
-  --tsuper-color: #ff007f;
-  --tsuper-border: 2px solid #00ffff;
-  --tsuper-glow: 0 0 30px rgba(255, 0, 127, 0.85);
-  --tsuper-text-shadow: 0 0 10px #ff007f;
-  --tsuper-particle: #ff007f;
+  --tsuper-color: #e879f9;
+  --tsuper-border: 1px solid #e879f9;
+  --tsuper-glow: 0 0 26px rgba(232, 121, 249, 0.7);
+  --tsuper-text-shadow: 0 0 9px #e879f9;
+  --tsuper-particle: #e879f9;
 }
