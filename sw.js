@@ -1,4 +1,4 @@
-const CACHE_NAME = '2048-reimagined-v23';
+const CACHE_NAME = '2048-reimagined-v24';
 const PRECACHE_ASSETS = [
   './',
   'index.html',
