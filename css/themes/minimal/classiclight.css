@@ -73,7 +73,7 @@
   --t2048-bg: #edc22e;
   --t2048-color: #f9f6f2;
   --t2048-border: none;
-  --t2048-glow: 0 0 12px rgba(237, 194, 46, 0.45);
+  --t2048-glow: none;
   --t2048-particle: #edc22e;
 
   --t4096-bg: #e07a5f;

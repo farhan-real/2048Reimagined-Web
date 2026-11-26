@@ -73,30 +73,30 @@
   --t2048-bg: #3a3a3a;
   --t2048-color: #ffffff;
   --t2048-border: 1px solid #999999;
-  --t2048-glow: 0 0 10px rgba(255, 255, 255, 0.14);
+  --t2048-glow: none;
   --t2048-particle: #ffffff;
 
   --t4096-bg: #2e2e2e;
   --t4096-color: #ffffff;
   --t4096-border: 1px solid #aaaaaa;
-  --t4096-glow: 0 0 12px rgba(255, 255, 255, 0.16);
+  --t4096-glow: none;
   --t4096-particle: #ffffff;
 
   --t8192-bg: #1a1a1a;
   --t8192-color: #ffffff;
   --t8192-border: 1px solid #bbbbbb;
-  --t8192-glow: 0 0 14px rgba(255, 255, 255, 0.18);
+  --t8192-glow: none;
   --t8192-particle: #ffffff;
 
   --t16384-bg: #4a4a4a;
   --t16384-color: #ffffff;
   --t16384-border: 1px solid #cccccc;
-  --t16384-glow: 0 0 14px rgba(255, 255, 255, 0.2);
+  --t16384-glow: none;
   --t16384-particle: #ffffff;
 
   --tsuper-bg: #262626;
   --tsuper-color: #ffffff;
   --tsuper-border: 1px solid #ffffff;
-  --tsuper-glow: 0 0 16px rgba(255, 255, 255, 0.24);
+  --tsuper-glow: none;
   --tsuper-particle: #ffffff;
 }
