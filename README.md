@@ -117,8 +117,8 @@ The project relies entirely on native browser standards (ES6 modules, Canvas API
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/farhan-real/2048-Reimagined.git
-   cd 2048-Reimagined
+   git clone https://github.com/farhan-real/2048Reimagined-Web.git
+   cd 2048Reimagined-Web
    ```
 
 2. Serve the directory using any static HTTP server:

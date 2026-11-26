@@ -87,7 +87,7 @@
         "Leaderboard Loss Undo: Undoing from the Game Over screen now automatically retracts the submitted score from the top-5 leaderboard.",
         "Dynamic Visualizer Ceilings: Added harmonic per-bar variation so saturated chiptune tracks no longer draw an artificial curve.",
         "Audio Storage Optimization: Converted all music tracks to high-efficiency 192kbps MP3 directly in assets/music/, dramatically cutting storage footprint while expanding the soundtrack to 25 tracks.",
-        'Open Source: Published repository on GitHub at <a href="https://github.com/farhan-real/2048-Reimagined" target="_blank" rel="noopener noreferrer" style="color:var(--accent-color);text-decoration:underline;word-break:break-all;">github.com/farhan-real/2048-Reimagined</a>.'
+        'Open Source: Published repository on GitHub at <a href="https://github.com/farhan-real/2048Reimagined-Web/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-color);text-decoration:underline;word-break:break-all;">github.com/farhan-real/2048Reimagined-Web</a>.'
       ]
     },
     {
@@ -178,7 +178,7 @@
     {
       category: "Open Source",
       items: [
-        { role: "GitHub", name: '<a href="https://github.com/farhan-real/2048-Reimagined" target="_blank" rel="noopener noreferrer" style="color:var(--accent-color);text-decoration:underline;word-break:break-all;">github.com/farhan-real/2048-Reimagined</a>' }
+        { role: "GitHub", name: '<a href="https://github.com/farhan-real/2048Reimagined-Web/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-color);text-decoration:underline;word-break:break-all;">github.com/farhan-real/2048Reimagined-Web</a>' }
       ]
     },
     {
