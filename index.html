@@ -251,7 +251,7 @@
         document.head.appendChild(manifestLink);
 
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('sw.js').then(async (reg) => {
+          navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then(async (reg) => {
             try {
               const res = await fetch('sw.js', { cache: 'no-store' });
               if (res.ok) {

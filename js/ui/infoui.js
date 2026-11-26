@@ -45,9 +45,9 @@
       if (idx > 0 && idx < 48 && !change.slice(0, idx).includes('<')) {
         const lead = change.slice(0, idx);
         const body = change.slice(idx + 2);
-        return `<li class="changelog-item"><span class="changelog-lead">${lead}:</span> <span class="changelog-desc">${body}</span></li>`;
+        return `<li class="changelog-item"><div class="changelog-lead">${lead}</div><div class="changelog-desc">${body}</div></li>`;
       }
-      return `<li class="changelog-item"><span class="changelog-desc">${change}</span></li>`;
+      return `<li class="changelog-item"><div class="changelog-desc">${change}</div></li>`;
     }
 
     renderChangelog() {
@@ -60,10 +60,14 @@
         box.className = "themed-info-box changelog-card" + (index === 0 ? " is-latest" : "");
 
         const latestTag = index === 0 ? `<span class="changelog-latest-pill">Latest</span>` : "";
+        const countLabel = `${log.changes.length} ${log.changes.length === 1 ? 'change' : 'changes'}`;
         let html = `
           <div class="changelog-card-header">
             <div class="changelog-meta-row">
-              <div class="info-version-badge">${log.version}</div>
+              <div class="changelog-meta-left">
+                <div class="info-version-badge">${log.version}</div>
+                <span class="changelog-count-pill">${countLabel}</span>
+              </div>
               ${latestTag}
             </div>
             <div class="changelog-card-title">${log.title}</div>

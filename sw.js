@@ -1,4 +1,4 @@
-const CACHE_NAME = '2048-reimagined-v21';
+const CACHE_NAME = '2048-reimagined-v22';
 const PRECACHE_ASSETS = [
   './',
   'index.html',
@@ -84,7 +84,11 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return Promise.allSettled(
-        PRECACHE_ASSETS.map((url) => cache.add(url).catch(() => {}))
+        PRECACHE_ASSETS.map((url) =>
+          fetch(url, { cache: 'no-cache' })
+            .then((res) => (res && res.ok ? cache.put(url, res) : null))
+            .catch(() => {})
+        )
       );
     }).then(() => self.skipWaiting())
   );
@@ -117,12 +121,21 @@ self.addEventListener('fetch', (event) => {
 
   const requestUrl = new URL(event.request.url);
 
+  if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') {
+    return;
+  }
+
   if (requestUrl.pathname.includes('/music/') || event.request.headers.has('range')) {
     return;
   }
 
+  const isSameOrigin = requestUrl.origin === self.location.origin;
+  const networkPromise = isSameOrigin
+    ? fetch(event.request, { cache: 'no-cache' })
+    : fetch(event.request);
+
   event.respondWith(
-    fetch(event.request)
+    networkPromise
       .then((networkResponse) => {
         if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
           const cloned = networkResponse.clone();
