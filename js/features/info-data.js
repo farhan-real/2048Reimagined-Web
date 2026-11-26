@@ -1,6 +1,17 @@
 (function() {
   const CHANGELOG = [
     {
+      version: "v4.1.0",
+      title: "16K+ Tile Palettes, Theme Reworks & Visual Consistency",
+      changes: [
+        "Extended 16K+ Tile Palettes: Expanded every theme to support 16384 and super-tier tiles (32768+) with unified backgrounds, borders, and glows so high-value tiles match each theme seamlessly across random boards.",
+        "Theme-Matched Score Popups: Floating score addition popups now dynamically inherit the active theme's accent color and glow styling.",
+        "Cyber & Tech Theme Overhauls: Refined Blueprint Dark into distinct cyanotype blues, smoothed Frutiger Aero Dark glass tiles on a deeper sapphire canvas, updated Vectorheart Dark with an obsidian background plus pitch-black and white contrast tiles, and separated Cyberpunk from Neon Glow.",
+        "Space & Minimal Refinements: Reworked Stellar Nebula Dark into borderless cosmic solids matching its light counterpart, tuned Nordic Frost Dark to true cool glacier slates, and separated Retro Keeb around vintage mechanical keycap tones.",
+        "Pastel, Sakura & Terminal Polish: Restored Pastel Rainbow Light colors, made both Pastel Pink modes genuinely pastel pink with clear contrast between adjacent borderless tiles, differentiated Sakura Bloom with cherry-blossom crimson and plum accents, and aligned Terminal Light 2048+ tiles with its olive-sage phosphor palette."
+      ]
+    },
+    {
       version: "v4.0.0",
       title: "PWA Overhaul, Landscape Dashboard & Restart Safety",
       changes: [
