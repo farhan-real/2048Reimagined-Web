@@ -34,29 +34,29 @@
   --t16-glow: none;
   --t16-particle: #ffffff;
 
-  --t32-bg: #000000;
-  --t32-color: #ffffff;
-  --t32-border: 1px solid #2c2e35;
+  --t32-bg: #9ea5ae;
+  --t32-color: #000000;
+  --t32-border: 1px solid #c2c8cf;
   --t32-glow: none;
-  --t32-particle: #ffffff;
+  --t32-particle: #9ea5ae;
 
-  --t64-bg: #dfee00;
-  --t64-color: #000000;
-  --t64-border: 1px solid #b8c700;
+  --t64-bg: #000000;
+  --t64-color: #ffffff;
+  --t64-border: 1px solid #2c2e35;
   --t64-glow: none;
-  --t64-particle: #dfee00;
+  --t64-particle: #ffffff;
 
-  --t128-bg: #a0a7ae;
+  --t128-bg: #dfee00;
   --t128-color: #000000;
-  --t128-border: 1px solid #cfd6da;
+  --t128-border: 1px solid #b8c700;
   --t128-glow: none;
-  --t128-particle: #a0a7ae;
+  --t128-particle: #dfee00;
 
-  --t256-bg: #363940;
+  --t256-bg: #757c87;
   --t256-color: #ffffff;
-  --t256-border: 1px solid #545963;
+  --t256-border: 1px solid #969ea8;
   --t256-glow: none;
-  --t256-particle: #969ea6;
+  --t256-particle: #969ea8;
 
   --t512-bg: #cfd6da;
   --t512-color: #141619;
