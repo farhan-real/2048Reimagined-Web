@@ -17,7 +17,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#0f271a" stroke="#2d6a4f" stroke-width="1"/>
     <text x="14" y="24" fill="#e8f5ed" class="lbl">Forest</text>
     <text x="14" y="39" fill="#e8f5ed" fill-opacity="0.72" class="sub">Dark</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#091a11" stroke="#2d6a4f" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#091a11"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="#1e4732" stroke="#40916c" stroke-width="1"/><text x="21" y="26.8" fill="#d8f3dc" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="#2d6a4f" stroke="#52b788" stroke-width="1"/><text x="69" y="26.8" fill="#ffffff" class="val v2">4</text>
@@ -42,7 +42,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#f3f7f4" stroke="#bcd4c3" stroke-width="1"/>
     <text x="14" y="24" fill="#1b4332" class="lbl">Forest</text>
     <text x="14" y="39" fill="#1b4332" fill-opacity="0.72" class="sub">Light</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#dbe8df" stroke="#bcd4c3" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#dbe8df"/>
     <g transform="translate(170, 7)">
       <rect x="0" y="0" width="42" height="42" rx="5" fill="#e2ede5"/><text x="21" y="26.8" fill="#2d6a4f" class="val v2">2</text>
       <rect x="48" y="0" width="42" height="42" rx="5" fill="#d0e4d6"/><text x="69" y="26.8" fill="#1b4332" class="val v2">4</text>
@@ -67,7 +67,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#020b12" stroke="#01fdf0" stroke-width="1" stroke-opacity="0.25"/>
     <text x="14" y="24" fill="#e0f9fb" class="lbl">Ocean</text>
     <text x="14" y="39" fill="#e0f9fb" fill-opacity="0.72" class="sub">Dark</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#011624" stroke="#007799" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#011624"/>
     <g transform="translate(170, 7)">
       <rect x="0" y="0" width="42" height="42" rx="5" fill="#d0fcf9"/><text x="21" y="26.8" fill="#011624" class="val v2">2</text>
       <rect x="48" y="0" width="42" height="42" rx="5" fill="#a2f9f3"/><text x="69" y="26.8" fill="#011624" class="val v2">4</text>
@@ -92,7 +92,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#f0f8fa" stroke="#a9d7e5" stroke-width="1"/>
     <text x="14" y="24" fill="#023e8a" class="lbl">Ocean</text>
     <text x="14" y="39" fill="#023e8a" fill-opacity="0.72" class="sub">Light</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#d4ecf3" stroke="#a9d7e5" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#d4ecf3"/>
     <g transform="translate(170, 7)">
       <rect x="0" y="0" width="42" height="42" rx="5" fill="#e1f4f8"/><text x="21" y="26.8" fill="#023e8a" class="val v2">2</text>
       <rect x="48" y="0" width="42" height="42" rx="5" fill="#caedf5"/><text x="69" y="26.8" fill="#023e8a" class="val v2">4</text>
@@ -117,7 +117,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#0a0205" stroke="#f06595" stroke-width="1" stroke-opacity="0.3"/>
     <text x="14" y="24" fill="#ffe6ec" class="lbl">Sakura Bloom</text>
     <text x="14" y="39" fill="#ffe6ec" fill-opacity="0.72" class="sub">Dark</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#14040b" stroke="#f06595" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#14040b"/>
     <g transform="translate(170, 7)">
       <rect x="0" y="0" width="42" height="42" rx="5" fill="#fff2f0"/><text x="21" y="26.8" fill="#4d0b1f" class="val v2">2</text>
       <rect x="48" y="0" width="42" height="42" rx="5" fill="#ff9aa8"/><text x="69" y="26.8" fill="#45081b" class="val v2">4</text>
@@ -142,7 +142,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#fff7f8" stroke="#eba8b9" stroke-width="1"/>
     <text x="14" y="24" fill="#6e142f" class="lbl">Sakura Bloom</text>
     <text x="14" y="39" fill="#6e142f" fill-opacity="0.72" class="sub">Light</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#f5dce0" stroke="#d6456b" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#f5dce0"/>
     <g transform="translate(170, 7)">
       <rect x="0" y="0" width="42" height="42" rx="5" fill="#fff7f5"/><text x="21" y="26.8" fill="#6e142f" class="val v2">2</text>
       <rect x="48" y="0" width="42" height="42" rx="5" fill="#ff9aa8"/><text x="69" y="26.8" fill="#4d0b1f" class="val v2">4</text>
@@ -167,7 +167,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#1a0a06" stroke="#632515" stroke-width="1"/>
     <text x="14" y="24" fill="#fef3c7" class="lbl">Autumn Maple</text>
     <text x="14" y="39" fill="#fef3c7" fill-opacity="0.72" class="sub">Dark</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#2b1009" stroke="#f59e0b" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#2b1009"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="#fef08a" stroke="#facc15" stroke-width="1"/><text x="21" y="26.8" fill="#451a03" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="#fb923c" stroke="#ea580c" stroke-width="1"/><text x="69" y="26.8" fill="#ffffff" class="val v2">4</text>
@@ -192,7 +192,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#fdf6ed" stroke="#dbc0a4" stroke-width="1"/>
     <text x="14" y="24" fill="#3f1707" class="lbl">Autumn Maple</text>
     <text x="14" y="39" fill="#3f1707" fill-opacity="0.72" class="sub">Light</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#edd8c2" stroke="#c2410c" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#edd8c2"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="#fef9c3" stroke="#fde047" stroke-width="1"/><text x="21" y="26.8" fill="#713f12" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="#fed7aa" stroke="#fb923c" stroke-width="1"/><text x="69" y="26.8" fill="#7c2d12" class="val v2">4</text>
@@ -217,7 +217,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#cca97c" stroke="#a67c52" stroke-width="1"/>
     <text x="14" y="24" fill="#361e0e" class="lbl">Ukiyo-e</text>
     <text x="14" y="39" fill="#361e0e" fill-opacity="0.72" class="sub">Wood</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#8a5d38" stroke="#5c381c" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#8a5d38"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="#f4ebd9" stroke="#ba9e79" stroke-width="1"/><text x="21" y="26.8" fill="#361e0e" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="#ebd9bf" stroke="#ab8a60" stroke-width="1"/><text x="69" y="26.8" fill="#361e0e" class="val v2">4</text>

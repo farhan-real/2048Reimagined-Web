@@ -17,7 +17,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#000000" stroke="#222222" stroke-width="1"/>
     <text x="14" y="24" fill="#ffffff" class="lbl">Pastel Rainbow</text>
     <text x="14" y="39" fill="#ffffff" fill-opacity="0.72" class="sub">Dark</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#000000" stroke="#141414" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#000000"/>
     <g transform="translate(170, 7)">
       <rect x="0" y="0" width="42" height="42" rx="5" fill="#ffccd5"/><text x="21" y="26.8" fill="#111111" class="val v2">2</text>
       <rect x="48" y="0" width="42" height="42" rx="5" fill="#ffdac1"/><text x="69" y="26.8" fill="#111111" class="val v2">4</text>
@@ -42,7 +42,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#faf7fc" stroke="#dcd3eb" stroke-width="1"/>
     <text x="14" y="24" fill="#382c4d" class="lbl">Pastel Rainbow</text>
     <text x="14" y="39" fill="#382c4d" fill-opacity="0.72" class="sub">Light</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#e7e0f0" stroke="#d4c8e8" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#e7e0f0"/>
     <g transform="translate(170, 7)">
       <rect x="0" y="0" width="42" height="42" rx="5" fill="#ffccd5"/><text x="21" y="26.8" fill="#382c4d" class="val v2">2</text>
       <rect x="48" y="0" width="42" height="42" rx="5" fill="#ffdac1"/><text x="69" y="26.8" fill="#382c4d" class="val v2">4</text>
@@ -67,7 +67,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#0b0608" stroke="#3d1a28" stroke-width="1"/>
     <text x="14" y="24" fill="#ffe4ef" class="lbl">Pastel Pink</text>
     <text x="14" y="39" fill="#ffe4ef" fill-opacity="0.72" class="sub">Dark</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#140a0e" stroke="#4a2031" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#140a0e"/>
     <g transform="translate(170, 7)">
       <rect x="0" y="0" width="42" height="42" rx="5" fill="#fff0f6"/><text x="21" y="26.8" fill="#471329" class="val v2">2</text>
       <rect x="48" y="0" width="42" height="42" rx="5" fill="#ffb3cf"/><text x="69" y="26.8" fill="#3b0c1f" class="val v2">4</text>
@@ -92,7 +92,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#fff5f8" stroke="#f0d5e0" stroke-width="1"/>
     <text x="14" y="24" fill="#6e2c46" class="lbl">Pastel Pink</text>
     <text x="14" y="39" fill="#6e2c46" fill-opacity="0.72" class="sub">Light</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#edd4de" stroke="#e2becc" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#edd4de"/>
     <g transform="translate(170, 7)">
       <rect x="0" y="0" width="42" height="42" rx="5" fill="#fff0f6"/><text x="21" y="26.8" fill="#7a304d" class="val v2">2</text>
       <rect x="48" y="0" width="42" height="42" rx="5" fill="#ffb3cf"/><text x="69" y="26.8" fill="#4f132c" class="val v2">4</text>
@@ -117,7 +117,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#0a131c" stroke="#2c465e" stroke-width="1"/>
     <text x="14" y="24" fill="#e8f0f5" class="lbl">Nordic Frost</text>
     <text x="14" y="39" fill="#e8f0f5" fill-opacity="0.72" class="sub">Dark</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#111f2c" stroke="#7daecc" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#111f2c"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="#1a2d3d" stroke="#35546e" stroke-width="1"/><text x="21" y="26.8" fill="#c6dce8" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="#2c4f6b" stroke="#527e9e" stroke-width="1"/><text x="69" y="26.8" fill="#e8f0f5" class="val v2">4</text>
@@ -142,7 +142,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#f4f7f9" stroke="#bfcfdc" stroke-width="1"/>
     <text x="14" y="24" fill="#243b4d" class="lbl">Nordic Frost</text>
     <text x="14" y="39" fill="#243b4d" fill-opacity="0.72" class="sub">Light</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#dbe4ea" stroke="#bfcfdc" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#dbe4ea"/>
     <g transform="translate(170, 7)">
       <rect x="0" y="0" width="42" height="42" rx="5" fill="#e3ebf1"/><text x="21" y="26.8" fill="#243b4d" class="val v2">2</text>
       <rect x="48" y="0" width="42" height="42" rx="5" fill="#d1dfeb"/><text x="69" y="26.8" fill="#243b4d" class="val v2">4</text>
@@ -167,7 +167,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#1f1d1a" stroke="#4a4239" stroke-width="1"/>
     <text x="14" y="24" fill="#f9f6f2" class="lbl">Classic Sand</text>
     <text x="14" y="39" fill="#f9f6f2" fill-opacity="0.72" class="sub">Dark</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#3d3731" stroke="#4d453d" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#3d3731"/>
     <g transform="translate(170, 7)">
       <rect x="0" y="0" width="42" height="42" rx="5" fill="#423c35"/><text x="21" y="26.8" fill="#eee4da" class="val v2">2</text>
       <rect x="48" y="0" width="42" height="42" rx="5" fill="#4a433a"/><text x="69" y="26.8" fill="#ede0c8" class="val v2">4</text>
@@ -192,7 +192,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#faf8ef" stroke="#bbada0" stroke-width="1"/>
     <text x="14" y="24" fill="#776e65" class="lbl">Classic Sand</text>
     <text x="14" y="39" fill="#776e65" fill-opacity="0.72" class="sub">Light</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#bbada0" stroke="#bbada0" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#bbada0"/>
     <g transform="translate(170, 7)">
       <rect x="0" y="0" width="42" height="42" rx="5" fill="#eee4da"/><text x="21" y="26.8" fill="#776e65" class="val v2">2</text>
       <rect x="48" y="0" width="42" height="42" rx="5" fill="#ede0c8"/><text x="69" y="26.8" fill="#776e65" class="val v2">4</text>
@@ -217,7 +217,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#000000" stroke="#1a1a1a" stroke-width="1"/>
     <text x="14" y="24" fill="#888888" class="lbl">The Void</text>
     <text x="14" y="39" fill="#888888" fill-opacity="0.72" class="sub">OLED</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#000000" stroke="#111111" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#000000"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="#080808" stroke="#111111" stroke-width="1"/><text x="21" y="26.8" fill="#555555" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="#0c0c0c" stroke="#1c1c1c" stroke-width="1"/><text x="69" y="26.8" fill="#777777" class="val v2">4</text>

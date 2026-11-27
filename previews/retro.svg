@@ -34,7 +34,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#1a1816" stroke="#403b35" stroke-width="1"/>
     <text x="14" y="24" fill="#ebe3d5" class="lbl">Retro Keeb</text>
     <text x="14" y="39" fill="#ebe3d5" fill-opacity="0.72" class="sub">Dark</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#262320" stroke="#e06338" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#262320"/>
     <g transform="translate(170, 7)">
       <rect x="1" y="1" width="40" height="40" rx="4" fill="#2e2b28" stroke="#4a453f" stroke-width="2"/><text x="21" y="26.8" fill="#ebe3d5" class="val v2">2</text>
       <rect x="49" y="1" width="40" height="40" rx="4" fill="#443f3a" stroke="#635c55" stroke-width="2"/><text x="69" y="26.8" fill="#f4efe6" class="val v2">4</text>
@@ -59,7 +59,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#e8e2d5" stroke="#bdb29f" stroke-width="1"/>
     <text x="14" y="24" fill="#2c2620" class="lbl">Retro Keeb</text>
     <text x="14" y="39" fill="#2c2620" fill-opacity="0.72" class="sub">Light</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#d4ccbd" stroke="#c85a32" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#d4ccbd"/>
     <g transform="translate(170, 7)">
       <rect x="1" y="1" width="40" height="40" rx="4" fill="#f4efe6" stroke="#d6ccb8" stroke-width="2"/><text x="21" y="26.8" fill="#362f28" class="val v2">2</text>
       <rect x="49" y="1" width="40" height="40" rx="4" fill="#e2d7c3" stroke="#bfb199" stroke-width="2"/><text x="69" y="26.8" fill="#362f28" class="val v2">4</text>
@@ -84,7 +84,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#0b1a0e" stroke="#2a5726" stroke-width="1"/>
     <text x="14" y="24" fill="#9bbc0f" class="lbl">DMG 1989</text>
     <text x="14" y="39" fill="#9bbc0f" fill-opacity="0.72" class="sub">Dark</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#112616" stroke="#4e8238" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#112616"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="#142e1a" stroke="#2a5726" stroke-width="1"/><text x="21" y="26.8" fill="#8bac0f" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="#1b3b22" stroke="#376f32" stroke-width="1"/><text x="69" y="26.8" fill="#9bbc0f" class="val v2">4</text>
@@ -109,7 +109,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#9bbc0f" stroke="#306230" stroke-width="1"/>
     <text x="14" y="24" fill="#0f380f" class="lbl">DMG 1989</text>
     <text x="14" y="39" fill="#0f380f" fill-opacity="0.72" class="sub">Light</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#8bac0f" stroke="#306230" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#8bac0f"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="#9bbc0f" stroke="#306230" stroke-width="1"/><text x="21" y="26.8" fill="#0f380f" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="#8bac0f" stroke="#306230" stroke-width="1"/><text x="69" y="26.8" fill="#0f380f" class="val v2">4</text>
@@ -134,7 +134,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#000000" stroke="#00ff46" stroke-width="1" stroke-opacity="0.2"/>
     <text x="14" y="24" fill="#00ff46" class="lbl">Terminal</text>
     <text x="14" y="39" fill="#00ff46" fill-opacity="0.72" class="sub">Dark</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#000000" stroke="#00ff46" stroke-width="1" stroke-opacity="0.3"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#000000"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="#000000" stroke="#00ff46" stroke-width="1"/><text x="21" y="26.8" fill="#00ff46" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="#000000" stroke="#00dd3a" stroke-width="1"/><text x="69" y="26.8" fill="#00dd3a" class="val v2">4</text>
@@ -159,7 +159,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#eaede8" stroke="#98a89b" stroke-width="1"/>
     <text x="14" y="24" fill="#0d2112" class="lbl">Terminal</text>
     <text x="14" y="39" fill="#0d2112" fill-opacity="0.72" class="sub">Light</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#dce0da" stroke="#1a3020" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#dce0da"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="#f4f6f2" stroke="#1a3020" stroke-width="1"/><text x="21" y="26.8" fill="#0d2112" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="#e0e8dc" stroke="#1a3020" stroke-width="1"/><text x="69" y="26.8" fill="#0d2112" class="val v2">4</text>
@@ -184,7 +184,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#0b0217" stroke="#3b1464" stroke-width="1"/>
     <text x="14" y="24" fill="#f7e8ff" class="lbl">Synthwave</text>
     <text x="14" y="39" fill="#f7e8ff" fill-opacity="0.72" class="sub">Dark</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#120424" stroke="#ff007f" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#120424"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="url(#synthwavedark-t2)" stroke="#ff2a85" stroke-width="1"/><text x="21" y="26.8" fill="#ff2a85" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="url(#synthwavedark-t4)" stroke="#00f0ff" stroke-width="1"/><text x="69" y="26.8" fill="#00f0ff" class="val v2">4</text>
@@ -209,7 +209,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#fef6f8" stroke="#ff007f" stroke-width="1"/>
     <text x="14" y="24" fill="#3a102a" class="lbl">Synthwave</text>
     <text x="14" y="39" fill="#3a102a" fill-opacity="0.72" class="sub">Light</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#fbe6ee" stroke="#ff007f" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#fbe6ee"/>
     <g transform="translate(170, 7)">
       <rect x="1" y="1" width="40" height="40" rx="4" fill="#ffffff" stroke="#ff007f" stroke-width="2"/><text x="21" y="26.8" fill="#ff007f" class="val v2">2</text>
       <rect x="49" y="1" width="40" height="40" rx="4" fill="#ffffff" stroke="#00bcd4" stroke-width="2"/><text x="69" y="26.8" fill="#00bcd4" class="val v2">4</text>

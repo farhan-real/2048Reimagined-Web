@@ -17,7 +17,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#080312" stroke="#3c1a6e" stroke-width="1"/>
     <text x="14" y="24" fill="#f3e8ff" class="lbl">Stellar Nebula</text>
     <text x="14" y="39" fill="#f3e8ff" fill-opacity="0.72" class="sub">Dark</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#110724" stroke="#7b2cbf" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#110724"/>
     <g transform="translate(170, 7)">
       <rect x="0" y="0" width="42" height="42" rx="5" fill="#d8ccf2"/><text x="21" y="26.8" fill="#2e1a4d" class="val v2">2</text>
       <rect x="48" y="0" width="42" height="42" rx="5" fill="#7c52b8"/><text x="69" y="26.8" fill="#ffffff" class="val v2">4</text>
@@ -42,7 +42,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#f7f6fc" stroke="#cec7eb" stroke-width="1"/>
     <text x="14" y="24" fill="#3c2a63" class="lbl">Stellar Nebula</text>
     <text x="14" y="39" fill="#3c2a63" fill-opacity="0.72" class="sub">Light</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#e4e1f5" stroke="#cec7eb" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#e4e1f5"/>
     <g transform="translate(170, 7)">
       <rect x="0" y="0" width="42" height="42" rx="5" fill="#eae6f5"/><text x="21" y="26.8" fill="#503775" class="val v2">2</text>
       <rect x="48" y="0" width="42" height="42" rx="5" fill="#ddd6ee"/><text x="69" y="26.8" fill="#3c2a63" class="val v2">4</text>
@@ -67,7 +67,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#07010f" stroke="#52197d" stroke-width="1"/>
     <text x="14" y="24" fill="#fff4e6" class="lbl">Supernova</text>
     <text x="14" y="39" fill="#fff4e6" fill-opacity="0.72" class="sub">Dark</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#140326" stroke="#ffb703" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#140326"/>
     <g transform="translate(170, 7)">
       <rect x="0" y="0" width="42" height="42" rx="5" fill="#00e5ff"/><text x="21" y="26.8" fill="#07010f" class="val v2">2</text>
       <rect x="48" y="0" width="42" height="42" rx="5" fill="#a855f7"/><text x="69" y="26.8" fill="#ffffff" class="val v2">4</text>
@@ -92,7 +92,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#fffcf5" stroke="#fad896" stroke-width="1"/>
     <text x="14" y="24" fill="#451a03" class="lbl">Supernova</text>
     <text x="14" y="39" fill="#451a03" fill-opacity="0.72" class="sub">Light</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#faeccb" stroke="#f59e0b" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#faeccb"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/><text x="21" y="26.8" fill="#92400e" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="#fde68a" stroke="#fcd34d" stroke-width="1"/><text x="69" y="26.8" fill="#92400e" class="val v2">4</text>

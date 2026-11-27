@@ -49,7 +49,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#080312" stroke="#ff007f" stroke-width="1"/>
     <text x="14" y="24" fill="#f8fafc" class="lbl">Cyberpunk</text>
     <text x="14" y="39" fill="#f8fafc" fill-opacity="0.72" class="sub">Dark</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#120724" stroke="#fcee0a" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#120724"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="#1b1736" stroke="#00e5ff" stroke-width="1"/><text x="21" y="26.8" fill="#38e8ff" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="#380828" stroke="#ff007f" stroke-width="1"/><text x="69" y="26.8" fill="#ff66b2" class="val v2">4</text>
@@ -74,7 +74,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#eef1f6" stroke="#ff007f" stroke-width="1"/>
     <text x="14" y="24" fill="#0f172a" class="lbl">Cyberpunk</text>
     <text x="14" y="39" fill="#0f172a" fill-opacity="0.72" class="sub">Light</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#dce2ed" stroke="#ff007f" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#dce2ed"/>
     <g transform="translate(170, 7)">
       <rect x="1" y="1" width="40" height="40" rx="4" fill="#ffffff" stroke="#00bcd4" stroke-width="2"/><text x="21" y="26.8" fill="#0f172a" class="val v2">2</text>
       <rect x="49" y="1" width="40" height="40" rx="4" fill="#fcee0a" stroke="#0f172a" stroke-width="2"/><text x="69" y="26.8" fill="#0f172a" class="val v2">4</text>
@@ -99,7 +99,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#08162e" stroke="#1d4880" stroke-width="1"/>
     <text x="14" y="24" fill="#e0f2fe" class="lbl">Blueprint</text>
     <text x="14" y="39" fill="#e0f2fe" fill-opacity="0.72" class="sub">Dark</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#0e244a" stroke="#4da6ff" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#0e244a"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="#122e5e" stroke="#356ec4" stroke-width="1"/><text x="21" y="26.8" fill="#b8dcff" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="#0284c7" stroke="#7dd3fc" stroke-width="1"/><text x="69" y="26.8" fill="#ffffff" class="val v2">4</text>
@@ -124,7 +124,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#dbeef9" stroke="#8bb6d9" stroke-width="1"/>
     <text x="14" y="24" fill="#072b4f" class="lbl">Blueprint</text>
     <text x="14" y="39" fill="#072b4f" fill-opacity="0.72" class="sub">Light</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#c0dfef" stroke="#0a4c8a" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#c0dfef"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="#ebf5fb" stroke="#0a4c8a" stroke-width="1"/><text x="21" y="26.8" fill="#072b4f" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="#d4ebf7" stroke="#0a4c8a" stroke-width="1"/><text x="69" y="26.8" fill="#072b4f" class="val v2">4</text>
@@ -149,7 +149,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#071a2e" stroke="#245f94" stroke-width="1"/>
     <text x="14" y="24" fill="#e0f7ff" class="lbl">Frutiger Aero</text>
     <text x="14" y="39" fill="#e0f7ff" fill-opacity="0.72" class="sub">Dark</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#0d2a47" stroke="#38bdf8" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#0d2a47"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="url(#frutigerdark-t2)" stroke="#7dd3fc" stroke-width="1" stroke-opacity="0.5"/><text x="21" y="26.8" fill="#e0fbff" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="url(#frutigerdark-t4)" stroke="#5eead4" stroke-width="1" stroke-opacity="0.55"/><text x="69" y="26.8" fill="#ecfdf5" class="val v2">4</text>
@@ -174,7 +174,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#dcf4f7" stroke="#89d6e2" stroke-width="1"/>
     <text x="14" y="24" fill="#03333d" class="lbl">Frutiger Aero</text>
     <text x="14" y="39" fill="#03333d" fill-opacity="0.72" class="sub">Light</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#b8e8f0" stroke="#00a8c6" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#b8e8f0"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="#e0f7fa" stroke="#80deea" stroke-width="1"/><text x="21" y="26.8" fill="#024855" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="#a7f3d0" stroke="#34d399" stroke-width="1"/><text x="69" y="26.8" fill="#064e3b" class="val v2">4</text>
@@ -199,7 +199,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#09090b" stroke="#2b2d33" stroke-width="1"/>
     <text x="14" y="24" fill="#f0f2f4" class="lbl">Vectorheart</text>
     <text x="14" y="39" fill="#f0f2f4" fill-opacity="0.72" class="sub">Dark</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#141518" stroke="#ff142b" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#141518"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="#24262b" stroke="#3c4048" stroke-width="1"/><text x="21" y="26.8" fill="#f0f2f4" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="#484c54" stroke="#676c75" stroke-width="1"/><text x="69" y="26.8" fill="#ffffff" class="val v2">4</text>
@@ -224,7 +224,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#eaedf0" stroke="#c0c8cf" stroke-width="1"/>
     <text x="14" y="24" fill="#141619" class="lbl">Vectorheart</text>
     <text x="14" y="39" fill="#141619" fill-opacity="0.72" class="sub">Light</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#d3dade" stroke="#ff142b" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#d3dade"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="#ffffff" stroke="#b8c0c7" stroke-width="1"/><text x="21" y="26.8" fill="#141619" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="#bcc4ca" stroke="#96a0a8" stroke-width="1"/><text x="69" y="26.8" fill="#141619" class="val v2">4</text>
@@ -249,7 +249,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#000000" stroke="#222222" stroke-width="1"/>
     <text x="14" y="24" fill="#ffffff" class="lbl">Neon Glow</text>
     <text x="14" y="39" fill="#ffffff" fill-opacity="0.72" class="sub">Dark</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#000000" stroke="#141414" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#000000"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="url(#neondark-t2)" stroke="#3b4659" stroke-width="1"/><text x="21" y="26.8" fill="#94a3b8" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="url(#neondark-t4)" stroke="#00f0ff" stroke-width="1"/><text x="69" y="26.8" fill="#00f0ff" class="val v2">4</text>
@@ -274,7 +274,7 @@
     <rect x="0.5" y="0.5" width="911" height="55" rx="8" fill="#f8fafd" stroke="#cbd5e1" stroke-width="1"/>
     <text x="14" y="24" fill="#0f172a" class="lbl">Neon Glow</text>
     <text x="14" y="39" fill="#0f172a" fill-opacity="0.72" class="sub">Light</text>
-    <rect x="164.5" y="3.5" width="725" height="49" rx="7" fill="#e2e8f0" stroke="#0284c7" stroke-width="1"/>
+    <rect x="164" y="3" width="726" height="50" rx="7" fill="#e2e8f0"/>
     <g transform="translate(170, 7)">
       <rect x="0.5" y="0.5" width="41" height="41" rx="4.5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/><text x="21" y="26.8" fill="#475569" class="val v2">2</text>
       <rect x="48.5" y="0.5" width="41" height="41" rx="4.5" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1"/><text x="69" y="26.8" fill="#0369a1" class="val v2">4</text>
