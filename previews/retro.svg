@@ -7,26 +7,20 @@
     .v2 { font-size:15px; } .v3 { font-size:12px; } .v4 { font-size:10px; } .v5 { font-size:9px; }
   </style>
   <defs>
-    <linearGradient id="rkd-2048" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e63946"/><stop offset="100%" stop-color="#b71c1c"/></linearGradient>
-    <linearGradient id="rkd-4096" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f0ece1"/><stop offset="100%" stop-color="#d0d7e3"/></linearGradient>
-    <linearGradient id="rkd-8192" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#24272b"/><stop offset="100%" stop-color="#181a1c"/></linearGradient>
-    <linearGradient id="rkd-16384" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#798496"/><stop offset="100%" stop-color="#575f6d"/></linearGradient>
-    <linearGradient id="rkl-2048" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#c0392b"/><stop offset="100%" stop-color="#96281b"/></linearGradient>
-    <linearGradient id="rkl-4096" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2c2824"/><stop offset="100%" stop-color="#1a1715"/></linearGradient>
-    <linearGradient id="rkl-8192" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fbf8f3"/><stop offset="100%" stop-color="#eee7da"/></linearGradient>
-    <linearGradient id="rkl-16384" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#524a41"/><stop offset="100%" stop-color="#2c2824"/></linearGradient>
-    <linearGradient id="dd-2048" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#9bbc0f"/><stop offset="100%" stop-color="#7a9c0d"/></linearGradient>
-    <linearGradient id="dd-4096" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#c5e63e"/><stop offset="100%" stop-color="#9bbc0f"/></linearGradient>
-    <linearGradient id="dd-8192" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1b3b22"/><stop offset="100%" stop-color="#0b1a0e"/></linearGradient>
-    <linearGradient id="dd-16384" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#458c45"/><stop offset="100%" stop-color="#285431"/></linearGradient>
-    <linearGradient id="swd-2048" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2b0038"/><stop offset="100%" stop-color="#120424"/></linearGradient>
-    <linearGradient id="swd-4096" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#3d0028"/><stop offset="100%" stop-color="#120424"/></linearGradient>
-    <linearGradient id="swd-8192" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#331f00"/><stop offset="100%" stop-color="#120424"/></linearGradient>
-    <linearGradient id="swd-16384" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#360030"/><stop offset="100%" stop-color="#002236"/></linearGradient>
-    <linearGradient id="swl-2048" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ffe3f1"/><stop offset="100%" stop-color="#e0fcff"/></linearGradient>
-    <linearGradient id="swl-4096" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e0f7ff"/><stop offset="100%" stop-color="#f3e5ff"/></linearGradient>
-    <linearGradient id="swl-8192" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fff5cc"/><stop offset="100%" stop-color="#ffe3f1"/></linearGradient>
-    <linearGradient id="swl-16384" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2d0a3d"/><stop offset="100%" stop-color="#1a0524"/></linearGradient>
+    <linearGradient id="swd-2" x1="14.6%" y1="14.6%" x2="85.4%" y2="85.4%"><stop offset="0%" stop-color="#2a002e"/><stop offset="100%" stop-color="#120424"/></linearGradient>
+    <linearGradient id="swd-4" x1="14.6%" y1="14.6%" x2="85.4%" y2="85.4%"><stop offset="0%" stop-color="#002236"/><stop offset="100%" stop-color="#120424"/></linearGradient>
+    <linearGradient id="swd-8" x1="14.6%" y1="14.6%" x2="85.4%" y2="85.4%"><stop offset="0%" stop-color="#331a00"/><stop offset="100%" stop-color="#120424"/></linearGradient>
+    <linearGradient id="swd-16" x1="14.6%" y1="14.6%" x2="85.4%" y2="85.4%"><stop offset="0%" stop-color="#003322"/><stop offset="100%" stop-color="#120424"/></linearGradient>
+    <linearGradient id="swd-32" x1="14.6%" y1="14.6%" x2="85.4%" y2="85.4%"><stop offset="0%" stop-color="#360024"/><stop offset="100%" stop-color="#120424"/></linearGradient>
+    <linearGradient id="swd-64" x1="14.6%" y1="14.6%" x2="85.4%" y2="85.4%"><stop offset="0%" stop-color="#381200"/><stop offset="100%" stop-color="#120424"/></linearGradient>
+    <linearGradient id="swd-128" x1="14.6%" y1="14.6%" x2="85.4%" y2="85.4%"><stop offset="0%" stop-color="#260042"/><stop offset="100%" stop-color="#120424"/></linearGradient>
+    <linearGradient id="swd-256" x1="14.6%" y1="14.6%" x2="85.4%" y2="85.4%"><stop offset="0%" stop-color="#380010"/><stop offset="100%" stop-color="#120424"/></linearGradient>
+    <linearGradient id="swd-512" x1="14.6%" y1="14.6%" x2="85.4%" y2="85.4%"><stop offset="0%" stop-color="#001f3b"/><stop offset="100%" stop-color="#120424"/></linearGradient>
+    <linearGradient id="swd-1024" x1="14.6%" y1="14.6%" x2="85.4%" y2="85.4%"><stop offset="0%" stop-color="#332d00"/><stop offset="100%" stop-color="#120424"/></linearGradient>
+    <linearGradient id="swd-2048" x1="14.6%" y1="14.6%" x2="85.4%" y2="85.4%"><stop offset="0%" stop-color="#002236"/><stop offset="100%" stop-color="#120424"/></linearGradient>
+    <linearGradient id="swd-4096" x1="14.6%" y1="14.6%" x2="85.4%" y2="85.4%"><stop offset="0%" stop-color="#360024"/><stop offset="100%" stop-color="#120424"/></linearGradient>
+    <linearGradient id="swd-8192" x1="14.6%" y1="14.6%" x2="85.4%" y2="85.4%"><stop offset="0%" stop-color="#331f00"/><stop offset="100%" stop-color="#120424"/></linearGradient>
+    <linearGradient id="swd-16384" x1="14.6%" y1="14.6%" x2="85.4%" y2="85.4%"><stop offset="0%" stop-color="#003322"/><stop offset="100%" stop-color="#120424"/></linearGradient>
   </defs>
 
   <g transform="translate(180, 24)">
@@ -35,52 +29,52 @@
 
   <!-- Retro Keeb Dark -->
   <g transform="translate(10, 36)">
-    <rect width="864" height="54" rx="8" fill="#181a1c" stroke="#e63946" stroke-width="1"/>
-    <text x="14" y="24" fill="#f0ece1" class="lbl">Retro Keeb</text><text x="14" y="38" class="sub">Dark</text>
+    <rect width="864" height="54" rx="8" fill="#1a1816" stroke="#e06338" stroke-width="1"/>
+    <text x="14" y="24" fill="#ebe3d5" class="lbl">Retro Keeb</text><text x="14" y="38" class="sub" style="fill:#ebe3d5;" fill-opacity="0.72">Dark</text>
     <g transform="translate(170, 6)">
-      <rect x="0" width="42" height="42" rx="6" fill="#2c3036" stroke="#434952"/><text x="21" y="21" fill="#f0ece1" class="val v2">2</text>
-      <rect x="48" width="42" height="42" rx="6" fill="#3f454f" stroke="#5b6370"/><text x="69" y="21" fill="#f0ece1" class="val v2">4</text>
-      <rect x="96" width="42" height="42" rx="6" fill="#575f6d" stroke="#778194"/><text x="117" y="21" fill="#ffffff" class="val v2">8</text>
-      <rect x="144" width="42" height="42" rx="6" fill="#798496" stroke="#9ea9bd"/><text x="165" y="21" fill="#181a1c" class="val v2">16</text>
-      <rect x="192" width="42" height="42" rx="6" fill="#a7b1c2" stroke="#d0d7e3"/><text x="213" y="21" fill="#181a1c" class="val v2">32</text>
-      <rect x="240" width="42" height="42" rx="6" fill="#f0ece1" stroke="#ffffff"/><text x="261" y="21" fill="#181a1c" class="val v2">64</text>
-      <rect x="288" width="42" height="42" rx="6" fill="#e63946" stroke="#ff6b77"/><text x="309" y="21" fill="#ffffff" class="val v3">128</text>
-      <rect x="336" width="42" height="42" rx="6" fill="#b71c1c" stroke="#e63946"/><text x="357" y="21" fill="#ffffff" class="val v3">256</text>
-      <rect x="384" width="42" height="42" rx="6" fill="#181a1c" stroke="#e63946" stroke-width="2"/><text x="405" y="21" fill="#e63946" class="val v3">512</text>
-      <rect x="432" width="42" height="42" rx="6" fill="#f0ece1" stroke="#b71c1c" stroke-width="2"/><text x="453" y="21" fill="#b71c1c" class="val v4">1024</text>
-      <rect x="480" width="42" height="42" rx="6" fill="url(#rkd-2048)" stroke="#f0ece1" stroke-width="2"/><text x="501" y="21" fill="#f0ece1" class="val v4">2048</text>
-      <rect x="528" width="42" height="42" rx="6" fill="url(#rkd-4096)" stroke="#e63946" stroke-width="2"/><text x="549" y="21" fill="#181a1c" class="val v4">4096</text>
-      <rect x="576" width="42" height="42" rx="6" fill="url(#rkd-8192)" stroke="#e63946" stroke-width="2"/><text x="597" y="21" fill="#f0ece1" class="val v4">8192</text>
-      <rect x="624" width="42" height="42" rx="6" fill="url(#rkd-16384)" stroke="#f0ece1" stroke-width="2"/><text x="645" y="21" fill="#f0ece1" class="val v5">16384</text>
+      <rect x="0" width="42" height="42" rx="6" fill="#2e2b28" stroke="#4a453f" stroke-width="2"/><text x="21" y="21" fill="#ebe3d5" class="val v2">2</text>
+      <rect x="48" width="42" height="42" rx="6" fill="#443f3a" stroke="#635c55" stroke-width="2"/><text x="69" y="21" fill="#f4efe6" class="val v2">4</text>
+      <rect x="96" width="42" height="42" rx="6" fill="#615a52" stroke="#857c71" stroke-width="2"/><text x="117" y="21" fill="#ffffff" class="val v2">8</text>
+      <rect x="144" width="42" height="42" rx="6" fill="#8c8275" stroke="#b5a998" stroke-width="2"/><text x="165" y="21" fill="#1a1816" class="val v2">16</text>
+      <rect x="192" width="42" height="42" rx="6" fill="#d6cbb8" stroke="#f4efe6" stroke-width="2"/><text x="213" y="21" fill="#24201c" class="val v2">32</text>
+      <rect x="240" width="42" height="42" rx="6" fill="#ebe3d5" stroke="#ffffff" stroke-width="2"/><text x="261" y="21" fill="#1a1816" class="val v2">64</text>
+      <rect x="288" width="42" height="42" rx="6" fill="#e06338" stroke="#ff8c66" stroke-width="2"/><text x="309" y="21" fill="#ffffff" class="val v3">128</text>
+      <rect x="336" width="42" height="42" rx="6" fill="#2c7a7b" stroke="#56b3b4" stroke-width="2"/><text x="357" y="21" fill="#f4efe6" class="val v3">256</text>
+      <rect x="384" width="42" height="42" rx="6" fill="#d99226" stroke="#f5be58" stroke-width="2"/><text x="405" y="21" fill="#1a1816" class="val v3">512</text>
+      <rect x="432" width="42" height="42" rx="6" fill="#b8402c" stroke="#e06338" stroke-width="2"/><text x="453" y="21" fill="#faf6ee" class="val v4">1024</text>
+      <rect x="480" width="42" height="42" rx="6" fill="#1f1d1b" stroke="#e06338" stroke-width="2"/><text x="501" y="21" fill="#e06338" class="val v4">2048</text>
+      <rect x="528" width="42" height="42" rx="6" fill="#ebe3d5" stroke="#b8402c" stroke-width="2"/><text x="549" y="21" fill="#b8402c" class="val v4">4096</text>
+      <rect x="576" width="42" height="42" rx="6" fill="#496e5d" stroke="#76a68f" stroke-width="2"/><text x="597" y="21" fill="#f4efe6" class="val v4">8192</text>
+      <rect x="624" width="42" height="42" rx="6" fill="#786d5f" stroke="#d6cbb8" stroke-width="2"/><text x="645" y="21" fill="#f4efe6" class="val v5">16384</text>
     </g>
   </g>
 
   <!-- Retro Keeb Light -->
   <g transform="translate(10, 96)">
-    <rect width="864" height="54" rx="8" fill="#e8e2d5" stroke="#c0392b" stroke-width="1"/>
-    <text x="14" y="24" fill="#2c2824" class="lbl">Retro Keeb</text><text x="14" y="38" class="sub">Light</text>
+    <rect width="864" height="54" rx="8" fill="#e8e2d5" stroke="#c85a32" stroke-width="1"/>
+    <text x="14" y="24" fill="#2c2620" class="lbl">Retro Keeb</text><text x="14" y="38" class="sub" style="fill:#2c2620;" fill-opacity="0.72">Light</text>
     <g transform="translate(170, 6)">
-      <rect x="0" width="42" height="42" rx="6" fill="#fbf8f3" stroke="#dcd5c7"/><text x="21" y="21" fill="#2c2824" class="val v2">2</text>
-      <rect x="48" width="42" height="42" rx="6" fill="#eee7da" stroke="#cfc6b5"/><text x="69" y="21" fill="#2c2824" class="val v2">4</text>
-      <rect x="96" width="42" height="42" rx="6" fill="#d6cdc0" stroke="#b3a794" stroke-width="2"/><text x="117" y="21" fill="#2c2824" class="val v2">8</text>
-      <rect x="144" width="42" height="42" rx="6" fill="#b8ada0" stroke="#8f8272" stroke-width="2"/><text x="165" y="21" fill="#2c2824" class="val v2">16</text>
-      <rect x="192" width="42" height="42" rx="6" fill="#8a7f72" stroke="#5c5347" stroke-width="2"/><text x="213" y="21" fill="#fbf8f3" class="val v2">32</text>
-      <rect x="240" width="42" height="42" rx="6" fill="#524a41" stroke="#2c2824" stroke-width="2"/><text x="261" y="21" fill="#fbf8f3" class="val v2">64</text>
-      <rect x="288" width="42" height="42" rx="6" fill="#e63946" stroke="#c0212f" stroke-width="2"/><text x="309" y="21" fill="#ffffff" class="val v3">128</text>
-      <rect x="336" width="42" height="42" rx="6" fill="#b71c1c" stroke="#7f0000" stroke-width="2"/><text x="357" y="21" fill="#ffffff" class="val v3">256</text>
-      <rect x="384" width="42" height="42" rx="6" fill="#fbf8f3" stroke="#c0392b" stroke-width="3"/><text x="405" y="21" fill="#c0392b" class="val v3">512</text>
-      <rect x="432" width="42" height="42" rx="6" fill="#2c2824" stroke="#e63946" stroke-width="3"/><text x="453" y="21" fill="#e63946" class="val v4">1024</text>
-      <rect x="480" width="42" height="42" rx="6" fill="url(#rkl-2048)" stroke="#2c2824" stroke-width="2"/><text x="501" y="21" fill="#fbf8f3" class="val v4">2048</text>
-      <rect x="528" width="42" height="42" rx="6" fill="url(#rkl-4096)" stroke="#c0392b" stroke-width="2"/><text x="549" y="21" fill="#fbf8f3" class="val v4">4096</text>
-      <rect x="576" width="42" height="42" rx="6" fill="url(#rkl-8192)" stroke="#2c2824" stroke-width="2"/><text x="597" y="21" fill="#c0392b" class="val v4">8192</text>
-      <rect x="624" width="42" height="42" rx="6" fill="url(#rkl-16384)" stroke="#b8ad9b" stroke-width="2"/><text x="645" y="21" fill="#e8e2d5" class="val v5">16384</text>
+      <rect x="0" width="42" height="42" rx="6" fill="#f4efe6" stroke="#d6ccb8" stroke-width="2"/><text x="21" y="21" fill="#362f28" class="val v2">2</text>
+      <rect x="48" width="42" height="42" rx="6" fill="#e2d7c3" stroke="#bfb199" stroke-width="2"/><text x="69" y="21" fill="#362f28" class="val v2">4</text>
+      <rect x="96" width="42" height="42" rx="6" fill="#c7baa4" stroke="#9e9079" stroke-width="2"/><text x="117" y="21" fill="#2c2620" class="val v2">8</text>
+      <rect x="144" width="42" height="42" rx="6" fill="#9e9280" stroke="#756a5a" stroke-width="2"/><text x="165" y="21" fill="#faf6ee" class="val v2">16</text>
+      <rect x="192" width="42" height="42" rx="6" fill="#6b6257" stroke="#4a433b" stroke-width="2"/><text x="213" y="21" fill="#faf6ee" class="val v2">32</text>
+      <rect x="240" width="42" height="42" rx="6" fill="#3d3832" stroke="#24201c" stroke-width="2"/><text x="261" y="21" fill="#f4efe6" class="val v2">64</text>
+      <rect x="288" width="42" height="42" rx="6" fill="#d95d39" stroke="#a84022" stroke-width="2"/><text x="309" y="21" fill="#ffffff" class="val v3">128</text>
+      <rect x="336" width="42" height="42" rx="6" fill="#2b6e70" stroke="#1b4b4d" stroke-width="2"/><text x="357" y="21" fill="#f4efe6" class="val v3">256</text>
+      <rect x="384" width="42" height="42" rx="6" fill="#c98a1e" stroke="#96640e" stroke-width="2"/><text x="405" y="21" fill="#2c2620" class="val v3">512</text>
+      <rect x="432" width="42" height="42" rx="6" fill="#b5452e" stroke="#7d2c1b" stroke-width="2"/><text x="453" y="21" fill="#faf6ee" class="val v4">1024</text>
+      <rect x="480" width="42" height="42" rx="6" fill="#f4efe6" stroke="#c85a32" stroke-width="2"/><text x="501" y="21" fill="#c85a32" class="val v4">2048</text>
+      <rect x="528" width="42" height="42" rx="6" fill="#3d3832" stroke="#c98a1e" stroke-width="2"/><text x="549" y="21" fill="#e8a838" class="val v4">4096</text>
+      <rect x="576" width="42" height="42" rx="6" fill="#496e5d" stroke="#2c473b" stroke-width="2"/><text x="597" y="21" fill="#f4efe6" class="val v4">8192</text>
+      <rect x="624" width="42" height="42" rx="6" fill="#8c4a32" stroke="#5c2d1c" stroke-width="2"/><text x="645" y="21" fill="#faf6ee" class="val v5">16384</text>
     </g>
   </g>
 
   <!-- DMG 1989 Dark -->
   <g transform="translate(10, 156)">
     <rect width="864" height="54" rx="8" fill="#0b1a0e" stroke="#4e8238" stroke-width="1"/>
-    <text x="14" y="24" fill="#9bbc0f" class="lbl">DMG 1989</text><text x="14" y="38" class="sub">Dark</text>
+    <text x="14" y="24" fill="#9bbc0f" class="lbl">DMG 1989</text><text x="14" y="38" class="sub" style="fill:#9bbc0f;" fill-opacity="0.72">Dark</text>
     <g transform="translate(170, 6)">
       <rect x="0" width="42" height="42" rx="6" fill="#142e1a" stroke="#2a5726"/><text x="21" y="21" fill="#8bac0f" class="val v2">2</text>
       <rect x="48" width="42" height="42" rx="6" fill="#1b3b22" stroke="#376f32"/><text x="69" y="21" fill="#9bbc0f" class="val v2">4</text>
@@ -92,17 +86,17 @@
       <rect x="336" width="42" height="42" rx="6" fill="#52a352" stroke="#aff0a8"/><text x="357" y="21" fill="#0b1a0e" class="val v3">256</text>
       <rect x="384" width="42" height="42" rx="6" fill="#62ba62" stroke="#ffffff"/><text x="405" y="21" fill="#0b1a0e" class="val v3">512</text>
       <rect x="432" width="42" height="42" rx="6" fill="#78d478" stroke="#ffffff"/><text x="453" y="21" fill="#0b1a0e" class="val v4">1024</text>
-      <rect x="480" width="42" height="42" rx="6" fill="url(#dd-2048)" stroke="#c5e63e" stroke-width="2"/><text x="501" y="21" fill="#0b1a0e" class="val v4">2048</text>
-      <rect x="528" width="42" height="42" rx="6" fill="url(#dd-4096)" stroke="#effa9e" stroke-width="2"/><text x="549" y="21" fill="#0b1a0e" class="val v4">4096</text>
-      <rect x="576" width="42" height="42" rx="6" fill="url(#dd-8192)" stroke="#9bbc0f" stroke-width="2"/><text x="597" y="21" fill="#c5e63e" class="val v4">8192</text>
-      <rect x="624" width="42" height="42" rx="6" fill="url(#dd-16384)" stroke="#c5e63e" stroke-width="2"/><text x="645" y="21" fill="#effa9e" class="val v5">16384</text>
+      <rect x="480" width="42" height="42" rx="6" fill="#8bac0f" stroke="#c5e63e"/><text x="501" y="21" fill="#0b1a0e" class="val v4">2048</text>
+      <rect x="528" width="42" height="42" rx="6" fill="#9bbc0f" stroke="#effa9e"/><text x="549" y="21" fill="#0b1a0e" class="val v4">4096</text>
+      <rect x="576" width="42" height="42" rx="6" fill="#306230" stroke="#8bac0f"/><text x="597" y="21" fill="#c5e63e" class="val v4">8192</text>
+      <rect x="624" width="42" height="42" rx="6" fill="#52a352" stroke="#aff0a8"/><text x="645" y="21" fill="#0b1a0e" class="val v5">16384</text>
     </g>
   </g>
 
   <!-- DMG 1989 Light -->
   <g transform="translate(10, 216)">
-    <rect width="864" height="54" rx="8" fill="#9bbc0f" stroke="#306230" stroke-width="1.5"/>
-    <text x="14" y="24" fill="#0f380f" class="lbl">DMG 1989</text><text x="14" y="38" class="sub" style="fill:#306230;">Light</text>
+    <rect width="864" height="54" rx="8" fill="#9bbc0f" stroke="#306230" stroke-width="1"/>
+    <text x="14" y="24" fill="#0f380f" class="lbl">DMG 1989</text><text x="14" y="38" class="sub" style="fill:#0f380f;" fill-opacity="0.72">Light</text>
     <g transform="translate(170, 6)">
       <rect x="0" width="42" height="42" rx="6" fill="#9bbc0f" stroke="#306230"/><text x="21" y="21" fill="#0f380f" class="val v2">2</text>
       <rect x="48" width="42" height="42" rx="6" fill="#8bac0f" stroke="#306230"/><text x="69" y="21" fill="#0f380f" class="val v2">4</text>
@@ -115,16 +109,16 @@
       <rect x="384" width="42" height="42" rx="6" fill="#255025" stroke="#0f380f" stroke-width="2"/><text x="405" y="21" fill="#9bbc0f" class="val v3">512</text>
       <rect x="432" width="42" height="42" rx="6" fill="#1a401a" stroke="#8bac0f" stroke-width="2"/><text x="453" y="21" fill="#8bac0f" class="val v4">1024</text>
       <rect x="480" width="42" height="42" rx="6" fill="#0f380f" stroke="#306230" stroke-width="2"/><text x="501" y="21" fill="#9bbc0f" class="val v4">2048</text>
-      <rect x="528" width="42" height="42" rx="6" fill="#9bbc0f" stroke="#0f380f" stroke-width="2.5"/><text x="549" y="21" fill="#0f380f" class="val v4">4096</text>
-      <rect x="576" width="42" height="42" rx="6" fill="#306230" stroke="#0f380f" stroke-width="2.5"/><text x="597" y="21" fill="#9bbc0f" class="val v4">8192</text>
-      <rect x="624" width="42" height="42" rx="6" fill="#0f380f" stroke="#8bac0f" stroke-width="2.5"/><text x="645" y="21" fill="#c5e63e" class="val v5">16384</text>
+      <rect x="528" width="42" height="42" rx="6" fill="#7a9c0d" stroke="#0f380f" stroke-width="2"/><text x="549" y="21" fill="#0f380f" class="val v4">4096</text>
+      <rect x="576" width="42" height="42" rx="6" fill="#306230" stroke="#0f380f" stroke-width="2"/><text x="597" y="21" fill="#9bbc0f" class="val v4">8192</text>
+      <rect x="624" width="42" height="42" rx="6" fill="#1a401a" stroke="#0f380f" stroke-width="2"/><text x="645" y="21" fill="#c5e63e" class="val v5">16384</text>
     </g>
   </g>
 
   <!-- Terminal Dark -->
   <g transform="translate(10, 276)">
-    <rect width="864" height="54" rx="8" fill="#000000" stroke="#00ff46" stroke-width="1"/>
-    <text x="14" y="24" fill="#00ff46" class="lbl">Terminal</text><text x="14" y="38" class="sub">Dark</text>
+    <rect width="864" height="54" rx="8" fill="#000000" stroke="#00ff46" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="14" y="24" fill="#00ff46" class="lbl">Terminal</text><text x="14" y="38" class="sub" style="fill:#00ff46;" fill-opacity="0.72">Dark</text>
     <g transform="translate(170, 6)">
       <rect x="0" width="42" height="42" rx="6" fill="#000000" stroke="#00ff46"/><text x="21" y="21" fill="#00ff46" class="val v2">2</text>
       <rect x="48" width="42" height="42" rx="6" fill="#000000" stroke="#00dd3a"/><text x="69" y="21" fill="#00dd3a" class="val v2">4</text>
@@ -136,17 +130,17 @@
       <rect x="336" width="42" height="42" rx="6" fill="#000000" stroke="#6bff6b" stroke-width="2"/><text x="357" y="21" fill="#6bff6b" class="val v3">256</text>
       <rect x="384" width="42" height="42" rx="6" fill="#000000" stroke="#9bff9b" stroke-width="2"/><text x="405" y="21" fill="#9bff9b" class="val v3">512</text>
       <rect x="432" width="42" height="42" rx="6" fill="#000000" stroke="#ffffff" stroke-width="2"/><text x="453" y="21" fill="#ffffff" class="val v4">1024</text>
-      <rect x="480" width="42" height="42" rx="6" fill="#001806" stroke="#00ff46" stroke-width="2"/><text x="501" y="21" fill="#00ff46" class="val v4">2048</text>
-      <rect x="528" width="42" height="42" rx="6" fill="#00290b" stroke="#6bff6b" stroke-width="2"/><text x="549" y="21" fill="#9bff9b" class="val v4">4096</text>
-      <rect x="576" width="42" height="42" rx="6" fill="#00ff46" stroke="#9bff9b" stroke-width="2"/><text x="597" y="21" fill="#000000" class="val v4">8192</text>
-      <rect x="624" width="42" height="42" rx="6" fill="#000000" stroke="#00ff46" stroke-width="2.5"/><text x="645" y="21" fill="#ffffff" class="val v5">16384</text>
+      <rect x="480" width="42" height="42" rx="6" fill="#000000" stroke="#00ff46" stroke-width="2"/><text x="501" y="21" fill="#00ff46" class="val v4">2048</text>
+      <rect x="528" width="42" height="42" rx="6" fill="#000000" stroke="#6bff6b" stroke-width="2"/><text x="549" y="21" fill="#6bff6b" class="val v4">4096</text>
+      <rect x="576" width="42" height="42" rx="6" fill="#000000" stroke="#9bff9b" stroke-width="2"/><text x="597" y="21" fill="#9bff9b" class="val v4">8192</text>
+      <rect x="624" width="42" height="42" rx="6" fill="#000000" stroke="#d4ffd4" stroke-width="2"/><text x="645" y="21" fill="#d4ffd4" class="val v5">16384</text>
     </g>
   </g>
 
   <!-- Terminal Light -->
   <g transform="translate(10, 336)">
-    <rect width="864" height="54" rx="8" fill="#eaede8" stroke="#1a3020" stroke-width="1.5"/>
-    <text x="14" y="24" fill="#0d2112" class="lbl">Terminal</text><text x="14" y="38" class="sub" style="fill:#1a3020;">Light</text>
+    <rect width="864" height="54" rx="8" fill="#eaede8" stroke="#1a3020" stroke-width="1"/>
+    <text x="14" y="24" fill="#0d2112" class="lbl">Terminal</text><text x="14" y="38" class="sub" style="fill:#0d2112;" fill-opacity="0.72">Light</text>
     <g transform="translate(170, 6)">
       <rect x="0" width="42" height="42" rx="6" fill="#f4f6f2" stroke="#1a3020"/><text x="21" y="21" fill="#0d2112" class="val v2">2</text>
       <rect x="48" width="42" height="42" rx="6" fill="#e0e8dc" stroke="#1a3020"/><text x="69" y="21" fill="#0d2112" class="val v2">4</text>
@@ -158,39 +152,39 @@
       <rect x="336" width="42" height="42" rx="6" fill="#3a5f2c" stroke="#08170c" stroke-width="2"/><text x="357" y="21" fill="#ffffff" class="val v3">256</text>
       <rect x="384" width="42" height="42" rx="6" fill="#244519" stroke="#3bfb3b" stroke-width="2"/><text x="405" y="21" fill="#3bfb3b" class="val v3">512</text>
       <rect x="432" width="42" height="42" rx="6" fill="#122e0a" stroke="#3bfb3b" stroke-width="2"/><text x="453" y="21" fill="#3bfb3b" class="val v4">1024</text>
-      <rect x="480" width="42" height="42" rx="6" fill="#0d2112" stroke="#008f39" stroke-width="2"/><text x="501" y="21" fill="#6ee787" class="val v4">2048</text>
-      <rect x="528" width="42" height="42" rx="6" fill="#008f39" stroke="#0d2112" stroke-width="2"/><text x="549" y="21" fill="#ffffff" class="val v4">4096</text>
-      <rect x="576" width="42" height="42" rx="6" fill="#e0e8dc" stroke="#008f39" stroke-width="2"/><text x="597" y="21" fill="#008f39" class="val v4">8192</text>
-      <rect x="624" width="42" height="42" rx="6" fill="#1a3020" stroke="#3bfb3b" stroke-width="2"/><text x="645" y="21" fill="#a7f3d0" class="val v5">16384</text>
+      <rect x="480" width="42" height="42" rx="6" fill="#1c3b12" stroke="#3bfb3b" stroke-width="2"/><text x="501" y="21" fill="#3bfb3b" class="val v4">2048</text>
+      <rect x="528" width="42" height="42" rx="6" fill="#618553" stroke="#08170c" stroke-width="2"/><text x="549" y="21" fill="#ffffff" class="val v4">4096</text>
+      <rect x="576" width="42" height="42" rx="6" fill="#b8cfa8" stroke="#1a3020" stroke-width="2"/><text x="597" y="21" fill="#0d2112" class="val v4">8192</text>
+      <rect x="624" width="42" height="42" rx="6" fill="#2f4f23" stroke="#3bfb3b" stroke-width="2"/><text x="645" y="21" fill="#9ef79e" class="val v5">16384</text>
     </g>
   </g>
 
   <!-- Synthwave Dark -->
   <g transform="translate(10, 396)">
     <rect width="864" height="54" rx="8" fill="#0b0217" stroke="#ff007f" stroke-width="1"/>
-    <text x="14" y="24" fill="#f7e8ff" class="lbl">Synthwave</text><text x="14" y="38" class="sub">Dark</text>
+    <text x="14" y="24" fill="#f7e8ff" class="lbl">Synthwave</text><text x="14" y="38" class="sub" style="fill:#f7e8ff;" fill-opacity="0.72">Dark</text>
     <g transform="translate(170, 6)">
-      <rect x="0" width="42" height="42" rx="6" fill="#2a002e" stroke="#ff2a85"/><text x="21" y="21" fill="#ff2a85" class="val v2">2</text>
-      <rect x="48" width="42" height="42" rx="6" fill="#002236" stroke="#00f0ff"/><text x="69" y="21" fill="#00f0ff" class="val v2">4</text>
-      <rect x="96" width="42" height="42" rx="6" fill="#331a00" stroke="#ff9e00"/><text x="117" y="21" fill="#ff9e00" class="val v2">8</text>
-      <rect x="144" width="42" height="42" rx="6" fill="#003322" stroke="#00ff9f"/><text x="165" y="21" fill="#00ff9f" class="val v2">16</text>
-      <rect x="192" width="42" height="42" rx="6" fill="#360024" stroke="#ff007f"/><text x="213" y="21" fill="#ff007f" class="val v2">32</text>
-      <rect x="240" width="42" height="42" rx="6" fill="#381200" stroke="#ff5400"/><text x="261" y="21" fill="#ff5400" class="val v2">64</text>
-      <rect x="288" width="42" height="42" rx="6" fill="#260042" stroke="#9d00ff"/><text x="309" y="21" fill="#9d00ff" class="val v3">128</text>
-      <rect x="336" width="42" height="42" rx="6" fill="#380010" stroke="#ff003c"/><text x="357" y="21" fill="#ff003c" class="val v3">256</text>
-      <rect x="384" width="42" height="42" rx="6" fill="#001f3b" stroke="#00a6fb"/><text x="405" y="21" fill="#00a6fb" class="val v3">512</text>
-      <rect x="432" width="42" height="42" rx="6" fill="#332d00" stroke="#ffe600"/><text x="453" y="21" fill="#ffe600" class="val v4">1024</text>
-      <rect x="480" width="42" height="42" rx="6" fill="url(#swd-2048)" stroke="#00ffff" stroke-width="2"/><text x="501" y="21" fill="#00ffff" class="val v4">2048</text>
-      <rect x="528" width="42" height="42" rx="6" fill="url(#swd-4096)" stroke="#ff007f" stroke-width="2"/><text x="549" y="21" fill="#ff007f" class="val v4">4096</text>
-      <rect x="576" width="42" height="42" rx="6" fill="url(#swd-8192)" stroke="#ff9e00" stroke-width="2"/><text x="597" y="21" fill="#ffe600" class="val v4">8192</text>
-      <rect x="624" width="42" height="42" rx="6" fill="url(#swd-16384)" stroke="#00ffff" stroke-width="2"/><text x="645" y="21" fill="#ffffff" class="val v5">16384</text>
+      <rect x="0" width="42" height="42" rx="6" fill="url(#swd-2)" stroke="#ff2a85"/><text x="21" y="21" fill="#ff2a85" class="val v2">2</text>
+      <rect x="48" width="42" height="42" rx="6" fill="url(#swd-4)" stroke="#00f0ff"/><text x="69" y="21" fill="#00f0ff" class="val v2">4</text>
+      <rect x="96" width="42" height="42" rx="6" fill="url(#swd-8)" stroke="#ff9e00"/><text x="117" y="21" fill="#ff9e00" class="val v2">8</text>
+      <rect x="144" width="42" height="42" rx="6" fill="url(#swd-16)" stroke="#00ff9f"/><text x="165" y="21" fill="#00ff9f" class="val v2">16</text>
+      <rect x="192" width="42" height="42" rx="6" fill="url(#swd-32)" stroke="#ff007f"/><text x="213" y="21" fill="#ff007f" class="val v2">32</text>
+      <rect x="240" width="42" height="42" rx="6" fill="url(#swd-64)" stroke="#ff5400"/><text x="261" y="21" fill="#ff5400" class="val v2">64</text>
+      <rect x="288" width="42" height="42" rx="6" fill="url(#swd-128)" stroke="#9d00ff"/><text x="309" y="21" fill="#9d00ff" class="val v3">128</text>
+      <rect x="336" width="42" height="42" rx="6" fill="url(#swd-256)" stroke="#ff003c"/><text x="357" y="21" fill="#ff003c" class="val v3">256</text>
+      <rect x="384" width="42" height="42" rx="6" fill="url(#swd-512)" stroke="#00a6fb"/><text x="405" y="21" fill="#00a6fb" class="val v3">512</text>
+      <rect x="432" width="42" height="42" rx="6" fill="url(#swd-1024)" stroke="#ffe600"/><text x="453" y="21" fill="#ffe600" class="val v4">1024</text>
+      <rect x="480" width="42" height="42" rx="6" fill="url(#swd-2048)" stroke="#00ffff"/><text x="501" y="21" fill="#00ffff" class="val v4">2048</text>
+      <rect x="528" width="42" height="42" rx="6" fill="url(#swd-4096)" stroke="#ff007f"/><text x="549" y="21" fill="#ff007f" class="val v4">4096</text>
+      <rect x="576" width="42" height="42" rx="6" fill="url(#swd-8192)" stroke="#ffe600"/><text x="597" y="21" fill="#ffe600" class="val v4">8192</text>
+      <rect x="624" width="42" height="42" rx="6" fill="url(#swd-16384)" stroke="#00ff9f"/><text x="645" y="21" fill="#00ff9f" class="val v5">16384</text>
     </g>
   </g>
 
   <!-- Synthwave Light -->
   <g transform="translate(10, 456)">
     <rect width="864" height="54" rx="8" fill="#fef6f8" stroke="#ff007f" stroke-width="1"/>
-    <text x="14" y="24" fill="#3a102a" class="lbl">Synthwave</text><text x="14" y="38" class="sub">Light</text>
+    <text x="14" y="24" fill="#3a102a" class="lbl">Synthwave</text><text x="14" y="38" class="sub" style="fill:#3a102a;" fill-opacity="0.72">Light</text>
     <g transform="translate(170, 6)">
       <rect x="0" width="42" height="42" rx="6" fill="#ffffff" stroke="#ff007f" stroke-width="2"/><text x="21" y="21" fill="#ff007f" class="val v2">2</text>
       <rect x="48" width="42" height="42" rx="6" fill="#ffffff" stroke="#00bcd4" stroke-width="2"/><text x="69" y="21" fill="#00bcd4" class="val v2">4</text>
@@ -202,10 +196,10 @@
       <rect x="336" width="42" height="42" rx="6" fill="#ffffff" stroke="#00b0ff" stroke-width="2"/><text x="357" y="21" fill="#00b0ff" class="val v3">256</text>
       <rect x="384" width="42" height="42" rx="6" fill="#ffffff" stroke="#00e676" stroke-width="2"/><text x="405" y="21" fill="#00e676" class="val v3">512</text>
       <rect x="432" width="42" height="42" rx="6" fill="#ffffff" stroke="#ffd600" stroke-width="2"/><text x="453" y="21" fill="#ffd600" class="val v4">1024</text>
-      <rect x="480" width="42" height="42" rx="6" fill="url(#swl-2048)" stroke="#ff007f" stroke-width="2"/><text x="501" y="21" fill="#d1006b" class="val v4">2048</text>
-      <rect x="528" width="42" height="42" rx="6" fill="url(#swl-4096)" stroke="#00bcd4" stroke-width="2"/><text x="549" y="21" fill="#0088a3" class="val v4">4096</text>
-      <rect x="576" width="42" height="42" rx="6" fill="url(#swl-8192)" stroke="#ff6f00" stroke-width="2"/><text x="597" y="21" fill="#c25900" class="val v4">8192</text>
-      <rect x="624" width="42" height="42" rx="6" fill="url(#swl-16384)" stroke="#ff007f" stroke-width="2"/><text x="645" y="21" fill="#00f0ff" class="val v5">16384</text>
+      <rect x="480" width="42" height="42" rx="6" fill="#ffffff" stroke="#e91e63" stroke-width="2"/><text x="501" y="21" fill="#e91e63" class="val v4">2048</text>
+      <rect x="528" width="42" height="42" rx="6" fill="#ffffff" stroke="#00acc1" stroke-width="2"/><text x="549" y="21" fill="#00acc1" class="val v4">4096</text>
+      <rect x="576" width="42" height="42" rx="6" fill="#ffffff" stroke="#ff6f00" stroke-width="2"/><text x="597" y="21" fill="#ff6f00" class="val v4">8192</text>
+      <rect x="624" width="42" height="42" rx="6" fill="#ffffff" stroke="#7b1fa2" stroke-width="2"/><text x="645" y="21" fill="#7b1fa2" class="val v5">16384</text>
     </g>
   </g>
 </svg>
