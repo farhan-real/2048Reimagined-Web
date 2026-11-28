@@ -1,4 +1,4 @@
-const CACHE_NAME = '2048-reimagined-v26';
+const CACHE_NAME = '2048-reimagined-v27';
 const PRECACHE_ASSETS = [
   './',
   'index.html',
@@ -27,6 +27,8 @@ const PRECACHE_ASSETS = [
   'css/themes/cyber/neonlight.css',
   'css/themes/cyber/vectorheartdark.css',
   'css/themes/cyber/vectorheartlight.css',
+  'css/themes/cyber/vectorstrikedark.css',
+  'css/themes/cyber/vectorstrikelight.css',
   'css/themes/minimal/classicdark.css',
   'css/themes/minimal/classiclight.css',
   'css/themes/minimal/nordicdark.css',

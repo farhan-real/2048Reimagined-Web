@@ -46,17 +46,17 @@
   --t64-glow: none;
   --t64-particle: #ffffff;
 
-  --t128-bg: #dfee00;
-  --t128-color: #000000;
-  --t128-border: 1px solid #b8c700;
+  --t128-bg: #606670;
+  --t128-color: #ffffff;
+  --t128-border: 1px solid #828994;
   --t128-glow: none;
-  --t128-particle: #dfee00;
+  --t128-particle: #828994;
 
-  --t256-bg: #757c87;
+  --t256-bg: #7b838f;
   --t256-color: #ffffff;
-  --t256-border: 1px solid #969ea8;
+  --t256-border: 1px solid #a0a7ae;
   --t256-glow: none;
-  --t256-particle: #969ea8;
+  --t256-particle: #a0a7ae;
 
   --t512-bg: #cfd6da;
   --t512-color: #141619;
@@ -76,11 +76,11 @@
   --t2048-glow: none;
   --t2048-particle: #ff142b;
 
-  --t4096-bg: #dfee00;
-  --t4096-color: #000000;
-  --t4096-border: 1px solid #b8c700;
+  --t4096-bg: #363a42;
+  --t4096-color: #ffffff;
+  --t4096-border: 1px solid #545964;
   --t4096-glow: none;
-  --t4096-particle: #dfee00;
+  --t4096-particle: #969ea6;
 
   --t8192-bg: #e8ecef;
   --t8192-color: #000000;
@@ -88,11 +88,11 @@
   --t8192-glow: none;
   --t8192-particle: #e8ecef;
 
-  --t16384-bg: #676c75;
-  --t16384-color: #ffffff;
-  --t16384-border: 1px solid #969ea6;
+  --t16384-bg: #88909c;
+  --t16384-color: #000000;
+  --t16384-border: 1px solid #b8c0c7;
   --t16384-glow: none;
-  --t16384-particle: #a0a7ae;
+  --t16384-particle: #b8c0c7;
 
   --tsuper-bg: #1c1e22;
   --tsuper-color: #ffffff;

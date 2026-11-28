@@ -33,6 +33,7 @@
         { id: "blueprint", name: "Blueprint", darkKey: "blueprintdark", lightKey: "blueprintlight" },
         { id: "frutiger", name: "Frutiger Aero", darkKey: "frutigerdark", lightKey: "frutigerlight" },
         { id: "vectorheart", name: "Vectorheart", darkKey: "vectorheartdark", lightKey: "vectorheartlight" },
+        { id: "vectorstrike", name: "Vectorstrike", darkKey: "vectorstrikedark", lightKey: "vectorstrikelight" },
         { id: "neon", name: "Neon Glow", darkKey: "neondark", lightKey: "neonlight" }
       ]
     },

@@ -40,7 +40,7 @@ Play at [2048reimagined.pages.dev](https://2048reimagined.pages.dev/) or [farhan
 The game separates visual appearance into standalone CSS modular palettes. Color schemes maintain high contrast and distinct color tiers for every numerical threshold.
 
 ### Cyber & Technical
-Themes: Cyberpunk, Blueprint, Frutiger Aero, Vectorheart, Neon Glow.
+Themes: Cyberpunk, Blueprint, Frutiger Aero, Vectorheart, Vectorstrike, Neon Glow.
 
 ![Cyber Themes](previews/cyber.svg)
 
