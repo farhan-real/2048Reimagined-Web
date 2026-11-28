@@ -185,41 +185,11 @@ Disable third-party extensions like **Dark Reader** in Chrome, or turn off **nig
 
 ---
 
-## Analytics & Privacy
-
-2048 Reimagined uses lightweight Google Tag Manager / Google Analytics 4 (GA4) telemetry solely to understand gameplay balance, feature usage, and theme preferences. You can opt out completely at any time using the **Disable Analytics** killswitch in **Settings**, which stops the analytics script from loading on future launches and disables all tracking immediately.
-
-### What Is Tracked
-
-Beyond standard anonymous GA4 page-load telemetry, the game sends two custom events:
-
-- **`initialize` (at game launch):**
-  - Active `theme` name
-  - Only settings that have been changed from their defaults (including gameplay, visualizer, haptic, and music settings)
-- **`game_completed` (when clearing the board after a finished game):**
-  - Final `score`
-  - Number of times Undo was used (`undo_count`)
-  - Total moves played (`moves`)
-  - Current `highscore`
-  - Highest tile reached (`highest_tile`)
-  - Time taken in seconds (`time_taken`)
-  - Note: This event is only sent when you start a new board after a Game Over. If you undo your last move from the Game Over screen, nothing is sent for that interrupted state; the stats are updated and sent only when the run truly finishes and the board is cleared.
-
-### What Is NOT Tracked
-
-- No personal information (names, emails, accounts, or user identifiers)
-- No individual swipes, keystrokes, or move-by-move board states
-- No saved game boards
-- No advertisements or ad-network tracking
-
----
-
 ## Credits
 
 - Game Design: Original 2048 puzzle mechanics by Gabriele Cirulli.
 - Architecture and Implementation: Farhan.
 - Soundtrack Composers: Dubmood, Zabutom, Zalza, Floppi, Jakim, ko0x, Moodmode, Oxbow, rez, kenet, 0BiT, GEAR, SnD.
----
 
 ---
 
