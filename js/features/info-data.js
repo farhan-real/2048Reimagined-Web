@@ -1,6 +1,15 @@
 (function() {
   const CHANGELOG = [
     {
+      version: "v4.2.0",
+      title: "Vectorstrike Theme, Mode Memory & Control Styling",
+      changes: [
+        "Vectorstrike Theme: Added the new Cyber & Tech Vectorstrike theme in both Dark and Light variants, pairing crisp vector monochrome surfaces with high-voltage volt yellow accents.",
+        "Persistent Theme Mode Memory: Selecting Dark or Light mode now saves your last chosen mode so switching between themes and relaunching the app keeps your preferred mode.",
+        "Themed Action & Score Controls: Updated Score cards, Undo, and Restart buttons to reflect each active theme's accent color, glow, border tint, and contrast-tuned text."
+      ]
+    },
+    {
       version: "v4.1.0",
       title: "16K+ Tile Palettes, Theme Reworks & Visual Consistency",
       changes: [

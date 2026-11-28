@@ -68,7 +68,7 @@
   "./js/core/prng.js": "5b2b07f0a273",
   "./js/core/storage.js": "73b8e5382c4f",
   "./js/core/tile.js": "12d64942ed88",
-  "./js/features/info-data.js": "f67c7d9cfdc0",
+  "./js/features/info-data.js": "7545887cd773",
   "./js/features/leaderboard.js": "7716a7f9d060",
   "./js/features/particles.js": "591ec8cacbe5",
   "./js/features/timer.js": "a5c3904fe1b4",
