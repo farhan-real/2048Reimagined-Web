@@ -200,7 +200,7 @@
       <rect x="144.5" y="0.5" width="41" height="41" rx="4.5" fill="#ffffff" stroke="#d5dce0" stroke-width="1"/><text x="165" y="26.8" fill="#000000" class="val v2">16</text>
       <rect x="192.5" y="0.5" width="41" height="41" rx="4.5" fill="#9ea5ae" stroke="#c2c8cf" stroke-width="1"/><text x="213" y="26.8" fill="#000000" class="val v2">32</text>
       <rect x="240.5" y="0.5" width="41" height="41" rx="4.5" fill="#000000" stroke="#2c2e35" stroke-width="1"/><text x="261" y="26.8" fill="#ffffff" class="val v2">64</text>
-      <rect x="288.5" y="0.5" width="41" height="41" rx="4.5" fill="#606670" stroke="#828994" stroke-width="1"/><text x="309" y="26" fill="#ffffff" class="val v3">128</text>
+      <rect x="288.5" y="0.5" width="41" height="41" rx="4.5" fill="#ff142b" stroke="#ff4759" stroke-width="1"/><text x="309" y="26" fill="#ffffff" class="val v3">128</text>
       <rect x="336.5" y="0.5" width="41" height="41" rx="4.5" fill="#7b838f" stroke="#a0a7ae" stroke-width="1"/><text x="357" y="26" fill="#ffffff" class="val v3">256</text>
       <rect x="384.5" y="0.5" width="41" height="41" rx="4.5" fill="#cfd6da" stroke="#e8ecef" stroke-width="1"/><text x="405" y="26" fill="#141619" class="val v3">512</text>
       <rect x="432.5" y="0.5" width="41" height="41" rx="4.5" fill="#000000" stroke="#2c2e35" stroke-width="1"/><text x="453" y="25.1" fill="#ffffff" class="val v4">1024</text>
@@ -224,7 +224,7 @@
       <rect x="144.5" y="0.5" width="41" height="41" rx="4.5" fill="#000000" stroke="#26282e" stroke-width="1"/><text x="165" y="26.8" fill="#ffffff" class="val v2">16</text>
       <rect x="192.5" y="0.5" width="41" height="41" rx="4.5" fill="#e6eaec" stroke="#aeb7bf" stroke-width="1"/><text x="213" y="26.8" fill="#141619" class="val v2">32</text>
       <rect x="240.5" y="0.5" width="41" height="41" rx="4.5" fill="#464a50" stroke="#2e3136" stroke-width="1"/><text x="261" y="26.8" fill="#ffffff" class="val v2">64</text>
-      <rect x="288.5" y="0.5" width="41" height="41" rx="4.5" fill="#7a828c" stroke="#5b626b" stroke-width="1"/><text x="309" y="26" fill="#ffffff" class="val v3">128</text>
+      <rect x="288.5" y="0.5" width="41" height="41" rx="4.5" fill="#ff142b" stroke="#d10018" stroke-width="1"/><text x="309" y="26" fill="#ffffff" class="val v3">128</text>
       <rect x="336.5" y="0.5" width="41" height="41" rx="4.5" fill="#24262b" stroke="#101114" stroke-width="1"/><text x="357" y="26" fill="#ffffff" class="val v3">256</text>
       <rect x="384.5" y="0.5" width="41" height="41" rx="4.5" fill="#969ea6" stroke="#737b82" stroke-width="1"/><text x="405" y="26" fill="#141619" class="val v3">512</text>
       <rect x="432.5" y="0.5" width="41" height="41" rx="4.5" fill="#ffffff" stroke="#b8c0c7" stroke-width="1"/><text x="453" y="25.1" fill="#000000" class="val v4">1024</text>
@@ -248,7 +248,7 @@
       <rect x="144.5" y="0.5" width="41" height="41" rx="4.5" fill="#ffffff" stroke="#d5dce0" stroke-width="1"/><text x="165" y="26.8" fill="#000000" class="val v2">16</text>
       <rect x="192.5" y="0.5" width="41" height="41" rx="4.5" fill="#9ea5ae" stroke="#c2c8cf" stroke-width="1"/><text x="213" y="26.8" fill="#000000" class="val v2">32</text>
       <rect x="240.5" y="0.5" width="41" height="41" rx="4.5" fill="#000000" stroke="#2c2e35" stroke-width="1"/><text x="261" y="26.8" fill="#ffffff" class="val v2">64</text>
-      <rect x="288.5" y="0.5" width="41" height="41" rx="4.5" fill="#606670" stroke="#828994" stroke-width="1"/><text x="309" y="26" fill="#ffffff" class="val v3">128</text>
+      <rect x="288.5" y="0.5" width="41" height="41" rx="4.5" fill="#dfee00" stroke="#b8c700" stroke-width="1"/><text x="309" y="26" fill="#000000" class="val v3">128</text>
       <rect x="336.5" y="0.5" width="41" height="41" rx="4.5" fill="#7b838f" stroke="#a0a7ae" stroke-width="1"/><text x="357" y="26" fill="#ffffff" class="val v3">256</text>
       <rect x="384.5" y="0.5" width="41" height="41" rx="4.5" fill="#cfd6da" stroke="#e8ecef" stroke-width="1"/><text x="405" y="26" fill="#141619" class="val v3">512</text>
       <rect x="432.5" y="0.5" width="41" height="41" rx="4.5" fill="#000000" stroke="#2c2e35" stroke-width="1"/><text x="453" y="25.1" fill="#ffffff" class="val v4">1024</text>
@@ -272,7 +272,7 @@
       <rect x="144.5" y="0.5" width="41" height="41" rx="4.5" fill="#000000" stroke="#26282e" stroke-width="1"/><text x="165" y="26.8" fill="#ffffff" class="val v2">16</text>
       <rect x="192.5" y="0.5" width="41" height="41" rx="4.5" fill="#e6eaec" stroke="#aeb7bf" stroke-width="1"/><text x="213" y="26.8" fill="#141619" class="val v2">32</text>
       <rect x="240.5" y="0.5" width="41" height="41" rx="4.5" fill="#464a50" stroke="#2e3136" stroke-width="1"/><text x="261" y="26.8" fill="#ffffff" class="val v2">64</text>
-      <rect x="288.5" y="0.5" width="41" height="41" rx="4.5" fill="#7a828c" stroke="#5b626b" stroke-width="1"/><text x="309" y="26" fill="#ffffff" class="val v3">128</text>
+      <rect x="288.5" y="0.5" width="41" height="41" rx="4.5" fill="#dfee00" stroke="#a6b500" stroke-width="1"/><text x="309" y="26" fill="#000000" class="val v3">128</text>
       <rect x="336.5" y="0.5" width="41" height="41" rx="4.5" fill="#24262b" stroke="#101114" stroke-width="1"/><text x="357" y="26" fill="#ffffff" class="val v3">256</text>
       <rect x="384.5" y="0.5" width="41" height="41" rx="4.5" fill="#969ea6" stroke="#737b82" stroke-width="1"/><text x="405" y="26" fill="#141619" class="val v3">512</text>
       <rect x="432.5" y="0.5" width="41" height="41" rx="4.5" fill="#ffffff" stroke="#b8c0c7" stroke-width="1"/><text x="453" y="25.1" fill="#000000" class="val v4">1024</text>

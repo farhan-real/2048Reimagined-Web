@@ -46,11 +46,11 @@
   --t64-glow: none;
   --t64-particle: #ffffff;
 
-  --t128-bg: #606670;
-  --t128-color: #ffffff;
-  --t128-border: 1px solid #828994;
+  --t128-bg: #dfee00;
+  --t128-color: #000000;
+  --t128-border: 1px solid #b8c700;
   --t128-glow: none;
-  --t128-particle: #828994;
+  --t128-particle: #dfee00;
 
   --t256-bg: #7b838f;
   --t256-color: #ffffff;
