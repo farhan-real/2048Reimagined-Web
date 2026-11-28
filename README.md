@@ -14,15 +14,15 @@ Play at [2048reimagined.pages.dev](https://2048reimagined.pages.dev/) or [farhan
 
 | | |
 | :---: | :---: |
-| ![Android 1](./preview/mobile-1.png) | ![Android 2](./preview/mobile-2.png) |
-| ![Android 3](./preview/mobile-3.png) | ![Android 4](./preview/mobile-4.png) |
+| ![Android 1](./previews/mobile-1.png) | ![Android 2](./previews/mobile-2.png) |
+| ![Android 3](./previews/mobile-3.png) | ![Android 4](./previews/mobile-4.png) |
 
 ### Desktop & Tablet UI
 
 | | |
 | :---: | :---: |
-| ![Tablet 1](./preview/tablet-1.png) | ![Tablet 2](./preview/tablet-2.png) |
-| ![Tablet 3](./preview/tablet-3.png) | ![Tablet 4](./preview/tablet-4.png) |
+| ![Tablet 1](./previews/tablet-1.png) | ![Tablet 2](./previews/tablet-2.png) |
+| ![Tablet 3](./previews/tablet-3.png) | ![Tablet 4](./previews/tablet-4.png) |
 
 ---
 
