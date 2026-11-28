@@ -90,11 +90,23 @@
       }
     }
   </style>
-  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5CVS6CNS"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    (function() {
+      const GTM_ID = 'GTM-5CVS6CNS';
+      const optOut = window.localStorage && window.localStorage.getItem('ga_opt_out') === 'true';
+      if (optOut) {
+        window['ga-disable-' + GTM_ID] = true;
+        window.gtag = function() {};
+        return;
+      }
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function() { window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      const gtmScript = document.createElement('script');
+      gtmScript.async = true;
+      gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=' + GTM_ID;
+      document.head.appendChild(gtmScript);
+    })();
   </script>
 </head>
 <body data-theme="neondark" data-visualizer-mode="full" data-box-size="medium" data-orientation-mode="auto">
@@ -196,6 +208,7 @@
     <div class="settings-card toggle-row full-width"><div><div class="setting-info">Confirm on Exit</div><div class="setting-subtext">Prompt confirmation dialog before closing the game</div></div><label class="switch"><input type="checkbox" id="toggle-confirm-exit" aria-label="Confirm on Exit" checked><span class="switch-slider"></span></label></div>
     <div class="settings-card"><div class="setting-info">Slide Haptic</div><div class="tab-group" id="group-haptic-slide"><button class="tab-btn" data-val="0">Off</button><button class="tab-btn" data-val="8">Soft</button><button class="tab-btn" data-val="16">Hard</button></div></div>
     <div class="settings-card"><div class="setting-info">Merge Haptic</div><div class="tab-group" id="group-haptic-merge"><button class="tab-btn" data-val="0">Off</button><button class="tab-btn" data-val="18">Soft</button><button class="tab-btn" data-val="35">Hard</button></div></div>
+    <div class="settings-card toggle-row full-width"><div><div class="setting-info">Disable Analytics</div><div class="setting-subtext">Killswitch to opt out of Google Analytics (GA4) tracking</div></div><label class="switch"><input type="checkbox" id="toggle-disable-analytics" aria-label="Disable Analytics"><span class="switch-slider"></span></label></div>
     <div class="settings-action-grid"><button class="settings-action-card" id="btn-open-changelog"><span class="action-card-header"><span class="action-card-title">Changelog</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span><span class="action-card-desc">View latest updates</span></button><button class="settings-action-card" id="btn-open-credits"><span class="action-card-header"><span class="action-card-title">Credits</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span><span class="action-card-desc">Special thanks</span></button></div>
     <button class="btn-danger" id="btn-reset-best"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg><span>Reset High Score</span></button>
   </div><div class="modal-footer"><button class="btn-primary" id="btn-save-settings">Save &amp; Close</button></div></div></div>

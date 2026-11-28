@@ -29,6 +29,7 @@
       this.deterministicCheckbox = document.getElementById('toggle-deterministic');
       this.confirmExitCheckbox = document.getElementById('toggle-confirm-exit');
       this.showTimerCheckbox = document.getElementById('toggle-show-timer');
+      this.disableAnalyticsCheckbox = document.getElementById('toggle-disable-analytics');
 
       this.settingsBarsSlider = document.getElementById('slider-settings-visualizer-bars');
       this.lblSettingsBars = document.getElementById('lbl-settings-visualizer-bars');
@@ -199,6 +200,7 @@
       this.deterministicCheckbox.checked = s.deterministicEnabled;
       this.confirmExitCheckbox.checked = s.confirmExitEnabled;
       this.showTimerCheckbox.checked = s.showTimerEnabled;
+      if (this.disableAnalyticsCheckbox) this.disableAnalyticsCheckbox.checked = s.disableAnalytics;
 
       const sfxVol = s.sfxVolume !== undefined ? s.sfxVolume : 80;
       const musicVol = s.musicVolume !== undefined ? s.musicVolume : 75;
@@ -245,7 +247,24 @@
       syncTab('group-orientation-mode', this.orientationMode, 'data-orientation');
     }
 
+    applyAnalyticsKillswitch(disabled) {
+      const GTM_ID = 'GTM-5CVS6CNS';
+      window['ga-disable-' + GTM_ID] = !!disabled;
+      if (disabled) {
+        window.gtag = function() {};
+      } else if (!document.querySelector('script[src*="googletagmanager.com/gtm.js"]')) {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function() { window.dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+        const gtmScript = document.createElement('script');
+        gtmScript.async = true;
+        gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=' + GTM_ID;
+        document.head.appendChild(gtmScript);
+      }
+    }
+
     save() {
+      const disableAnalytics = this.disableAnalyticsCheckbox ? this.disableAnalyticsCheckbox.checked : false;
       window.storage.saveSettings({
         slideSpeed: this.slideSlider.value,
         partLife: this.partLifeSlider.value,
@@ -259,11 +278,13 @@
         showTimerEnabled: this.showTimerCheckbox.checked,
         orientationMode: this.orientationMode,
         slideHaptic: this.slideHapticVal,
-        mergeHaptic: this.mergeHapticVal
+        mergeHaptic: this.mergeHapticVal,
+        disableAnalytics
       });
       if (window.sound) window.sound.enabled = this.soundCheckbox.checked;
       this.applyTimerVisibility();
       this.applyOrientation(this.orientationMode);
+      this.applyAnalyticsKillswitch(disableAnalytics);
       document.documentElement.style.setProperty('--slide-speed', `${this.slideSlider.value}ms`);
     }
   }
