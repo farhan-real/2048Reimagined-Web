@@ -66,6 +66,8 @@
     constructor(parentUI) {
       this.parent = parentUI;
       this.currentTheme = "neondark";
+      const savedMode = window.storage ? window.storage.getThemeMode() : null;
+      this.preferredMode = (savedMode === "light" || savedMode === "dark") ? savedMode : "dark";
       this.onThemeChange = null;
 
       this.themeTriggerBtn = document.getElementById('theme-dropdown-btn');
@@ -124,9 +126,10 @@
           meta.appendChild(nameSpan);
 
           if (variant.darkKey && variant.lightKey) {
+            const rowMode = isSelected ? currentMode : this.preferredMode;
             const toggle = document.createElement('div');
             toggle.className = "theme-mode-toggle";
-            toggle.setAttribute('data-mode', isSelected ? currentMode : "dark");
+            toggle.setAttribute('data-mode', rowMode);
             toggle.innerHTML = `
               <div class="mode-toggle-slider"></div>
               <button class="mode-toggle-btn mode-btn-dark" aria-label="Dark Mode">${MOON_ICON}</button>
@@ -135,18 +138,21 @@
 
             toggle.querySelector('.mode-btn-dark').addEventListener('click', (e) => {
               e.stopPropagation();
+              this.setPreferredMode("dark");
               this.setTheme(variant.darkKey);
             });
 
             toggle.querySelector('.mode-btn-light').addEventListener('click', (e) => {
               e.stopPropagation();
+              this.setPreferredMode("light");
               this.setTheme(variant.lightKey);
             });
 
             toggle.addEventListener('click', (e) => {
               e.stopPropagation();
-              const nextTheme = (this.currentTheme === variant.lightKey) ? variant.darkKey : variant.lightKey;
-              this.setTheme(nextTheme);
+              const nextMode = (rowMode === "light") ? "dark" : "light";
+              this.setPreferredMode(nextMode);
+              this.setTheme(nextMode === "light" ? variant.lightKey : variant.darkKey);
             });
 
             meta.appendChild(toggle);
@@ -165,9 +171,11 @@
 
           item.addEventListener('click', (e) => {
             e.stopPropagation();
-            const targetKey = variant.fixedKey || ((isSelected && this.currentTheme === variant.lightKey)
-              ? variant.darkKey
-              : (variant.darkKey || variant.lightKey));
+            const targetKey = variant.fixedKey || (
+              this.preferredMode === "light"
+                ? (variant.lightKey || variant.darkKey)
+                : (variant.darkKey || variant.lightKey)
+            );
             this.setTheme(targetKey);
           });
 
@@ -176,11 +184,20 @@
       });
     }
 
+    setPreferredMode(mode) {
+      this.preferredMode = (mode === "light") ? "light" : "dark";
+      if (window.storage) window.storage.setThemeMode(this.preferredMode);
+    }
+
     setTheme(themeKey, onSelect) {
       if (onSelect) this.onThemeChange = onSelect;
       if (!THEMES[themeKey]) themeKey = "neondark";
+      const info = THEMES[themeKey];
+      if (window.storage && !window.storage.getThemeMode() && info.variant.darkKey && info.variant.lightKey) {
+        this.preferredMode = info.mode;
+      }
       this.currentTheme = themeKey;
-      if (this.themeCurrentLbl) this.themeCurrentLbl.textContent = THEMES[themeKey].name;
+      if (this.themeCurrentLbl) this.themeCurrentLbl.textContent = info.name;
       document.body.setAttribute('data-theme', themeKey);
       this.buildDropdown();
       if (this.onThemeChange) this.onThemeChange(themeKey);
