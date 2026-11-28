@@ -230,6 +230,7 @@
   <script src="js/features/particles.js"></script>
   <script src="js/features/timer.js"></script>
   <script src="js/features/leaderboard.js"></script>
+  <script src="js/features/analytics.js"></script>
   <script src="js/features/info-data.js"></script>
   <script src="js/ui/infoui.js"></script>
   <script src="js/ui/theme-ui.js"></script>
@@ -246,6 +247,9 @@
       window.ui = new window.UIController();
       window.gameEngine = new window.GameEngine(window.ui);
       window.input = new window.InputHandler(window.gameEngine, window.ui);
+      if (window.analytics) {
+        window.analytics.trackInitialize(window.ui.getCurrentTheme());
+      }
       const musicSettings = window.storage ? window.storage.getMusicSettings() : { autoplayMusicEnabled: true };
       if (musicSettings.autoplayMusicEnabled !== false) window.musicEngine.play();
       const unlockAudio = () => {

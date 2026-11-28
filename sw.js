@@ -1,4 +1,4 @@
-const CACHE_NAME = '2048-reimagined-v33';
+const CACHE_NAME = '2048-reimagined-v34';
 const PRECACHE_ASSETS = [
   './',
   'index.html',
@@ -73,6 +73,7 @@ const PRECACHE_ASSETS = [
   'js/features/particles.js',
   'js/features/timer.js',
   'js/features/leaderboard.js',
+  'js/features/analytics.js',
   'js/features/info-data.js',
   'js/ui/infoui.js',
   'js/ui/theme-ui.js',

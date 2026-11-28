@@ -6,10 +6,12 @@
       this.score = 0;
       this.bestScore = 0;
       this.moveCount = 0;
+      this.undoCount = 0;
       this.gameSeed = Date.now();
       this.undoState = null;
       this.isMoving = false;
       this.gameOverLeaderboardId = null;
+      this.pendingCompletedGame = null;
 
       this.tilesContainer = document.getElementById('tiles-container');
       this.particles = new window.ParticleEngine();
@@ -77,11 +79,38 @@
       else this.ui.btnUndo.setAttribute('disabled', 'true');
     }
 
+    getHighestTile() {
+      let maxTile = 0;
+      this.grid.forEach(tile => {
+        if (tile && tile.value > maxTile) maxTile = tile.value;
+      });
+      return maxTile;
+    }
+
+    buildCompletedGamePayload() {
+      return {
+        score: this.score,
+        undoCount: this.undoCount,
+        moves: this.moveCount,
+        highscore: this.bestScore,
+        highestTile: this.getHighestTile(),
+        timeTaken: this.timer.getElapsedSeconds()
+      };
+    }
+
     restart() {
+      if (this.pendingCompletedGame) {
+        if (window.analytics) {
+          window.analytics.trackGameCompleted(this.pendingCompletedGame);
+        }
+        this.pendingCompletedGame = null;
+      }
+
       this.clearDOMGrid();
       this.grid.clear();
       this.score = 0;
       this.moveCount = 0;
+      this.undoCount = 0;
       this.gameSeed = Date.now();
       this.prng = new window.DeterministicRNG(this.gameSeed);
       this.undoState = null;
@@ -132,6 +161,9 @@
         this.gameOverLeaderboardId = null;
         if (this.ui && this.ui.leaderboard) this.ui.leaderboard.render();
       }
+
+      this.undoCount++;
+      this.pendingCompletedGame = null;
 
       this.score = this.undoState.score;
       this.moveCount = this.undoState.moveCount;
@@ -241,6 +273,8 @@
             this.ui.triggerHaptic(20);
             if (window.sound) window.sound.playGameOver();
             this.gameOverLeaderboardId = window.leaderboard ? window.leaderboard.addEntry(this.score, this.timer.getElapsedSeconds()) : null;
+            this.pendingCompletedGame = this.buildCompletedGamePayload();
+            this.saveState();
             this.ui.finalScoreEl.textContent = this.score;
             if (this.ui.finalTimeEl) {
               this.ui.finalTimeEl.textContent = this.timer.formatTime(this.timer.getElapsedSeconds());
@@ -268,10 +302,12 @@
       const payload = {
         score: this.score,
         moveCount: this.moveCount,
+        undoCount: this.undoCount,
         gameSeed: this.gameSeed,
         timeSeconds: this.timer.getElapsedSeconds(),
         currentTheme: this.ui.getCurrentTheme(),
         gameOverLeaderboardId: this.gameOverLeaderboardId,
+        pendingCompletedGame: this.pendingCompletedGame,
         board: this.grid.serialize(),
         undoState: this.undoState
       };
@@ -285,8 +321,10 @@
         if (data && data.board && Array.isArray(data.board)) {
           this.score = data.score || 0;
           this.moveCount = data.moveCount || 0;
+          this.undoCount = data.undoCount || 0;
           this.gameSeed = data.gameSeed || Date.now();
           this.gameOverLeaderboardId = data.gameOverLeaderboardId || null;
+          this.pendingCompletedGame = data.pendingCompletedGame || null;
           this.prng = new window.DeterministicRNG(this.gameSeed);
           this.bestScore = window.storage.getBestScore();
 
