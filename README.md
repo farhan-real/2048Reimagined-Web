@@ -8,6 +8,24 @@ Play at [2048reimagined.pages.dev](https://2048reimagined.pages.dev/) or [farhan
 
 ---
 
+## Screenshots
+
+### Android UI
+
+| | |
+| :---: | :---: |
+| ![Android 1](./preview/mobile-1.png) | ![Android 2](./preview/mobile-2.png) |
+| ![Android 3](./preview/mobile-3.png) | ![Android 4](./preview/mobile-4.png) |
+
+### Desktop & Tablet UI
+
+| | |
+| :---: | :---: |
+| ![Tablet 1](./preview/tablet-1.png) | ![Tablet 2](./preview/tablet-2.png) |
+| ![Tablet 3](./preview/tablet-3.png) | ![Tablet 4](./preview/tablet-4.png) |
+
+---
+
 ## Core Features
 
 - Progressive Web App (PWA): Fully installable on Desktop (Chrome, Edge, Safari, Brave) and Mobile (Android, iOS) with offline execution and standalone window mode.
